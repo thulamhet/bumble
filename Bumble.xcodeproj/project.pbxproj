@@ -22,6 +22,8 @@
 		78F29AB12A5677AF009D977E /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F29AB02A5677AF009D977E /* Contants.swift */; };
 		78F29AB42A567861009D977E /* UIColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F29AB32A567861009D977E /* UIColorEx.swift */; };
 		78F29AB62A567875009D977E /* StringEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F29AB52A567875009D977E /* StringEx.swift */; };
+		78F29ABF2A56800F009D977E /* FindNewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F29ABD2A56800F009D977E /* FindNewVC.swift */; };
+		78F29AC02A56800F009D977E /* FindNewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F29ABE2A56800F009D977E /* FindNewVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		78F29AB02A5677AF009D977E /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		78F29AB32A567861009D977E /* UIColorEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorEx.swift; sourceTree = "<group>"; };
 		78F29AB52A567875009D977E /* StringEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringEx.swift; sourceTree = "<group>"; };
+		78F29ABD2A56800F009D977E /* FindNewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNewVC.swift; sourceTree = "<group>"; };
+		78F29ABE2A56800F009D977E /* FindNewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindNewVC.xib; sourceTree = "<group>"; };
 		994707E9C593FF8FA4B1F652 /* Pods-Bumble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bumble.release.xcconfig"; path = "Target Support Files/Pods-Bumble/Pods-Bumble.release.xcconfig"; sourceTree = "<group>"; };
 		AAD973E9AB96004C0BF68AE9 /* Pods-Bumble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bumble.debug.xcconfig"; path = "Target Support Files/Pods-Bumble/Pods-Bumble.debug.xcconfig"; sourceTree = "<group>"; };
 		FF2C73F4B1F534CB803BBF9C /* Pods_Bumble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bumble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +163,7 @@
 		78F29AAE2A567798009D977E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				78F29AB72A567D08009D977E /* FindNewBoobies */,
 				78F29AA92A567257009D977E /* Login */,
 			);
 			path = Scenes;
@@ -179,6 +184,15 @@
 				78F29AB52A567875009D977E /* StringEx.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		78F29AB72A567D08009D977E /* FindNewBoobies */ = {
+			isa = PBXGroup;
+			children = (
+				78F29ABD2A56800F009D977E /* FindNewVC.swift */,
+				78F29ABE2A56800F009D977E /* FindNewVC.xib */,
+			);
+			path = FindNewBoobies;
 			sourceTree = "<group>";
 		};
 		B3BCC4B5417C391C16598E4E /* Pods */ = {
@@ -306,6 +320,7 @@
 			files = (
 				78D056F32A4D3A0E00F4C7B4 /* Assets.xcassets in Resources */,
 				78F29AAD2A56726C009D977E /* CreateNewAccVC.xib in Resources */,
+				78F29AC02A56800F009D977E /* FindNewVC.xib in Resources */,
 				78D0571C2A4D3AFF00F4C7B4 /* LoginVC.xib in Resources */,
 				78F29AA82A566E03009D977E /* GoogleService-Info.plist in Resources */,
 			);
@@ -381,6 +396,7 @@
 				78F29AB12A5677AF009D977E /* Contants.swift in Sources */,
 				78D056EA2A4D3A0D00F4C7B4 /* AppDelegate.swift in Sources */,
 				78D056EC2A4D3A0D00F4C7B4 /* SceneDelegate.swift in Sources */,
+				78F29ABF2A56800F009D977E /* FindNewVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
