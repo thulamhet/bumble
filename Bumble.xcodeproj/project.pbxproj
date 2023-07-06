@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4032B3FADD9709A93F5F0247 /* Pods_Bumble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C73F4B1F534CB803BBF9C /* Pods_Bumble.framework */; };
 		78D056EA2A4D3A0D00F4C7B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D056E92A4D3A0D00F4C7B4 /* AppDelegate.swift */; };
 		78D056EC2A4D3A0D00F4C7B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D056EB2A4D3A0D00F4C7B4 /* SceneDelegate.swift */; };
-		78D056EE2A4D3A0D00F4C7B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D056ED2A4D3A0D00F4C7B4 /* ViewController.swift */; };
-		78D056F12A4D3A0D00F4C7B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78D056EF2A4D3A0D00F4C7B4 /* Main.storyboard */; };
 		78D056F32A4D3A0E00F4C7B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78D056F22A4D3A0E00F4C7B4 /* Assets.xcassets */; };
-		78D056F62A4D3A0E00F4C7B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78D056F42A4D3A0E00F4C7B4 /* LaunchScreen.storyboard */; };
 		78D057012A4D3A0E00F4C7B4 /* BumbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D057002A4D3A0E00F4C7B4 /* BumbleTests.swift */; };
 		78D0570B2A4D3A0E00F4C7B4 /* BumbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D0570A2A4D3A0E00F4C7B4 /* BumbleUITests.swift */; };
 		78D0570D2A4D3A0E00F4C7B4 /* BumbleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D0570C2A4D3A0E00F4C7B4 /* BumbleUITestsLaunchTests.swift */; };
+		78D0571B2A4D3AFF00F4C7B4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D057192A4D3AFF00F4C7B4 /* LoginVC.swift */; };
+		78D0571C2A4D3AFF00F4C7B4 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78D0571A2A4D3AFF00F4C7B4 /* LoginVC.xib */; };
+		78F29AA82A566E03009D977E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78F29AA72A566E03009D977E /* GoogleService-Info.plist */; };
+		78F29AAC2A56726C009D977E /* CreateNewAccVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F29AAA2A56726C009D977E /* CreateNewAccVC.swift */; };
+		78F29AAD2A56726C009D977E /* CreateNewAccVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F29AAB2A56726C009D977E /* CreateNewAccVC.xib */; };
+		78F29AB12A5677AF009D977E /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F29AB02A5677AF009D977E /* Contants.swift */; };
+		78F29AB42A567861009D977E /* UIColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F29AB32A567861009D977E /* UIColorEx.swift */; };
+		78F29AB62A567875009D977E /* StringEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F29AB52A567875009D977E /* StringEx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,16 +45,24 @@
 		78D056E62A4D3A0D00F4C7B4 /* Bumble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bumble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D056E92A4D3A0D00F4C7B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78D056EB2A4D3A0D00F4C7B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		78D056ED2A4D3A0D00F4C7B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		78D056F02A4D3A0D00F4C7B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		78D056F22A4D3A0E00F4C7B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		78D056F52A4D3A0E00F4C7B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78D056F72A4D3A0E00F4C7B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78D056FC2A4D3A0E00F4C7B4 /* BumbleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BumbleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D057002A4D3A0E00F4C7B4 /* BumbleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumbleTests.swift; sourceTree = "<group>"; };
 		78D057062A4D3A0E00F4C7B4 /* BumbleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BumbleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D0570A2A4D3A0E00F4C7B4 /* BumbleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumbleUITests.swift; sourceTree = "<group>"; };
 		78D0570C2A4D3A0E00F4C7B4 /* BumbleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumbleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		78D057192A4D3AFF00F4C7B4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		78D0571A2A4D3AFF00F4C7B4 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		78F29AA72A566E03009D977E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		78F29AAA2A56726C009D977E /* CreateNewAccVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewAccVC.swift; sourceTree = "<group>"; };
+		78F29AAB2A56726C009D977E /* CreateNewAccVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateNewAccVC.xib; sourceTree = "<group>"; };
+		78F29AB02A5677AF009D977E /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
+		78F29AB32A567861009D977E /* UIColorEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorEx.swift; sourceTree = "<group>"; };
+		78F29AB52A567875009D977E /* StringEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringEx.swift; sourceTree = "<group>"; };
+		994707E9C593FF8FA4B1F652 /* Pods-Bumble.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bumble.release.xcconfig"; path = "Target Support Files/Pods-Bumble/Pods-Bumble.release.xcconfig"; sourceTree = "<group>"; };
+		AAD973E9AB96004C0BF68AE9 /* Pods-Bumble.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bumble.debug.xcconfig"; path = "Target Support Files/Pods-Bumble/Pods-Bumble.debug.xcconfig"; sourceTree = "<group>"; };
+		FF2C73F4B1F534CB803BBF9C /* Pods_Bumble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bumble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4032B3FADD9709A93F5F0247 /* Pods_Bumble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				78D056FF2A4D3A0E00F4C7B4 /* BumbleTests */,
 				78D057092A4D3A0E00F4C7B4 /* BumbleUITests */,
 				78D056E72A4D3A0D00F4C7B4 /* Products */,
+				B3BCC4B5417C391C16598E4E /* Pods */,
+				D8DD3E1573DFAAA93FEE5948 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +116,13 @@
 		78D056E82A4D3A0D00F4C7B4 /* Bumble */ = {
 			isa = PBXGroup;
 			children = (
+				78F29AB22A56782E009D977E /* Extension */,
+				78F29AAF2A5677A2009D977E /* Contants */,
+				78F29AAE2A567798009D977E /* Scenes */,
+				78F29AA72A566E03009D977E /* GoogleService-Info.plist */,
 				78D056E92A4D3A0D00F4C7B4 /* AppDelegate.swift */,
 				78D056EB2A4D3A0D00F4C7B4 /* SceneDelegate.swift */,
-				78D056ED2A4D3A0D00F4C7B4 /* ViewController.swift */,
-				78D056EF2A4D3A0D00F4C7B4 /* Main.storyboard */,
 				78D056F22A4D3A0E00F4C7B4 /* Assets.xcassets */,
-				78D056F42A4D3A0E00F4C7B4 /* LaunchScreen.storyboard */,
 				78D056F72A4D3A0E00F4C7B4 /* Info.plist */,
 			);
 			path = Bumble;
@@ -127,6 +145,59 @@
 			path = BumbleUITests;
 			sourceTree = "<group>";
 		};
+		78F29AA92A567257009D977E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				78D057192A4D3AFF00F4C7B4 /* LoginVC.swift */,
+				78D0571A2A4D3AFF00F4C7B4 /* LoginVC.xib */,
+				78F29AAA2A56726C009D977E /* CreateNewAccVC.swift */,
+				78F29AAB2A56726C009D977E /* CreateNewAccVC.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		78F29AAE2A567798009D977E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				78F29AA92A567257009D977E /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		78F29AAF2A5677A2009D977E /* Contants */ = {
+			isa = PBXGroup;
+			children = (
+				78F29AB02A5677AF009D977E /* Contants.swift */,
+			);
+			path = Contants;
+			sourceTree = "<group>";
+		};
+		78F29AB22A56782E009D977E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				78F29AB32A567861009D977E /* UIColorEx.swift */,
+				78F29AB52A567875009D977E /* StringEx.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B3BCC4B5417C391C16598E4E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAD973E9AB96004C0BF68AE9 /* Pods-Bumble.debug.xcconfig */,
+				994707E9C593FF8FA4B1F652 /* Pods-Bumble.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D8DD3E1573DFAAA93FEE5948 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF2C73F4B1F534CB803BBF9C /* Pods_Bumble.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78D057102A4D3A0E00F4C7B4 /* Build configuration list for PBXNativeTarget "Bumble" */;
 			buildPhases = (
+				CEE430529EA5E929AD18C2F0 /* [CP] Check Pods Manifest.lock */,
 				78D056E22A4D3A0D00F4C7B4 /* Sources */,
 				78D056E32A4D3A0D00F4C7B4 /* Frameworks */,
 				78D056E42A4D3A0D00F4C7B4 /* Resources */,
+				22FAC3BECE009F4B069FF455 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,9 +304,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78D056F62A4D3A0E00F4C7B4 /* LaunchScreen.storyboard in Resources */,
 				78D056F32A4D3A0E00F4C7B4 /* Assets.xcassets in Resources */,
-				78D056F12A4D3A0D00F4C7B4 /* Main.storyboard in Resources */,
+				78F29AAD2A56726C009D977E /* CreateNewAccVC.xib in Resources */,
+				78D0571C2A4D3AFF00F4C7B4 /* LoginVC.xib in Resources */,
+				78F29AA82A566E03009D977E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,12 +327,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		22FAC3BECE009F4B069FF455 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bumble/Pods-Bumble-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bumble/Pods-Bumble-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bumble/Pods-Bumble-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEE430529EA5E929AD18C2F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bumble-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		78D056E22A4D3A0D00F4C7B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78D056EE2A4D3A0D00F4C7B4 /* ViewController.swift in Sources */,
+				78F29AB42A567861009D977E /* UIColorEx.swift in Sources */,
+				78D0571B2A4D3AFF00F4C7B4 /* LoginVC.swift in Sources */,
+				78F29AAC2A56726C009D977E /* CreateNewAccVC.swift in Sources */,
+				78F29AB62A567875009D977E /* StringEx.swift in Sources */,
+				78F29AB12A5677AF009D977E /* Contants.swift in Sources */,
 				78D056EA2A4D3A0D00F4C7B4 /* AppDelegate.swift in Sources */,
 				78D056EC2A4D3A0D00F4C7B4 /* SceneDelegate.swift in Sources */,
 			);
@@ -295,25 +415,6 @@
 			targetProxy = 78D057072A4D3A0E00F4C7B4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		78D056EF2A4D3A0D00F4C7B4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				78D056F02A4D3A0D00F4C7B4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		78D056F42A4D3A0E00F4C7B4 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				78D056F52A4D3A0E00F4C7B4 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		78D0570E2A4D3A0E00F4C7B4 /* Debug */ = {
@@ -432,6 +533,7 @@
 		};
 		78D057112A4D3A0E00F4C7B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAD973E9AB96004C0BF68AE9 /* Pods-Bumble.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -442,7 +544,6 @@
 				INFOPLIST_FILE = Bumble/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -460,6 +561,7 @@
 		};
 		78D057122A4D3A0E00F4C7B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 994707E9C593FF8FA4B1F652 /* Pods-Bumble.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -470,7 +572,6 @@
 				INFOPLIST_FILE = Bumble/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
