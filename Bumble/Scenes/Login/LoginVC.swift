@@ -46,6 +46,8 @@ class LoginVC: UIViewController {
                 return
             }
             print("You have signed in")
+            let vc = FindNewVC()
+            self.navigationController?.pushViewController(vc, animated: true)
         })
     }
     

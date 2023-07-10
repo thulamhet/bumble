@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,28 +10,75 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FindNewVC" customModule="Bumble" customModuleProvider="target">
             <connections>
+                <outlet property="kolodaView" destination="4Yi-eW-d9i" id="5Q9-Oi-gWu"/>
                 <outlet property="scrollView" destination="k29-9u-rR2" id="61s-DH-kHr"/>
                 <outlet property="view" destination="VrJ-9W-h3o" id="LfE-be-Snd"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VrJ-9W-h3o">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z1i-uq-vUM">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="40"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="e9i-x9-9QR"/>
+                        <constraint firstAttribute="height" constant="30" id="e9i-x9-9QR"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2e-mU-pds" userLabel="Navbar">
+                    <rect key="frame" x="0.0" y="30" width="414" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgT-iT-Igs">
+                            <rect key="frame" x="15" y="5" width="40" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="PQj-yF-0S2"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="backward.end.fill" catalog="system"/>
+                            <connections>
+                                <action selector="didSelectButtonBack:" destination="-1" eventType="touchUpInside" id="dYt-O9-e6s"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@Merchandise Sống một đời có &quot;lãi&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yB-FP-TrM" userLabel="Bumble fking time" customClass="VNPLabel">
+                            <rect key="frame" x="65.666666666666686" y="12.333333333333334" width="283" height="19.333333333333329"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="XgT-iT-Igs" secondAttribute="bottom" constant="5" id="5wJ-vs-fdA"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="8ld-Gj-7Pi"/>
+                        <constraint firstItem="XgT-iT-Igs" firstAttribute="top" secondItem="k2e-mU-pds" secondAttribute="top" constant="5" id="TzK-kP-Rwe"/>
+                        <constraint firstItem="8yB-FP-TrM" firstAttribute="centerY" secondItem="k2e-mU-pds" secondAttribute="centerY" id="cTK-sa-91A"/>
+                        <constraint firstItem="8yB-FP-TrM" firstAttribute="centerX" secondItem="k2e-mU-pds" secondAttribute="centerX" id="gZx-u8-0Qi"/>
+                        <constraint firstAttribute="height" constant="44" id="m23-CR-tIe"/>
+                        <constraint firstItem="XgT-iT-Igs" firstAttribute="leading" secondItem="k2e-mU-pds" secondAttribute="leading" constant="15" id="nAo-f2-Grz"/>
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pYt-c2-9wd">
-                    <rect key="frame" x="10" y="50" width="373" height="802"/>
+                    <rect key="frame" x="10" y="40" width="394" height="696"/>
                     <subviews>
                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k29-9u-rR2">
-                            <rect key="frame" x="0.0" y="0.0" width="373" height="802"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="696"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Yi-eW-d9i" customClass="KolodaView" customModule="Koloda">
+                                    <rect key="frame" x="50" y="100" width="294" height="200"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="200" id="1EV-mn-ijV"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBrownColor"/>
+                            <constraints>
+                                <constraint firstItem="4Yi-eW-d9i" firstAttribute="top" secondItem="k29-9u-rR2" secondAttribute="top" constant="100" id="J4k-za-L9m"/>
+                                <constraint firstAttribute="trailing" secondItem="4Yi-eW-d9i" secondAttribute="trailing" constant="50" id="MKX-cW-MP3"/>
+                                <constraint firstItem="4Yi-eW-d9i" firstAttribute="leading" secondItem="k29-9u-rR2" secondAttribute="leading" constant="50" id="Rzm-XJ-u46"/>
+                            </constraints>
                         </view>
                     </subviews>
                     <constraints>
@@ -49,7 +96,10 @@
             <viewLayoutGuide key="safeArea" id="yHW-1M-VeK"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="k2e-mU-pds" firstAttribute="leading" secondItem="yHW-1M-VeK" secondAttribute="leading" id="2ky-LN-QpR"/>
                 <constraint firstItem="z1i-uq-vUM" firstAttribute="leading" secondItem="VrJ-9W-h3o" secondAttribute="leading" id="50m-Gq-IN6"/>
+                <constraint firstItem="yHW-1M-VeK" firstAttribute="trailing" secondItem="k2e-mU-pds" secondAttribute="trailing" id="CBp-if-b2R"/>
+                <constraint firstItem="k2e-mU-pds" firstAttribute="top" secondItem="z1i-uq-vUM" secondAttribute="bottom" id="Cz7-Cz-NsA"/>
                 <constraint firstAttribute="trailing" secondItem="z1i-uq-vUM" secondAttribute="trailing" id="Dnu-UA-6Z8"/>
                 <constraint firstAttribute="trailing" secondItem="pYt-c2-9wd" secondAttribute="trailing" constant="10" id="imr-QF-8lA"/>
                 <constraint firstItem="pYt-c2-9wd" firstAttribute="top" secondItem="z1i-uq-vUM" secondAttribute="bottom" constant="10" id="jAC-ec-joM"/>
@@ -61,8 +111,12 @@
         </view>
     </objects>
     <resources>
+        <image name="backward.end.fill" catalog="system" width="128" height="101"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
