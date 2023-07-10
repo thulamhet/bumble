@@ -17,6 +17,7 @@ class FindNewVC: UIViewController {
         setupView()
         kolodaView.dataSource = self
         kolodaView.delegate = self
+        kolodaView.reloadData()
     }
 
     private func setupView () {
