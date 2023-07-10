@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4032B3FADD9709A93F5F0247 /* Pods_Bumble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C73F4B1F534CB803BBF9C /* Pods_Bumble.framework */; };
+		787D496E2A5BFDE900303FAA /* BaseLoadCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D496D2A5BFDE900303FAA /* BaseLoadCustomView.swift */; };
+		787D49712A5BFEAE00303FAA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D496F2A5BFEAE00303FAA /* ProfileView.swift */; };
+		787D49722A5BFEAE00303FAA /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 787D49702A5BFEAE00303FAA /* ProfileView.xib */; };
+		787D49742A5C03AD00303FAA /* UIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D49732A5C03AD00303FAA /* UIViewEx.swift */; };
 		78D056EA2A4D3A0D00F4C7B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D056E92A4D3A0D00F4C7B4 /* AppDelegate.swift */; };
 		78D056EC2A4D3A0D00F4C7B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D056EB2A4D3A0D00F4C7B4 /* SceneDelegate.swift */; };
 		78D056F32A4D3A0E00F4C7B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78D056F22A4D3A0E00F4C7B4 /* Assets.xcassets */; };
@@ -44,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		787D496D2A5BFDE900303FAA /* BaseLoadCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLoadCustomView.swift; sourceTree = "<group>"; };
+		787D496F2A5BFEAE00303FAA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		787D49702A5BFEAE00303FAA /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		787D49732A5C03AD00303FAA /* UIViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewEx.swift; sourceTree = "<group>"; };
 		78D056E62A4D3A0D00F4C7B4 /* Bumble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bumble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D056E92A4D3A0D00F4C7B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78D056EB2A4D3A0D00F4C7B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +103,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		787D49652A5BFD2500303FAA /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				787D496F2A5BFEAE00303FAA /* ProfileView.swift */,
+				787D49702A5BFEAE00303FAA /* ProfileView.xib */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		787D496A2A5BFD7400303FAA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				787D496D2A5BFDE900303FAA /* BaseLoadCustomView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		78D056DD2A4D3A0D00F4C7B4 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +188,8 @@
 		78F29AAE2A567798009D977E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				787D496A2A5BFD7400303FAA /* Base */,
+				787D49652A5BFD2500303FAA /* CustomView */,
 				78F29AB72A567D08009D977E /* FindNewBoobies */,
 				78F29AA92A567257009D977E /* Login */,
 			);
@@ -182,6 +209,7 @@
 			children = (
 				78F29AB32A567861009D977E /* UIColorEx.swift */,
 				78F29AB52A567875009D977E /* StringEx.swift */,
+				787D49732A5C03AD00303FAA /* UIViewEx.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -321,6 +349,7 @@
 			files = (
 				78D056F32A4D3A0E00F4C7B4 /* Assets.xcassets in Resources */,
 				78F29AAD2A56726C009D977E /* CreateNewAccVC.xib in Resources */,
+				787D49722A5BFEAE00303FAA /* ProfileView.xib in Resources */,
 				78F29AC02A56800F009D977E /* FindNewVC.xib in Resources */,
 				78D0571C2A4D3AFF00F4C7B4 /* LoginVC.xib in Resources */,
 				78F29AA82A566E03009D977E /* GoogleService-Info.plist in Resources */,
@@ -390,7 +419,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				787D49742A5C03AD00303FAA /* UIViewEx.swift in Sources */,
+				787D496E2A5BFDE900303FAA /* BaseLoadCustomView.swift in Sources */,
 				78F29AB42A567861009D977E /* UIColorEx.swift in Sources */,
+				787D49712A5BFEAE00303FAA /* ProfileView.swift in Sources */,
 				78D0571B2A4D3AFF00F4C7B4 /* LoginVC.swift in Sources */,
 				78F29AAC2A56726C009D977E /* CreateNewAccVC.swift in Sources */,
 				78F29AB62A567875009D977E /* StringEx.swift in Sources */,
