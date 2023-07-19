@@ -8,9 +8,10 @@
 import UIKit
 import Koloda
 
-class FindNewVC: UIViewController {
+class FindNewVC: BaseViewController {
     @IBOutlet weak var scrollView: UIView!
-    var images: [String] = ["bee", "background", "fox", "bee"]
+    var images: [String] = ["woman1", "woman2", "woman3", "woman4", "woman5",
+                            "woman1", "woman2", "woman3", "woman4",]
     @IBOutlet weak var kolodaView: KolodaView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,6 @@ class FindNewVC: UIViewController {
     @IBAction func didSelectButtonBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
-    
 }
 
 extension FindNewVC: KolodaViewDataSource {
@@ -36,7 +36,8 @@ extension FindNewVC: KolodaViewDataSource {
     }
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        let view = UIImageView(image: UIImage(named: images[index]))
+//        let view = UIImageView(image: UIImage(named: images[index]))
+        let view = ProfileView()
         view.layer.cornerRadius = 20
         view.clipsToBounds = true
         return view

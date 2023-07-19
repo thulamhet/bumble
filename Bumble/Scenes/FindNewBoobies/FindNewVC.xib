@@ -30,36 +30,47 @@
                     <rect key="frame" x="0.0" y="30" width="414" height="44"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgT-iT-Igs">
-                            <rect key="frame" x="15" y="5" width="40" height="34"/>
+                            <rect key="frame" x="15" y="7" width="30" height="30"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="40" id="PQj-yF-0S2"/>
+                                <constraint firstAttribute="height" constant="30" id="fr7-8L-wb0"/>
+                                <constraint firstAttribute="width" constant="30" id="sfX-iQ-LJN"/>
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="backward.end.fill" catalog="system"/>
+                            <state key="normal" image="menu"/>
                             <connections>
                                 <action selector="didSelectButtonBack:" destination="-1" eventType="touchUpInside" id="dYt-O9-e6s"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bumble time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yB-FP-TrM" userLabel="Bumble fking time" customClass="VNPLabel">
-                            <rect key="frame" x="158.33333333333334" y="12.333333333333334" width="97.333333333333343" height="19.333333333333329"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQf-fy-Cc9">
+                            <rect key="frame" x="369" y="7" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="WSm-iY-bwC"/>
+                                <constraint firstAttribute="height" constant="30" id="i5O-Pe-nZZ"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="filter"/>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logobb" translatesAutoresizingMaskIntoConstraints="NO" id="D6S-Bw-xul">
+                            <rect key="frame" x="142" y="-540.66666666666674" width="130" height="1125.3333333333333"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="130" id="3xG-W0-AgR"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="XgT-iT-Igs" secondAttribute="bottom" constant="5" id="5wJ-vs-fdA"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="8ld-Gj-7Pi"/>
-                        <constraint firstItem="XgT-iT-Igs" firstAttribute="top" secondItem="k2e-mU-pds" secondAttribute="top" constant="5" id="TzK-kP-Rwe"/>
-                        <constraint firstItem="8yB-FP-TrM" firstAttribute="centerY" secondItem="k2e-mU-pds" secondAttribute="centerY" id="cTK-sa-91A"/>
-                        <constraint firstItem="8yB-FP-TrM" firstAttribute="centerX" secondItem="k2e-mU-pds" secondAttribute="centerX" id="gZx-u8-0Qi"/>
+                        <constraint firstItem="D6S-Bw-xul" firstAttribute="centerX" secondItem="k2e-mU-pds" secondAttribute="centerX" id="GM0-sE-3yD"/>
+                        <constraint firstAttribute="trailing" secondItem="QQf-fy-Cc9" secondAttribute="trailing" constant="15" id="L6n-7K-n9s"/>
+                        <constraint firstItem="D6S-Bw-xul" firstAttribute="centerY" secondItem="k2e-mU-pds" secondAttribute="centerY" id="P5g-wZ-tIE"/>
+                        <constraint firstItem="QQf-fy-Cc9" firstAttribute="centerY" secondItem="k2e-mU-pds" secondAttribute="centerY" id="eeJ-ip-zYw"/>
                         <constraint firstAttribute="height" constant="44" id="m23-CR-tIe"/>
                         <constraint firstItem="XgT-iT-Igs" firstAttribute="leading" secondItem="k2e-mU-pds" secondAttribute="leading" constant="15" id="nAo-f2-Grz"/>
+                        <constraint firstItem="XgT-iT-Igs" firstAttribute="centerY" secondItem="k2e-mU-pds" secondAttribute="centerY" id="ngb-vv-Bf3"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Yi-eW-d9i" customClass="KolodaView" customModule="Koloda">
-                    <rect key="frame" x="0.0" y="74" width="414" height="362"/>
+                    <rect key="frame" x="15" y="89" width="384" height="597"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
             </subviews>
@@ -71,17 +82,19 @@
                 <constraint firstItem="yHW-1M-VeK" firstAttribute="trailing" secondItem="k2e-mU-pds" secondAttribute="trailing" id="CBp-if-b2R"/>
                 <constraint firstItem="k2e-mU-pds" firstAttribute="top" secondItem="z1i-uq-vUM" secondAttribute="bottom" id="Cz7-Cz-NsA"/>
                 <constraint firstAttribute="trailing" secondItem="z1i-uq-vUM" secondAttribute="trailing" id="Dnu-UA-6Z8"/>
-                <constraint firstItem="yHW-1M-VeK" firstAttribute="trailing" secondItem="4Yi-eW-d9i" secondAttribute="trailing" id="MYL-cM-NlI"/>
-                <constraint firstItem="4Yi-eW-d9i" firstAttribute="leading" secondItem="yHW-1M-VeK" secondAttribute="leading" id="ZJt-2d-W7V"/>
-                <constraint firstItem="4Yi-eW-d9i" firstAttribute="top" secondItem="k2e-mU-pds" secondAttribute="bottom" id="jah-sZ-F9c"/>
-                <constraint firstItem="yHW-1M-VeK" firstAttribute="bottom" secondItem="4Yi-eW-d9i" secondAttribute="bottom" constant="300" id="xya-h4-Pno"/>
+                <constraint firstItem="yHW-1M-VeK" firstAttribute="trailing" secondItem="4Yi-eW-d9i" secondAttribute="trailing" constant="15" id="MYL-cM-NlI"/>
+                <constraint firstItem="4Yi-eW-d9i" firstAttribute="leading" secondItem="yHW-1M-VeK" secondAttribute="leading" constant="15" id="ZJt-2d-W7V"/>
+                <constraint firstItem="4Yi-eW-d9i" firstAttribute="top" secondItem="k2e-mU-pds" secondAttribute="bottom" constant="15" id="jah-sZ-F9c"/>
+                <constraint firstItem="yHW-1M-VeK" firstAttribute="bottom" secondItem="4Yi-eW-d9i" secondAttribute="bottom" constant="50" id="xya-h4-Pno"/>
                 <constraint firstItem="z1i-uq-vUM" firstAttribute="top" secondItem="VrJ-9W-h3o" secondAttribute="top" id="z5L-ot-kAQ"/>
             </constraints>
             <point key="canvasLocation" x="2" y="-11"/>
         </view>
     </objects>
     <resources>
-        <image name="backward.end.fill" catalog="system" width="128" height="101"/>
+        <image name="filter" width="512" height="512"/>
+        <image name="logobb" width="2000" height="1125"/>
+        <image name="menu" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

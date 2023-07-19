@@ -17,7 +17,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
                 window = UIWindow(frame: windowScene.coordinateSpace.bounds)
                 window?.windowScene = windowScene
-                window?.rootViewController = FindNewVC()
+                let vc = LoginVC()
+                let navigationController = UINavigationController(rootViewController: vc) // Embed LoginVC in a navigation controller
+                window?.rootViewController = navigationController
                 window?.makeKeyAndVisible()
     }
 
