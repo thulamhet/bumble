@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4032B3FADD9709A93F5F0247 /* Pods_Bumble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C73F4B1F534CB803BBF9C /* Pods_Bumble.framework */; };
+		78092CB22A9DCE89007C6ADD /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78092CB02A9DCE89007C6ADD /* ChatVC.swift */; };
+		78092CB32A9DCE89007C6ADD /* ChatVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78092CB12A9DCE89007C6ADD /* ChatVC.xib */; };
+		78092CB62A9DD02E007C6ADD /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78092CB52A9DD02E007C6ADD /* Message.swift */; };
 		787D496E2A5BFDE900303FAA /* BaseLoadCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D496D2A5BFDE900303FAA /* BaseLoadCustomView.swift */; };
 		787D49712A5BFEAE00303FAA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D496F2A5BFEAE00303FAA /* ProfileView.swift */; };
 		787D49722A5BFEAE00303FAA /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 787D49702A5BFEAE00303FAA /* ProfileView.xib */; };
@@ -49,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		78092CB02A9DCE89007C6ADD /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		78092CB12A9DCE89007C6ADD /* ChatVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatVC.xib; sourceTree = "<group>"; };
+		78092CB52A9DD02E007C6ADD /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		787D496D2A5BFDE900303FAA /* BaseLoadCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLoadCustomView.swift; sourceTree = "<group>"; };
 		787D496F2A5BFEAE00303FAA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		787D49702A5BFEAE00303FAA /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
@@ -105,6 +111,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78092CAF2A9DCDB5007C6ADD /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				78092CB42A9DD023007C6ADD /* Model */,
+				78092CB02A9DCE89007C6ADD /* ChatVC.swift */,
+				78092CB12A9DCE89007C6ADD /* ChatVC.xib */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		78092CB42A9DD023007C6ADD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				78092CB52A9DD02E007C6ADD /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		787D49652A5BFD2500303FAA /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +215,7 @@
 		78F29AAE2A567798009D977E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				78092CAF2A9DCDB5007C6ADD /* Chat */,
 				787D496A2A5BFD7400303FAA /* Base */,
 				787D49652A5BFD2500303FAA /* CustomView */,
 				78F29AB72A567D08009D977E /* FindNewBoobies */,
@@ -352,6 +377,7 @@
 			files = (
 				78D056F32A4D3A0E00F4C7B4 /* Assets.xcassets in Resources */,
 				78F29AAD2A56726C009D977E /* CreateNewAccVC.xib in Resources */,
+				78092CB32A9DCE89007C6ADD /* ChatVC.xib in Resources */,
 				787D49722A5BFEAE00303FAA /* ProfileView.xib in Resources */,
 				78F29AC02A56800F009D977E /* FindNewVC.xib in Resources */,
 				78D0571C2A4D3AFF00F4C7B4 /* LoginVC.xib in Resources */,
@@ -433,7 +459,9 @@
 				78F29AB12A5677AF009D977E /* Contants.swift in Sources */,
 				78D056EA2A4D3A0D00F4C7B4 /* AppDelegate.swift in Sources */,
 				78D056EC2A4D3A0D00F4C7B4 /* SceneDelegate.swift in Sources */,
+				78092CB22A9DCE89007C6ADD /* ChatVC.swift in Sources */,
 				78F29ABF2A56800F009D977E /* FindNewVC.swift in Sources */,
+				78092CB62A9DD02E007C6ADD /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

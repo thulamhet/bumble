@@ -8,6 +8,9 @@ target 'Bumble' do
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Koloda'
+pod 'MessageKit'
+pod 'Scaledrone', '~> 0.3.0'
+pod 'MessageInputBar'
 
 post_install do |installer|
     installer.generated_projects.each do |project|
