@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4032B3FADD9709A93F5F0247 /* Pods_Bumble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C73F4B1F534CB803BBF9C /* Pods_Bumble.framework */; };
+		786425732AE0C821003AD08F /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786425722AE0C821003AD08F /* ProfileModel.swift */; };
 		787D496E2A5BFDE900303FAA /* BaseLoadCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D496D2A5BFDE900303FAA /* BaseLoadCustomView.swift */; };
 		787D49712A5BFEAE00303FAA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D496F2A5BFEAE00303FAA /* ProfileView.swift */; };
 		787D49722A5BFEAE00303FAA /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 787D49702A5BFEAE00303FAA /* ProfileView.xib */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		786425722AE0C821003AD08F /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		787D496D2A5BFDE900303FAA /* BaseLoadCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLoadCustomView.swift; sourceTree = "<group>"; };
 		787D496F2A5BFEAE00303FAA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		787D49702A5BFEAE00303FAA /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
@@ -105,6 +107,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		786425712AE0C815003AD08F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				786425722AE0C821003AD08F /* ProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7878A9D62AC4786B009AB3AA /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		787D49652A5BFD2500303FAA /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +208,7 @@
 		78F29AAE2A567798009D977E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				7878A9D62AC4786B009AB3AA /* Chat */,
 				787D496A2A5BFD7400303FAA /* Base */,
 				787D49652A5BFD2500303FAA /* CustomView */,
 				78F29AB72A567D08009D977E /* FindNewBoobies */,
@@ -220,6 +238,7 @@
 		78F29AB72A567D08009D977E /* FindNewBoobies */ = {
 			isa = PBXGroup;
 			children = (
+				786425712AE0C815003AD08F /* Model */,
 				78F29ABD2A56800F009D977E /* FindNewVC.swift */,
 				78F29ABE2A56800F009D977E /* FindNewVC.xib */,
 			);
@@ -422,6 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				786425732AE0C821003AD08F /* ProfileModel.swift in Sources */,
 				787D49742A5C03AD00303FAA /* UIViewEx.swift in Sources */,
 				787D496E2A5BFDE900303FAA /* BaseLoadCustomView.swift in Sources */,
 				78F29AB42A567861009D977E /* UIColorEx.swift in Sources */,

@@ -10,8 +10,14 @@ import Koloda
 
 class FindNewVC: BaseViewController {
     @IBOutlet weak var scrollView: UIView!
-    var images: [String] = ["woman1", "woman2", "woman3", "woman4", "woman5",
-                            "woman1", "woman2", "woman3", "woman4",]
+    var images: [String] = ["woman4", "woman2", "woman3", "woman4", "woman5"]
+    var listProfile: [ProfileModel] = [
+        ProfileModel(name: "Lan", school: "VNU", bio: "no nsia asdasd"),
+        ProfileModel(name: "Ngoc", school: "UET", bio: "vxc  vxc vxc v xcvxc"),
+        ProfileModel(name: "Huyen", school: "VNG", bio: "wwweq  qwqw qw "),
+        ProfileModel(name: "Cutr", school: "CCG", bio: "dassdasdasczxcdasd"),
+        ProfileModel(name: "Elizaxua", school: "WWE", bio: "dassdasdasdasd"),
+    ]
     @IBOutlet weak var kolodaView: KolodaView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +44,9 @@ extension FindNewVC: KolodaViewDataSource {
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
 //        let view = UIImageView(image: UIImage(named: images[index]))
         let view = ProfileView()
+//        view.profileImg = UIImageView(image: UIImage(named: images[index]))
+        view.updateAvt(img: UIImage(named: images[index]) ?? UIImage())
+        view.updateInfo(data: listProfile[index])
         view.layer.cornerRadius = 20
         view.clipsToBounds = true
         return view

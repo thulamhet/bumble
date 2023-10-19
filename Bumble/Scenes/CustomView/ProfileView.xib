@@ -8,7 +8,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileView" customModule="Bumble" customModuleProvider="target">
             <connections>
+                <outlet property="bioLabel" destination="hrz-3r-jel" id="9Zs-72-gnq"/>
                 <outlet property="mainView" destination="i5M-Pr-FkT" id="omm-CW-E1L"/>
+                <outlet property="nameLabel" destination="nKJ-LC-MRB" id="GYU-c3-sQm"/>
+                <outlet property="profileImg" destination="ScP-md-PGV" id="8ke-4m-3YN"/>
+                <outlet property="schoolLabel" destination="A63-PE-TPi" id="Xc5-t9-xIk"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
