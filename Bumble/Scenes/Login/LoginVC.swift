@@ -38,12 +38,10 @@ class LoginVC: UIViewController {
 //        FirebaseAuth.Auth.auth().createUser(withEmail: "a@gmail.com", password: "123456")
     }
     @IBAction func didSelectLoginBtn(_ sender: Any) {
-//        Auth.auth().signInAnonymously()
         guard let email = emailField.text, !email.isEmpty, let password = passwordField.text, !password.isEmpty else {
             print("Missing field data")
             return
         }
-        GIDSignIn.sharedInstance.signOut()
         FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { result, error in
             guard error == nil else {
                 return

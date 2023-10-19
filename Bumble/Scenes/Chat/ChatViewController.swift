@@ -17,12 +17,10 @@ import SDWebImage
 
 class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate, MessagesDataSource, MessagesLayoutDelegate, MessagesDisplayDelegate {
 
-
     var currentUser: User = Auth.auth().currentUser!
-    
-    var user2Name: String?
-    var user2ImgUrl: String?
-    var user2UID: String?
+    var user2Name: String = "gang bang"
+    var user2ImgUrl: String = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.yazio.com%2Fen&psig=AOvVaw0UJilOYiizu_6Cud2MiaPZ&ust=1697786894480000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJivmZjLgYIDFQAAAAAdAAAAABAD"
+    var user2UID: String = "GO4z7RANy6aF6kt8NoOvKFVGPc53"
     
     private var docReference: DocumentReference?
     
@@ -32,7 +30,6 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         super.viewDidLoad()
         
         self.title = user2Name ?? "Chat"
-
         navigationItem.largeTitleDisplayMode = .never
         maintainPositionOnKeyboardFrameChanged = true
         scrollsToLastItemOnKeyboardBeginsEditing = true
@@ -69,14 +66,12 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     }
     
     func loadChat() {
-        
         //Fetch all the chats which has current user in it
         let db = Firestore.firestore().collection("Chats")
                 .whereField("users", arrayContains: Auth.auth().currentUser?.uid ?? "Not Found User 1")
         
         
         db.getDocuments { (chatQuerySnap, error) in
-            
             if let error = error {
                 print("Error: \(error)")
                 return
@@ -91,48 +86,42 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
                     //If documents count is zero that means there is no chat available and we need to create a new instance
                     self.createNewChat()
                 }
-//                else if queryCount >= 1 {
-//                    //Chat(s) found for currentUser
-//                    for doc in chatQuerySnap!.documents {
-//                        
-//                        let chat = Chat(dictionary: doc.data())
-//                        //Get the chat which has user2 id
-//                        if (chat?.users.contains(self.user2UID!))! {
-//                            
-//                            self.docReference = doc.reference
-//                            //fetch it's thread collection
-//                             doc.reference.collection("thread")
-//                                .order(by: "created", descending: false)
-//                                .addSnapshotListener(includeMetadataChanges: true, listener: { (threadQuery, error) in
-//                            if let error = error {
-//                                print("Error: \(error)")
-//                                return
-//                            } else {
-//                                self.messages.removeAll()
-//                                    for message in threadQuery!.documents {
-//
-//                                        let msg = Message(dictionary: message.data())
-//                                        self.messages.append(msg!)
-//                                        print("Data: \(msg?.content ?? "No message found")")
-//                                    }
-//                                self.messagesCollectionView.reloadData()
-//                                self.messagesCollectionView.scrollToLastItem(at: .bottom, animated: true)
-//                            }
-//                            })
-//                            return
-//                        } //end of if
-//                    } //end of for
-//                    self.createNewChat()
-//                } else {
-//                    print("Let's hope this error never prints!")
-//                }
+                else if queryCount >= 1 {
+                    //Chat(s) found for currentUser
+                    for doc in chatQuerySnap!.documents {
+                        let chat = Chat(dictionary: doc.data())
+                        //Get the chat which has user2 id
+                        if ((chat?.users.contains(self.user2UID)) != nil) {
+//                        if (true) {
+                            self.docReference = doc.reference
+                            //fetch it's thread collection
+                             doc.reference.collection("thread")
+                                .order(by: "created", descending: false)
+                                .addSnapshotListener(includeMetadataChanges: true, listener: { (threadQuery, error) in
+                            if let error = error {
+                                print("Error: \(error)")
+                                return
+                            } else {
+                                self.messages.removeAll()
+                                    for message in threadQuery!.documents {
+                                        let msg = Message(dictionary: message.data())
+                                        self.messages.append(msg ?? Message(id: "123", content: "No message found", created: Date(), senderID: "123", senderName: "nihao"))
+                                    }
+                                self.messagesCollectionView.reloadData()
+                                self.messagesCollectionView.scrollToLastItem(at: .bottom, animated: true)
+                            }
+                            })
+                            return
+                        } //end of if
+                    } //end of for
+                    self.createNewChat()
+                }
             }
         }
     }
     
     
     private func insertNewMessage(_ message: Message) {
-        
         messages.append(message)
         messagesCollectionView.reloadData()
         
@@ -142,7 +131,6 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     }
     
     private func save(_ message: Message) {
-        
         let data: [String: Any] = [
             "content": message.content,
             "created": message.created,
@@ -152,7 +140,6 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         ]
         
         docReference?.collection("thread").addDocument(data: data, completion: { (error) in
-            
             if let error = error {
                 print("Error Sending message: \(error)")
                 return
@@ -166,9 +153,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     // MARK: - InputBarAccessoryViewDelegate
     
             func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
-
                 let message = Message(id: UUID().uuidString, content: text, created: Date(), senderID: currentUser.uid, senderName: currentUser.displayName ?? "thu")
-                
                   //messages.append(message)
                   insertNewMessage(message)
                   save(message)
@@ -181,19 +166,16 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     
     // MARK: - MessagesDataSource
     func currentSender() -> SenderType {
-        
         return Sender(id: Auth.auth().currentUser!.uid, displayName: Auth.auth().currentUser?.displayName ?? "Name not found")
         
     }
     
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
-        
         return messages[indexPath.section]
         
     }
     
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
-        
         if messages.count == 0 {
             print("No messages to display")
             return 0
@@ -201,7 +183,6 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
             return messages.count
         }
     }
-    
     
     // MARK: - MessagesLayoutDelegate
     
@@ -215,23 +196,20 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     }
 
     func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
-        
         if message.sender.senderId == currentUser.uid {
             SDWebImageManager.shared.loadImage(with: currentUser.photoURL, options: .highPriority, progress: nil) { (image, data, error, cacheType, isFinished, imageUrl) in
                 avatarView.image = image
             }
         } else {
-            SDWebImageManager.shared.loadImage(with: URL(string: user2ImgUrl!), options: .highPriority, progress: nil) { (image, data, error, cacheType, isFinished, imageUrl) in
+            SDWebImageManager.shared.loadImage(with: URL(string: user2ImgUrl), options: .highPriority, progress: nil) { (image, data, error, cacheType, isFinished, imageUrl) in
                 avatarView.image = image
             }
         }
     }
 
     func messageStyle(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageStyle {
-
         let corner: MessageStyle.TailCorner = isFromCurrentSender(message: message) ? .bottomRight: .bottomLeft
         return .bubbleTail(corner, .curved)
-
     }
     
 }

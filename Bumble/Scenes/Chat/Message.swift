@@ -28,12 +28,11 @@ struct Message {
 
 extension Message {
     init?(dictionary: [String: Any]) {
-        guard let id = dictionary["id"] as? String,
-              let content = dictionary["content"] as? String,
-              let created = dictionary["created"] as? Date,
-              let senderID = dictionary["senderID"] as? String,
-              let senderName = dictionary["senderName"] as? String
-        else {return nil}
+        let id = dictionary["id"] as? String ?? ""
+        let content = dictionary["content"] as? String ?? ""
+        let created = dictionary["created"] as? Date ?? Date()
+        let senderID = dictionary["senderID"] as? String ?? ""
+        let senderName = dictionary["senderName"] as? String ?? ""
         self.init(id: id, content: content, created: created, senderID: senderID, senderName:senderName)
     }
 }
