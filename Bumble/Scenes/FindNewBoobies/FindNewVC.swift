@@ -42,18 +42,22 @@ extension FindNewVC: KolodaViewDataSource {
     }
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-//        let view = UIImageView(image: UIImage(named: images[index]))
         let view = ProfileView()
-//        view.profileImg = UIImageView(image: UIImage(named: images[index]))
         view.updateAvt(img: UIImage(named: images[index]) ?? UIImage())
         view.updateInfo(data: listProfile[index])
+        view.performLike = {
+            self.kolodaView.swipe(.left)
+        }
+        view.performDislike = {
+            self.kolodaView.swipe(.right)
+        }
         view.layer.cornerRadius = 20
         view.clipsToBounds = true
         return view
     }
     
     func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
-        return .fast
+        return .slow
     }
 }
 

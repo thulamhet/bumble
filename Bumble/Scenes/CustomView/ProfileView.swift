@@ -12,7 +12,8 @@ class ProfileView: BaseLoadCustomView {
     @IBOutlet weak var bioLabel: UILabel!
     @IBOutlet weak var schoolLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    
+    var performLike: (() -> Void)?
+    var performDislike: (() -> Void)?
     override func layoutSubviews() {
         super.layoutSubviews()
     }
@@ -26,5 +27,15 @@ class ProfileView: BaseLoadCustomView {
         schoolLabel.text = data.school
         nameLabel.text = data.name
     }
-
+    
+    
+    @IBAction func didSelectButtonDislike(_ sender: Any) {
+        performLike?()
+    }
+    
+    
+    @IBAction func didSelectButtonLike(_ sender: Any) {
+        performDislike?()
+    }
+    
 }
