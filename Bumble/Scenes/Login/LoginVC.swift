@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import GoogleSignIn
 
 class LoginVC: UIViewController {
     @IBOutlet weak var loginView: UIView!
@@ -37,7 +38,6 @@ class LoginVC: UIViewController {
 //        FirebaseAuth.Auth.auth().createUser(withEmail: "a@gmail.com", password: "123456")
     }
     @IBAction func didSelectLoginBtn(_ sender: Any) {
-//        Auth.auth().signInAnonymously()
         guard let email = emailField.text, !email.isEmpty, let password = passwordField.text, !password.isEmpty else {
             print("Missing field data")
             return
@@ -47,7 +47,8 @@ class LoginVC: UIViewController {
                 return
             }
             print("You have signed in")
-            let vc = FindNewVC()
+//            let vc = FindNewVC()
+            let vc = ChatViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         })
     }

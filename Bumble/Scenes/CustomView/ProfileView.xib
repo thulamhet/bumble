@@ -8,7 +8,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileView" customModule="Bumble" customModuleProvider="target">
             <connections>
+                <outlet property="bioLabel" destination="hrz-3r-jel" id="9Zs-72-gnq"/>
                 <outlet property="mainView" destination="i5M-Pr-FkT" id="omm-CW-E1L"/>
+                <outlet property="nameLabel" destination="nKJ-LC-MRB" id="GYU-c3-sQm"/>
+                <outlet property="profileImg" destination="ScP-md-PGV" id="8ke-4m-3YN"/>
+                <outlet property="schoolLabel" destination="A63-PE-TPi" id="Xc5-t9-xIk"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -129,19 +133,50 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="t88-Fw-iO2"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="I8K-Df-bGt"/>
                 </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQv-ec-BI7">
+                    <rect key="frame" x="15" y="661" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="7kb-66-Jtc"/>
+                        <constraint firstAttribute="height" constant="60" id="DgL-dI-oyw"/>
+                        <constraint firstAttribute="width" constant="60" id="pHd-ij-ujT"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="tB3-L5-PcF"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="doc.text" catalog="system"/>
+                    <connections>
+                        <action selector="didSelectButtonDislike:" destination="-1" eventType="touchUpInside" id="2Iy-Xp-y7i"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyF-vE-kFL">
+                    <rect key="frame" x="339" y="661" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="KXY-aI-YlU"/>
+                        <constraint firstAttribute="height" constant="60" id="Thw-dC-QgN"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="doc.text" catalog="system"/>
+                    <connections>
+                        <action selector="didSelectButtonLike:" destination="-1" eventType="touchUpInside" id="l6g-cr-ZSV"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="0.79509460034013602" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="pkj-c1-mWm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HQ6-fr-G1J"/>
+                <constraint firstItem="CQv-ec-BI7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="Jv2-In-1Vb"/>
+                <constraint firstAttribute="bottom" secondItem="kyF-vE-kFL" secondAttribute="bottom" constant="15" id="ODa-ka-pCt"/>
                 <constraint firstAttribute="trailing" secondItem="pkj-c1-mWm" secondAttribute="trailing" id="SJv-JE-gDV"/>
                 <constraint firstAttribute="bottom" secondItem="pkj-c1-mWm" secondAttribute="bottom" id="YhN-Ui-4ga"/>
                 <constraint firstItem="pkj-c1-mWm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bg0-nK-jxf"/>
+                <constraint firstAttribute="bottom" secondItem="CQv-ec-BI7" secondAttribute="bottom" constant="15" id="poE-bu-cZL"/>
+                <constraint firstAttribute="trailing" secondItem="kyF-vE-kFL" secondAttribute="trailing" constant="15" id="spp-vB-gPG"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="131.8840579710145" y="-11.413043478260871"/>
         </view>
     </objects>
     <resources>
+        <image name="doc.text" catalog="system" width="115" height="128"/>
         <image name="hat" width="80" height="80"/>
         <image name="woman6" width="1920" height="1080"/>
     </resources>

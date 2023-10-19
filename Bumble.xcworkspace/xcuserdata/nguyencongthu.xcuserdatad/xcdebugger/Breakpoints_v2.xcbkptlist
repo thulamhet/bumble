@@ -7,64 +7,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E5767711-33F7-44F9-B583-C8C070C5CF40"
+            uuid = "343CDEAF-BE84-4400-BA04-58A85FD3E91B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Bumble/Scenes/Login/LoginVC.swift"
+            filePath = "Bumble/Scenes/FindNewBoobies/FindNewVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "didSelectLoginBtn(_:)"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "koloda(_:viewForCardAt:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E5767711-33F7-44F9-B583-C8C070C5CF40 - 9bf126b513693fba"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bumble.LoginVC.didSelectLoginBtn(Any) -&gt; ()"
-                  moduleName = "Bumble"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyencongthu/IOS%20project/Bumble/Bumble/Scenes/Login/LoginVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "1208">
-               </Location>
-               <Location
-                  uuid = "E5767711-33F7-44F9-B583-C8C070C5CF40 - afd7f21fdb1f8564"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Bumble.LoginVC.didSelectLoginBtn(Any) -&gt; ()"
-                  moduleName = "Bumble"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyencongthu/IOS%20project/Bumble/Bumble/Scenes/Login/LoginVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "156">
-               </Location>
-               <Location
-                  uuid = "E5767711-33F7-44F9-B583-C8C070C5CF40 - afd7f21fdb1f8564"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Bumble.LoginVC.didSelectLoginBtn(Any) -&gt; ()"
-                  moduleName = "Bumble"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyencongthu/IOS%20project/Bumble/Bumble/Scenes/Login/LoginVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "344">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "512B183B-5BD0-4EF3-86C4-0E359F73A034"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bumble/Scenes/FindNewBoobies/FindNewVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "kolodaSpeedThatCardShouldDrag(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2C57585E-7D1A-4445-B4A4-9AD65F34483E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bumble/Scenes/Chat/ChatViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "save(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FC493C07-7576-4BF3-8AAE-19A798D5EB43"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bumble/Scenes/Chat/ChatViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "loadChat()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
