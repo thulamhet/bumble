@@ -14,6 +14,11 @@
 		787D49722A5BFEAE00303FAA /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 787D49702A5BFEAE00303FAA /* ProfileView.xib */; };
 		787D49742A5C03AD00303FAA /* UIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D49732A5C03AD00303FAA /* UIViewEx.swift */; };
 		787FB53F2A67DA1000491254 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787FB53E2A67DA1000491254 /* BaseViewController.swift */; };
+		789670092AE0DAA000B0508F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789670072AE0DAA000B0508F /* ChatViewController.swift */; };
+		7896700A2AE0DAA000B0508F /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 789670082AE0DAA000B0508F /* ChatViewController.xib */; };
+		7896700C2AE0DB9E00B0508F /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896700B2AE0DB9E00B0508F /* Chat.swift */; };
+		7896700E2AE0DBA900B0508F /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896700D2AE0DBA900B0508F /* ChatUser.swift */; };
+		789670102AE0DBBE00B0508F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896700F2AE0DBBE00B0508F /* Message.swift */; };
 		78D056EA2A4D3A0D00F4C7B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D056E92A4D3A0D00F4C7B4 /* AppDelegate.swift */; };
 		78D056EC2A4D3A0D00F4C7B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D056EB2A4D3A0D00F4C7B4 /* SceneDelegate.swift */; };
 		78D056F32A4D3A0E00F4C7B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78D056F22A4D3A0E00F4C7B4 /* Assets.xcassets */; };
@@ -56,6 +61,11 @@
 		787D49702A5BFEAE00303FAA /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
 		787D49732A5C03AD00303FAA /* UIViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewEx.swift; sourceTree = "<group>"; };
 		787FB53E2A67DA1000491254 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		789670072AE0DAA000B0508F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		789670082AE0DAA000B0508F /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		7896700B2AE0DB9E00B0508F /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		7896700D2AE0DBA900B0508F /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
+		7896700F2AE0DBBE00B0508F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		78D056E62A4D3A0D00F4C7B4 /* Bumble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bumble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D056E92A4D3A0D00F4C7B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78D056EB2A4D3A0D00F4C7B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +128,11 @@
 		7878A9D62AC4786B009AB3AA /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				789670072AE0DAA000B0508F /* ChatViewController.swift */,
+				789670082AE0DAA000B0508F /* ChatViewController.xib */,
+				7896700B2AE0DB9E00B0508F /* Chat.swift */,
+				7896700D2AE0DBA900B0508F /* ChatUser.swift */,
+				7896700F2AE0DBBE00B0508F /* Message.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -371,6 +386,7 @@
 			files = (
 				78D056F32A4D3A0E00F4C7B4 /* Assets.xcassets in Resources */,
 				78F29AAD2A56726C009D977E /* CreateNewAccVC.xib in Resources */,
+				7896700A2AE0DAA000B0508F /* ChatViewController.xib in Resources */,
 				787D49722A5BFEAE00303FAA /* ProfileView.xib in Resources */,
 				78F29AC02A56800F009D977E /* FindNewVC.xib in Resources */,
 				78D0571C2A4D3AFF00F4C7B4 /* LoginVC.xib in Resources */,
@@ -444,15 +460,19 @@
 				786425732AE0C821003AD08F /* ProfileModel.swift in Sources */,
 				787D49742A5C03AD00303FAA /* UIViewEx.swift in Sources */,
 				787D496E2A5BFDE900303FAA /* BaseLoadCustomView.swift in Sources */,
+				789670102AE0DBBE00B0508F /* Message.swift in Sources */,
 				78F29AB42A567861009D977E /* UIColorEx.swift in Sources */,
 				787D49712A5BFEAE00303FAA /* ProfileView.swift in Sources */,
 				78D0571B2A4D3AFF00F4C7B4 /* LoginVC.swift in Sources */,
 				787FB53F2A67DA1000491254 /* BaseViewController.swift in Sources */,
 				78F29AAC2A56726C009D977E /* CreateNewAccVC.swift in Sources */,
+				7896700E2AE0DBA900B0508F /* ChatUser.swift in Sources */,
 				78F29AB62A567875009D977E /* StringEx.swift in Sources */,
 				78F29AB12A5677AF009D977E /* Contants.swift in Sources */,
+				789670092AE0DAA000B0508F /* ChatViewController.swift in Sources */,
 				78D056EA2A4D3A0D00F4C7B4 /* AppDelegate.swift in Sources */,
 				78D056EC2A4D3A0D00F4C7B4 /* SceneDelegate.swift in Sources */,
+				7896700C2AE0DB9E00B0508F /* Chat.swift in Sources */,
 				78F29ABF2A56800F009D977E /* FindNewVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

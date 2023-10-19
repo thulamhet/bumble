@@ -6,7 +6,9 @@
 //
 
 import UIKit
-
+import InputBarAccessoryView
+import Firebase
+import MessageKit
 class ProfileView: BaseLoadCustomView {
     @IBOutlet var profileImg: UIImageView!
     @IBOutlet weak var bioLabel: UILabel!

@@ -8,7 +8,10 @@ target 'Bumble' do
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Koloda'
-
+pod 'MessageKit'
+pod 'Firebase/Firestore'
+pod 'SDWebImage'
+pod 'GoogleSignIn'
 post_install do |installer|
     installer.generated_projects.each do |project|
           project.targets.each do |target|

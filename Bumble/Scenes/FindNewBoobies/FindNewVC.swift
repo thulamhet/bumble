@@ -7,7 +7,6 @@
 
 import UIKit
 import Koloda
-
 class FindNewVC: BaseViewController {
     @IBOutlet weak var scrollView: UIView!
     var images: [String] = ["woman4", "woman2", "woman3", "woman4", "woman5"]
