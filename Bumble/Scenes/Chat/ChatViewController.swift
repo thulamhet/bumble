@@ -7,8 +7,6 @@
 
 import UIKit
 import MessageKit
-
-import UIKit
 import InputBarAccessoryView
 import Firebase
 import MessageKit
@@ -16,10 +14,9 @@ import FirebaseFirestore
 import SDWebImage
 
 class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate, MessagesDataSource, MessagesLayoutDelegate, MessagesDisplayDelegate {
-
     var currentUser: User = Auth.auth().currentUser!
-    var user2Name: String = "gang bang"
-    var user2ImgUrl: String = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.yazio.com%2Fen&psig=AOvVaw0UJilOYiizu_6Cud2MiaPZ&ust=1697786894480000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJivmZjLgYIDFQAAAAAdAAAAABAD"
+    var user2Name: String = "Wiliam"
+    var user2ImgUrl: String = "https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=1200&quality=85&auto=format&fit=max&s=a52bbe202f57ac0f5ff7f47166906403"
     var user2UID: String = "GO4z7RANy6aF6kt8NoOvKFVGPc53"
     
     private var docReference: DocumentReference?
@@ -29,7 +26,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = user2Name ?? "Chat"
+        self.title = "Chat"
         navigationItem.largeTitleDisplayMode = .never
         maintainPositionOnKeyboardFrameChanged = true
         scrollsToLastItemOnKeyboardBeginsEditing = true
@@ -43,7 +40,6 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         messagesCollectionView.messagesDisplayDelegate = self
         
         loadChat()
-        
     }
     
     // MARK: - Custom messages handlers
@@ -70,18 +66,15 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         let db = Firestore.firestore().collection("Chats")
                 .whereField("users", arrayContains: Auth.auth().currentUser?.uid ?? "Not Found User 1")
         
-        
         db.getDocuments { (chatQuerySnap, error) in
             if let error = error {
                 print("Error: \(error)")
                 return
             } else {
-                
                 //Count the no. of documents returned
                 guard let queryCount = chatQuerySnap?.documents.count else {
                     return
                 }
-                
                 if queryCount == 0 {
                     //If documents count is zero that means there is no chat available and we need to create a new instance
                     self.createNewChat()
@@ -119,7 +112,6 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
             }
         }
     }
-    
     
     private func insertNewMessage(_ message: Message) {
         messages.append(message)
@@ -192,7 +184,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     
     // MARK: - MessagesDisplayDelegate
     func backgroundColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
-        return isFromCurrentSender(message: message) ? .blue: .lightGray
+        return isFromCurrentSender(message: message) ? .orange : .lightGray
     }
 
     func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {

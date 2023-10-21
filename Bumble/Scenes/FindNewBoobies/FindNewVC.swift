@@ -9,7 +9,7 @@ import UIKit
 import Koloda
 class FindNewVC: BaseViewController {
     @IBOutlet weak var scrollView: UIView!
-    var images: [String] = ["woman4", "woman2", "woman3", "woman4", "woman5"]
+    var images: [String] = ["woman7", "woman2", "woman3", "woman7", "woman5"]
     var listProfile: [ProfileModel] = [
         ProfileModel(name: "Lan", school: "VNU", bio: "no nsia asdasd"),
         ProfileModel(name: "Ngoc", school: "UET", bio: "vxc  vxc vxc v xcvxc"),
@@ -33,6 +33,13 @@ class FindNewVC: BaseViewController {
     @IBAction func didSelectButtonBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func didSelectMessageButton(_ sender: Any) {
+        let vc = ListMessageVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
 }
 
 extension FindNewVC: KolodaViewDataSource {

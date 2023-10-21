@@ -31,13 +31,13 @@
                             <rect key="frame" x="15" y="250" width="384" height="250"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bE-F4-RfI">
-                                    <rect key="frame" x="15" y="10" width="354" height="32.5"/>
-                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="25"/>
+                                    <rect key="frame" x="15" y="10" width="354" height="34.5"/>
+                                    <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="25"/>
                                     <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="a@gmail.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tnq-Oa-Ex0">
-                                    <rect key="frame" x="15" y="62.5" width="354" height="40"/>
+                                    <rect key="frame" x="15" y="64.5" width="354" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="gp9-U5-BmO"/>
                                     </constraints>
@@ -45,7 +45,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZRc-0u-WAZ">
-                                    <rect key="frame" x="15" y="122.5" width="354" height="40"/>
+                                    <rect key="frame" x="15" y="124.5" width="354" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="4Np-lX-QaS"/>
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="OmM-gJ-SFr"/>
@@ -54,7 +54,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAg-Pu-q8x">
-                                    <rect key="frame" x="117" y="192.5" width="150" height="50"/>
+                                    <rect key="frame" x="117" y="194.5" width="150" height="50"/>
                                     <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="ECi-zs-zlY"/>
@@ -74,7 +74,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3oV-EQ-MiX">
-                                    <rect key="frame" x="15" y="200" width="82" height="40"/>
+                                    <rect key="frame" x="15" y="202" width="82" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="SYu-v8-Vq5"/>
                                     </constraints>

@@ -17,7 +17,7 @@ class LoginVC: UIViewController {
      
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.container.backgroundColor = UIColor(patternImage: UIImage(named: "background.jpg")!)
+        self.container.backgroundColor = UIColor(patternImage: UIImage(named: "background2.jpg")!)
         setupUI()
     }
     
@@ -42,13 +42,18 @@ class LoginVC: UIViewController {
             print("Missing field data")
             return
         }
+        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+        changeRequest?.displayName = "Ngoc trinh"
+        changeRequest?.photoURL = URL(string: "https://people.com/thmb/f96tuDus6iHbftSvPZjYpMAsTCk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(777x504:779x506)/petting-dog-080323-1-b4440cd8468c4242b3a707dbcb415120.jpg")
+        changeRequest?.commitChanges { error in
+        }
         FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { result, error in
             guard error == nil else {
                 return
             }
             print("You have signed in")
-//            let vc = FindNewVC()
-            let vc = ChatViewController()
+            let vc = FindNewVC()
+//            let vc = ChatViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         })
     }

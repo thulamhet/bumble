@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4032B3FADD9709A93F5F0247 /* Pods_Bumble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C73F4B1F534CB803BBF9C /* Pods_Bumble.framework */; };
+		781381D02AE3C08100FDB6F0 /* ListMessageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 781381CF2AE3C08100FDB6F0 /* ListMessageVC.xib */; };
 		786425732AE0C821003AD08F /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786425722AE0C821003AD08F /* ProfileModel.swift */; };
 		787D496E2A5BFDE900303FAA /* BaseLoadCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D496D2A5BFDE900303FAA /* BaseLoadCustomView.swift */; };
 		787D49712A5BFEAE00303FAA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D496F2A5BFEAE00303FAA /* ProfileView.swift */; };
@@ -19,6 +20,9 @@
 		7896700C2AE0DB9E00B0508F /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896700B2AE0DB9E00B0508F /* Chat.swift */; };
 		7896700E2AE0DBA900B0508F /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896700D2AE0DBA900B0508F /* ChatUser.swift */; };
 		789670102AE0DBBE00B0508F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896700F2AE0DBBE00B0508F /* Message.swift */; };
+		78B31E682AE3BBAE0074FEBE /* ListMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B31E662AE3BBAE0074FEBE /* ListMessageVC.swift */; };
+		78B31E712AE3BEB50074FEBE /* MatchQueueCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B31E6F2AE3BEB50074FEBE /* MatchQueueCollectionViewCell.swift */; };
+		78B31E722AE3BEB50074FEBE /* MatchQueueCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78B31E702AE3BEB50074FEBE /* MatchQueueCollectionViewCell.xib */; };
 		78D056EA2A4D3A0D00F4C7B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D056E92A4D3A0D00F4C7B4 /* AppDelegate.swift */; };
 		78D056EC2A4D3A0D00F4C7B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D056EB2A4D3A0D00F4C7B4 /* SceneDelegate.swift */; };
 		78D056F32A4D3A0E00F4C7B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78D056F22A4D3A0E00F4C7B4 /* Assets.xcassets */; };
@@ -55,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		781381CF2AE3C08100FDB6F0 /* ListMessageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListMessageVC.xib; sourceTree = "<group>"; };
 		786425722AE0C821003AD08F /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		787D496D2A5BFDE900303FAA /* BaseLoadCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLoadCustomView.swift; sourceTree = "<group>"; };
 		787D496F2A5BFEAE00303FAA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -66,6 +71,9 @@
 		7896700B2AE0DB9E00B0508F /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		7896700D2AE0DBA900B0508F /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
 		7896700F2AE0DBBE00B0508F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		78B31E662AE3BBAE0074FEBE /* ListMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMessageVC.swift; sourceTree = "<group>"; };
+		78B31E6F2AE3BEB50074FEBE /* MatchQueueCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchQueueCollectionViewCell.swift; sourceTree = "<group>"; };
+		78B31E702AE3BEB50074FEBE /* MatchQueueCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchQueueCollectionViewCell.xib; sourceTree = "<group>"; };
 		78D056E62A4D3A0D00F4C7B4 /* Bumble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bumble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D056E92A4D3A0D00F4C7B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78D056EB2A4D3A0D00F4C7B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,11 +136,9 @@
 		7878A9D62AC4786B009AB3AA /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				78B31E6C2AE3BBC30074FEBE /* Model */,
 				789670072AE0DAA000B0508F /* ChatViewController.swift */,
 				789670082AE0DAA000B0508F /* ChatViewController.xib */,
-				7896700B2AE0DB9E00B0508F /* Chat.swift */,
-				7896700D2AE0DBA900B0508F /* ChatUser.swift */,
-				7896700F2AE0DBBE00B0508F /* Message.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -153,6 +159,35 @@
 				787FB53E2A67DA1000491254 /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		78B31E6C2AE3BBC30074FEBE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7896700B2AE0DB9E00B0508F /* Chat.swift */,
+				7896700D2AE0DBA900B0508F /* ChatUser.swift */,
+				7896700F2AE0DBBE00B0508F /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		78B31E6D2AE3BCCF0074FEBE /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				78B31E6E2AE3BE900074FEBE /* Cell */,
+				781381CF2AE3C08100FDB6F0 /* ListMessageVC.xib */,
+				78B31E662AE3BBAE0074FEBE /* ListMessageVC.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		78B31E6E2AE3BE900074FEBE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				78B31E6F2AE3BEB50074FEBE /* MatchQueueCollectionViewCell.swift */,
+				78B31E702AE3BEB50074FEBE /* MatchQueueCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		78D056DD2A4D3A0D00F4C7B4 = {
@@ -223,6 +258,7 @@
 		78F29AAE2A567798009D977E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				78B31E6D2AE3BCCF0074FEBE /* Message */,
 				7878A9D62AC4786B009AB3AA /* Chat */,
 				787D496A2A5BFD7400303FAA /* Base */,
 				787D49652A5BFD2500303FAA /* CustomView */,
@@ -384,10 +420,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				781381D02AE3C08100FDB6F0 /* ListMessageVC.xib in Resources */,
 				78D056F32A4D3A0E00F4C7B4 /* Assets.xcassets in Resources */,
 				78F29AAD2A56726C009D977E /* CreateNewAccVC.xib in Resources */,
 				7896700A2AE0DAA000B0508F /* ChatViewController.xib in Resources */,
 				787D49722A5BFEAE00303FAA /* ProfileView.xib in Resources */,
+				78B31E722AE3BEB50074FEBE /* MatchQueueCollectionViewCell.xib in Resources */,
 				78F29AC02A56800F009D977E /* FindNewVC.xib in Resources */,
 				78D0571C2A4D3AFF00F4C7B4 /* LoginVC.xib in Resources */,
 				78F29AA82A566E03009D977E /* GoogleService-Info.plist in Resources */,
@@ -457,8 +495,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78B31E682AE3BBAE0074FEBE /* ListMessageVC.swift in Sources */,
 				786425732AE0C821003AD08F /* ProfileModel.swift in Sources */,
 				787D49742A5C03AD00303FAA /* UIViewEx.swift in Sources */,
+				78B31E712AE3BEB50074FEBE /* MatchQueueCollectionViewCell.swift in Sources */,
 				787D496E2A5BFDE900303FAA /* BaseLoadCustomView.swift in Sources */,
 				789670102AE0DBBE00B0508F /* Message.swift in Sources */,
 				78F29AB42A567861009D977E /* UIColorEx.swift in Sources */,
