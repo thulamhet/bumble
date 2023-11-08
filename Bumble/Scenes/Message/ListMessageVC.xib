@@ -38,6 +38,9 @@
                             <color key="tintColor" name="label"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="arrow.backward" catalog="system"/>
+                            <connections>
+                                <action selector="didSelectButtonBack:" destination="-1" eventType="touchUpInside" id="7oC-Ur-70Q"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -92,7 +95,55 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R0A-ME-PLM">
                     <rect key="frame" x="0.0" y="230" width="390" height="614"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bN5-W9-fkk">
+                            <rect key="frame" x="20" y="50" width="80" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="4s7-Pj-owu"/>
+                                <constraint firstAttribute="height" constant="80" id="Pgx-iq-efQ"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <connections>
+                                <action selector="didTemp:" destination="-1" eventType="touchUpInside" id="f74-aU-sJS"/>
+                            </connections>
+                        </button>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woman14" translatesAutoresizingMaskIntoConstraints="NO" id="kCh-LV-xkF">
+                            <rect key="frame" x="15" y="50" width="80" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="FpR-kd-vIY"/>
+                                <constraint firstAttribute="height" constant="80" id="mVM-cK-ZgK"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="40"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elena" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lnc-mi-PUZ">
+                            <rect key="frame" x="104" y="55" width="44" height="21"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello sweetie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzS-mU-QlD">
+                            <rect key="frame" x="105" y="91" width="102" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" name="avatarViewBackground"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Lnc-mi-PUZ" firstAttribute="top" secondItem="R0A-ME-PLM" secondAttribute="top" constant="55" id="2xD-ui-8tI"/>
+                        <constraint firstItem="XzS-mU-QlD" firstAttribute="top" secondItem="Lnc-mi-PUZ" secondAttribute="bottom" constant="15" id="8Vk-A2-MWI"/>
+                        <constraint firstItem="XzS-mU-QlD" firstAttribute="leading" secondItem="kCh-LV-xkF" secondAttribute="trailing" constant="10" id="Fom-jv-NQC"/>
+                        <constraint firstItem="kCh-LV-xkF" firstAttribute="top" secondItem="R0A-ME-PLM" secondAttribute="top" constant="50" id="JL0-Nr-zVa"/>
+                        <constraint firstItem="kCh-LV-xkF" firstAttribute="leading" secondItem="R0A-ME-PLM" secondAttribute="leading" constant="15" id="Lo4-B7-O99"/>
+                        <constraint firstItem="bN5-W9-fkk" firstAttribute="top" secondItem="R0A-ME-PLM" secondAttribute="top" constant="50" id="eXW-L9-KoA"/>
+                        <constraint firstItem="Lnc-mi-PUZ" firstAttribute="leading" secondItem="kCh-LV-xkF" secondAttribute="trailing" constant="9" id="gtF-aa-9ZF"/>
+                        <constraint firstItem="bN5-W9-fkk" firstAttribute="leading" secondItem="R0A-ME-PLM" secondAttribute="leading" constant="20" id="lY4-zq-k2N"/>
+                    </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chats (Recent)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLb-KC-EYz">
                     <rect key="frame" x="14.999999999999993" y="245" width="117.33333333333331" height="21"/>
@@ -124,6 +175,10 @@
     </objects>
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
+        <image name="woman14" width="540" height="360"/>
+        <namedColor name="avatarViewBackground">
+            <color red="0.55699998140335083" green="0.55699998140335083" blue="0.57599997520446777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="label">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </namedColor>

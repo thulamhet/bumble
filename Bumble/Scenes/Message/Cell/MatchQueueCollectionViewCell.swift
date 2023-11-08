@@ -8,14 +8,14 @@
 import UIKit
 
 class MatchQueueCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var avtImage: UIImageView!
     
+    @IBOutlet weak var image: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func setupCell (_ img: UIImage) {
-        avtImage.image = img
+    func setupCell (_ img: String) {
+        image.image = UIImage(named: img)
     }
 
 }

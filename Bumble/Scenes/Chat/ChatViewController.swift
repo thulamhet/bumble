@@ -25,12 +25,10 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.title = "Chat"
-        navigationItem.largeTitleDisplayMode = .never
         maintainPositionOnKeyboardFrameChanged = true
         scrollsToLastItemOnKeyboardBeginsEditing = true
-
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         messageInputBar.inputTextView.tintColor = .systemBlue
         messageInputBar.sendButton.setTitleColor(.systemTeal, for: .normal)
         
@@ -40,6 +38,12 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         messagesCollectionView.messagesDisplayDelegate = self
         
         loadChat()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     // MARK: - Custom messages handlers

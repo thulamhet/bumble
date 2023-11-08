@@ -10,12 +10,13 @@ import Koloda
 class FindNewVC: BaseViewController {
     @IBOutlet weak var scrollView: UIView!
     var images: [String] = ["woman7", "woman2", "woman3", "woman7", "woman5"]
+    let bio: String = "If you’re truly stumped on how to describe yourself or your interests, ask your friends or family what key things they think a date should know about you. They won’t overthink it in the same way you might. Maybe they’ll say that a match needs to know how much time you spend working out, so you might then write something like, “Looking for someone who enjoys gym dates” in your bio. "
     var listProfile: [ProfileModel] = [
-        ProfileModel(name: "Lan", school: "VNU", bio: "no nsia asdasd"),
-        ProfileModel(name: "Ngoc", school: "UET", bio: "vxc  vxc vxc v xcvxc"),
-        ProfileModel(name: "Huyen", school: "VNG", bio: "wwweq  qwqw qw "),
-        ProfileModel(name: "Cutr", school: "CCG", bio: "dassdasdasczxcdasd"),
-        ProfileModel(name: "Elizaxua", school: "WWE", bio: "dassdasdasdasd"),
+        ProfileModel(name: "Lan", school: "VNU", bio: "If you’re truly stumped on how to describe yourself or your interests, ask your friends or family what key things they think a date should know about you. They won’t overthink it in the same way you might.  "),
+        ProfileModel(name: "Ngoc", school: "UET", bio: "If you’re truly stumped on how to describe yourself or your interests, ask your friends or family what key things they think a date should know about you. They won’t overthink it in the same way you might."),
+        ProfileModel(name: "Huyen", school: "VNG", bio: "If you’re truly stumped on how to describe yourself or your interests, ask your friends or family what key things they think a date should know about you. They won’t overthink it in the same way you might."),
+        ProfileModel(name: "Cutr", school: "CCG", bio: "If you’re truly stumped on how to describe yourself or your interests, ask your friends or family what key things they think a date should know about you. They won’t overthink it in the same way you might."),
+        ProfileModel(name: "Elizaxua", school: "WWE", bio: "If you’re truly stumped on how to describe yourself or your interests, ask your friends or family what key things they think a date should know about you. They won’t overthink it in the same way you might."),
     ]
     @IBOutlet weak var kolodaView: KolodaView!
     override func viewDidLoad() {
