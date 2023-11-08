@@ -19,16 +19,12 @@ class FindNewVC: BaseViewController {
         ProfileModel(name: "Elizaxua", school: "WWE", bio: "If you’re truly stumped on how to describe yourself or your interests, ask your friends or family what key things they think a date should know about you. They won’t overthink it in the same way you might."),
     ]
     @IBOutlet weak var kolodaView: KolodaView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
         kolodaView.dataSource = self
         kolodaView.delegate = self
         kolodaView.reloadData()
-    }
-
-    private func setupView () {
-        
     }
     
     @IBAction func didSelectButtonBack(_ sender: Any) {
@@ -39,8 +35,6 @@ class FindNewVC: BaseViewController {
         let vc = ListMessageVC()
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
 }
 
 extension FindNewVC: KolodaViewDataSource {
@@ -77,6 +71,21 @@ extension FindNewVC: KolodaViewDelegate {
        let alert = UIAlertController(title: "Congratulation!", message: "Now you're \(images[index])", preferredStyle: .alert)
        alert.addAction(UIAlertAction(title: "OK", style: .default))
        self.present(alert, animated: true)
+    }
+    
+    func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
+        if direction == .right {
+            let vc = MatchedVC()
+            vc.updateAvt(images[index])
+            self.present(vc, animated: true)
+        }
+    }
+    func kolodaShouldTransparentizeNextCard(_ koloda: KolodaView) -> Bool {
+        return true
+    }
+    
+    func kolodaSwipeThresholdRatioMargin(_ koloda: KolodaView) -> CGFloat? {
+        return 10
     }
     
 }
