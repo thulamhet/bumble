@@ -83,9 +83,4 @@ extension FindNewVC: KolodaViewDelegate {
     func kolodaShouldTransparentizeNextCard(_ koloda: KolodaView) -> Bool {
         return true
     }
-    
-    func kolodaSwipeThresholdRatioMargin(_ koloda: KolodaView) -> CGFloat? {
-        return 10
-    }
-    
 }

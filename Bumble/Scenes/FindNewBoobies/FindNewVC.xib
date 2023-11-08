@@ -78,33 +78,18 @@
                     <rect key="frame" x="15" y="99" width="384" height="587"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
-                <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbp-MT-tnp">
-                    <rect key="frame" x="0.0" y="687" width="414" height="49"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="49" id="Aea-em-0FR"/>
-                    </constraints>
-                    <items>
-                        <tabBarItem title="" selectedImage="person.crop.circle" catalog="system" id="Ip6-Dw-Frf"/>
-                        <tabBarItem selectedImage="suit.heart" catalog="system" id="gnh-He-70k"/>
-                        <tabBarItem selectedImage="message" catalog="system" id="XnX-P9-QBX"/>
-                    </items>
-                </tabBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="yHW-1M-VeK"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="k2e-mU-pds" firstAttribute="leading" secondItem="yHW-1M-VeK" secondAttribute="leading" id="2ky-LN-QpR"/>
                 <constraint firstItem="z1i-uq-vUM" firstAttribute="leading" secondItem="VrJ-9W-h3o" secondAttribute="leading" id="50m-Gq-IN6"/>
-                <constraint firstItem="nbp-MT-tnp" firstAttribute="leading" secondItem="yHW-1M-VeK" secondAttribute="leading" id="Aoy-58-STA"/>
                 <constraint firstItem="yHW-1M-VeK" firstAttribute="trailing" secondItem="k2e-mU-pds" secondAttribute="trailing" id="CBp-if-b2R"/>
                 <constraint firstItem="k2e-mU-pds" firstAttribute="top" secondItem="z1i-uq-vUM" secondAttribute="bottom" id="Cz7-Cz-NsA"/>
                 <constraint firstAttribute="trailing" secondItem="z1i-uq-vUM" secondAttribute="trailing" id="Dnu-UA-6Z8"/>
                 <constraint firstItem="yHW-1M-VeK" firstAttribute="trailing" secondItem="4Yi-eW-d9i" secondAttribute="trailing" constant="15" id="MYL-cM-NlI"/>
-                <constraint firstItem="yHW-1M-VeK" firstAttribute="bottom" secondItem="nbp-MT-tnp" secondAttribute="bottom" id="ORg-sw-fXY"/>
                 <constraint firstItem="4Yi-eW-d9i" firstAttribute="leading" secondItem="yHW-1M-VeK" secondAttribute="leading" constant="15" id="ZJt-2d-W7V"/>
                 <constraint firstItem="4Yi-eW-d9i" firstAttribute="top" secondItem="k2e-mU-pds" secondAttribute="bottom" constant="15" id="jah-sZ-F9c"/>
-                <constraint firstItem="nbp-MT-tnp" firstAttribute="trailing" secondItem="yHW-1M-VeK" secondAttribute="trailing" id="rhI-aD-hWX"/>
                 <constraint firstItem="yHW-1M-VeK" firstAttribute="bottom" secondItem="4Yi-eW-d9i" secondAttribute="bottom" constant="50" id="xya-h4-Pno"/>
                 <constraint firstItem="z1i-uq-vUM" firstAttribute="top" secondItem="VrJ-9W-h3o" secondAttribute="top" id="z5L-ot-kAQ"/>
             </constraints>
@@ -114,10 +99,7 @@
     <resources>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
         <image name="logobb" width="2000" height="1125"/>
-        <image name="message" catalog="system" width="128" height="116"/>
         <image name="message.badge" catalog="system" width="128" height="116"/>
-        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
-        <image name="suit.heart" catalog="system" width="128" height="107"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

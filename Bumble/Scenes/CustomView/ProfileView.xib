@@ -104,7 +104,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQv-ec-BI7">
                                                     <rect key="frame" x="30" y="260" width="60" height="60"/>
-                                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                    <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="7kb-66-Jtc"/>
                                                         <constraint firstAttribute="height" constant="60" id="DgL-dI-oyw"/>
@@ -112,8 +112,8 @@
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="tB3-L5-PcF"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="iconClose" imagePadding="10">
-                                                        <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="iconClose" imagePadding="20">
+                                                        <color key="baseForegroundColor" systemColor="systemYellowColor"/>
                                                     </buttonConfiguration>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -126,7 +126,7 @@
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyF-vE-kFL">
                                                     <rect key="frame" x="324" y="260" width="60" height="60"/>
-                                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                    <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="KXY-aI-YlU"/>
                                                         <constraint firstAttribute="height" constant="60" id="Thw-dC-QgN"/>
@@ -199,8 +199,8 @@
         <image name="iconCheck" width="50" height="50"/>
         <image name="iconClose" width="50" height="50"/>
         <image name="woman6" width="1920" height="1080"/>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
