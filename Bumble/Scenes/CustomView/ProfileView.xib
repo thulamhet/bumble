@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -9,6 +10,9 @@
     <customFonts key="customFonts">
         <array key="SVN-Gilroy Bold.otf">
             <string>SVN-GilroyBold</string>
+        </array>
+        <array key="SVN-Gilroy Medium.otf">
+            <string>SVN-GilroyMedium</string>
         </array>
         <array key="SVN-Gilroy Regular.otf">
             <string>SVN-Gilroy</string>
@@ -48,20 +52,20 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HNUE 2026" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A63-PE-TPi">
-                                                    <rect key="frame" x="65" y="320.33333333333331" width="114.33333333333331" height="24.333333333333314"/>
-                                                    <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="23"/>
+                                                    <rect key="frame" x="54.000000000000007" y="326" width="114.66666666666669" height="24.333333333333314"/>
+                                                    <fontDescription key="fontDescription" name="SVN-GilroyMedium" family="SVN-Gilroy" pointSize="23"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hat" translatesAutoresizingMaskIntoConstraints="NO" id="eGI-Ek-wfg">
-                                                    <rect key="frame" x="20" y="315" width="35" height="35"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-graduation-cap-64" translatesAutoresizingMaskIntoConstraints="NO" id="eGI-Ek-wfg">
+                                                    <rect key="frame" x="20" y="326" width="24" height="24"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="35" id="1Mo-iM-kSl"/>
-                                                        <constraint firstAttribute="height" constant="35" id="VPl-pQ-trD"/>
+                                                        <constraint firstAttribute="width" constant="24" id="1Mo-iM-kSl"/>
+                                                        <constraint firstAttribute="height" constant="24" id="VPl-pQ-trD"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanh, 18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKJ-LC-MRB">
-                                                    <rect key="frame" x="15" y="276.33333333333331" width="140.33333333333334" height="33.666666666666686"/>
+                                                    <rect key="frame" x="15" y="287.33333333333331" width="140.33333333333334" height="33.666666666666686"/>
                                                     <fontDescription key="fontDescription" name="SVN-GilroyBold" family="SVN-Gilroy" pointSize="32"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -91,17 +95,25 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Day la bioday la bioday la bioday la bioday la bioday la bioday la bioday la bio bio cuc cang hehehehehe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrz-3r-jel">
-                                                    <rect key="frame" x="15" y="46" width="384" height="53.666666666666657"/>
+                                                    <rect key="frame" x="15" y="41" width="384" height="53.666666666666657"/>
                                                     <fontDescription key="fontDescription" name="SVN-GilroyBold" family="SVN-Gilroy" pointSize="17"/>
                                                     <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My basics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vv-nL-2KI">
+                                                    <rect key="frame" x="15" y="109.66666666666669" width="67.666666666666671" height="16"/>
+                                                    <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="lxk-1l-CT5" firstAttribute="top" secondItem="XGy-sT-rew" secondAttribute="top" constant="15" id="2db-I6-g7D"/>
+                                                <constraint firstItem="9Vv-nL-2KI" firstAttribute="top" secondItem="hrz-3r-jel" secondAttribute="bottom" constant="15" id="NpO-ef-bEQ"/>
                                                 <constraint firstAttribute="height" constant="250" id="Tku-0f-cot"/>
-                                                <constraint firstItem="hrz-3r-jel" firstAttribute="top" secondItem="lxk-1l-CT5" secondAttribute="bottom" constant="15" id="bAR-ed-p5d"/>
+                                                <constraint firstItem="hrz-3r-jel" firstAttribute="top" secondItem="lxk-1l-CT5" secondAttribute="bottom" constant="10" id="bAR-ed-p5d"/>
+                                                <constraint firstItem="9Vv-nL-2KI" firstAttribute="leading" secondItem="XGy-sT-rew" secondAttribute="leading" constant="15" id="dcF-Ft-WPZ"/>
                                                 <constraint firstItem="hrz-3r-jel" firstAttribute="leading" secondItem="XGy-sT-rew" secondAttribute="leading" constant="15" id="dq9-Bk-68h"/>
                                                 <constraint firstItem="lxk-1l-CT5" firstAttribute="leading" secondItem="XGy-sT-rew" secondAttribute="leading" constant="15" id="jlx-E2-N0h"/>
                                                 <constraint firstAttribute="trailing" secondItem="hrz-3r-jel" secondAttribute="trailing" constant="15" id="rJf-xP-dkn"/>
@@ -119,10 +131,10 @@
                                                         <constraint firstAttribute="width" constant="60" id="pHd-ij-ujT"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="tB3-L5-PcF"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="iconClose" imagePadding="20">
-                                                        <color key="baseForegroundColor" systemColor="systemYellowColor"/>
-                                                    </buttonConfiguration>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                                                    <state key="normal" image="iconClose">
+                                                        <color key="titleColor" systemColor="systemYellowColor"/>
+                                                    </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="30"/>
@@ -139,8 +151,8 @@
                                                         <constraint firstAttribute="width" constant="60" id="KXY-aI-YlU"/>
                                                         <constraint firstAttribute="height" constant="60" id="Thw-dC-QgN"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="iconCheck" imagePadding="10"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                                    <state key="normal" image="iconCheck"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="30"/>
@@ -163,7 +175,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" red="1" green="1" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="1" green="0.93333333333333335" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstItem="Llc-2N-ISL" firstAttribute="top" secondItem="xHl-JU-YcX" secondAttribute="top" id="0UL-Y4-LqO"/>
                                 <constraint firstAttribute="bottom" secondItem="Llc-2N-ISL" secondAttribute="bottom" id="4Da-4g-Fzl"/>
@@ -191,7 +203,7 @@
                     <viewLayoutGuide key="frameLayoutGuide" id="I8K-Df-bGt"/>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="0.79509460034013602" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="1" green="0.93333333333333335" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="pkj-c1-mWm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HQ6-fr-G1J"/>
                 <constraint firstAttribute="trailing" secondItem="pkj-c1-mWm" secondAttribute="trailing" id="SJv-JE-gDV"/>
@@ -203,9 +215,9 @@
         </view>
     </objects>
     <resources>
-        <image name="hat" width="80" height="80"/>
         <image name="iconCheck" width="50" height="50"/>
         <image name="iconClose" width="50" height="50"/>
+        <image name="icons8-graduation-cap-64" width="64" height="64"/>
         <image name="woman6" width="1920" height="1080"/>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

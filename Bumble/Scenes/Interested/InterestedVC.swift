@@ -9,7 +9,7 @@ import UIKit
 
 class InterestedVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
-    var matchList: [String] = ["woman10", "woman11","woman12", "woman13"]
+    var matchList: [String] = ["woman10", "woman11","woman12", "woman13", "woman13"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -59,8 +60,8 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="M1m-SI-RmV">
-                            <rect key="frame" x="15" y="51" width="360" height="80"/>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="M1m-SI-RmV">
+                            <rect key="frame" x="15" y="51" width="375" height="80"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="80" id="FQZ-lk-NDy"/>
@@ -86,7 +87,7 @@
                         <constraint firstAttribute="bottom" secondItem="bmj-U9-rzN" secondAttribute="bottom" id="ENg-Gk-zlP"/>
                         <constraint firstItem="M1m-SI-RmV" firstAttribute="leading" secondItem="bWj-B5-0eO" secondAttribute="leading" constant="15" id="JI4-bs-7RC"/>
                         <constraint firstAttribute="height" constant="150" id="UAi-2v-XRM"/>
-                        <constraint firstAttribute="trailing" secondItem="M1m-SI-RmV" secondAttribute="trailing" constant="15" id="hYP-HC-d36"/>
+                        <constraint firstAttribute="trailing" secondItem="M1m-SI-RmV" secondAttribute="trailing" id="hYP-HC-d36"/>
                         <constraint firstAttribute="trailing" secondItem="bmj-U9-rzN" secondAttribute="trailing" id="pvP-PE-s1T"/>
                         <constraint firstItem="smL-f8-b8M" firstAttribute="leading" secondItem="bWj-B5-0eO" secondAttribute="leading" constant="15" id="w02-lO-2gl"/>
                         <constraint firstItem="M1m-SI-RmV" firstAttribute="top" secondItem="smL-f8-b8M" secondAttribute="bottom" constant="15" id="xsz-ig-u9Y"/>
