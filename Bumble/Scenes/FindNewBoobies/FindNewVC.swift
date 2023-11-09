@@ -35,6 +35,18 @@ class FindNewVC: BaseViewController {
         let vc = ListMessageVC()
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @IBAction func didSelectFilterButton(_ sender: Any) {
+        let vc = FilterVC()
+        vc.modalPresentationStyle = .overFullScreen
+        self.navigationController?.present(vc, animated: true)
+    }
+    
+    @IBAction func didSelectInterestedButton(_ sender: Any) {
+        let vc = InterestedVC()
+        vc.modalPresentationStyle = .overFullScreen
+        self.navigationController?.present(vc, animated: true)
+    }
 }
 
 extension FindNewVC: KolodaViewDataSource {

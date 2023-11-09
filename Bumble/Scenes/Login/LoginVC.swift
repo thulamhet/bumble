@@ -17,7 +17,6 @@ class LoginVC: UIViewController {
      
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.container.backgroundColor = UIColor(patternImage: UIImage(named: "background2.jpg")!)
         setupUI()
     }
     

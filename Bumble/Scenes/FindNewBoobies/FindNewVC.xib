@@ -30,14 +30,14 @@
                     <rect key="frame" x="0.0" y="40" width="414" height="44"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgT-iT-Igs">
-                            <rect key="frame" x="15" y="7" width="30" height="30"/>
+                            <rect key="frame" x="15" y="-3" width="50" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="30" id="fr7-8L-wb0"/>
-                                <constraint firstAttribute="width" constant="30" id="sfX-iQ-LJN"/>
+                                <constraint firstAttribute="height" constant="50" id="fr7-8L-wb0"/>
+                                <constraint firstAttribute="width" constant="50" id="sfX-iQ-LJN"/>
                             </constraints>
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="line.3.horizontal" catalog="system"/>
+                            <state key="normal" image="Ic_24px_Outline_Home"/>
                             <connections>
                                 <action selector="didSelectButtonBack:" destination="-1" eventType="touchUpInside" id="dYt-O9-e6s"/>
                             </connections>
@@ -50,7 +50,7 @@
                             </constraints>
                             <color key="tintColor" systemColor="labelColor"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="message.badge" catalog="system"/>
+                            <state key="normal" image="Ic_24px_Outline_Chat"/>
                             <connections>
                                 <action selector="didSelectMessageButton:" destination="-1" eventType="touchUpInside" id="4Ac-d6-5d2"/>
                             </connections>
@@ -61,17 +61,45 @@
                                 <constraint firstAttribute="width" constant="130" id="3xG-W0-AgR"/>
                             </constraints>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jsh-vm-Y6q">
+                            <rect key="frame" x="73" y="-3" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="mH8-VQ-h8G"/>
+                                <constraint firstAttribute="width" constant="50" id="nyT-Ko-75c"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="component1061"/>
+                            <connections>
+                                <action selector="didSelectFilterButton:" destination="-1" eventType="touchUpInside" id="RYF-PF-gte"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZW-mV-Glf">
+                            <rect key="frame" x="282" y="-3" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="s2K-tY-MWk"/>
+                                <constraint firstAttribute="height" constant="50" id="vHH-8B-Ug9"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="ic24PxOutlineRefreshBlack"/>
+                            <connections>
+                                <action selector="didSelectInterestedButton:" destination="-1" eventType="touchUpInside" id="Hn1-ZS-GtF"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="6ZW-mV-Glf" firstAttribute="centerY" secondItem="k2e-mU-pds" secondAttribute="centerY" id="7N4-oz-9zv"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="8ld-Gj-7Pi"/>
+                        <constraint firstItem="6ZW-mV-Glf" firstAttribute="leading" secondItem="D6S-Bw-xul" secondAttribute="trailing" constant="10" id="DfW-lD-CQN"/>
                         <constraint firstItem="D6S-Bw-xul" firstAttribute="centerX" secondItem="k2e-mU-pds" secondAttribute="centerX" id="GM0-sE-3yD"/>
                         <constraint firstAttribute="trailing" secondItem="QQf-fy-Cc9" secondAttribute="trailing" constant="15" id="L6n-7K-n9s"/>
                         <constraint firstItem="D6S-Bw-xul" firstAttribute="centerY" secondItem="k2e-mU-pds" secondAttribute="centerY" id="P5g-wZ-tIE"/>
+                        <constraint firstItem="Jsh-vm-Y6q" firstAttribute="centerY" secondItem="k2e-mU-pds" secondAttribute="centerY" id="Sn4-TG-bbo"/>
                         <constraint firstItem="QQf-fy-Cc9" firstAttribute="centerY" secondItem="k2e-mU-pds" secondAttribute="centerY" id="eeJ-ip-zYw"/>
                         <constraint firstAttribute="height" constant="44" id="m23-CR-tIe"/>
                         <constraint firstItem="XgT-iT-Igs" firstAttribute="leading" secondItem="k2e-mU-pds" secondAttribute="leading" constant="15" id="nAo-f2-Grz"/>
                         <constraint firstItem="XgT-iT-Igs" firstAttribute="centerY" secondItem="k2e-mU-pds" secondAttribute="centerY" id="ngb-vv-Bf3"/>
+                        <constraint firstItem="Jsh-vm-Y6q" firstAttribute="leading" secondItem="XgT-iT-Igs" secondAttribute="trailing" constant="8" symbolic="YES" id="pBb-t8-nLM"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Yi-eW-d9i" customClass="KolodaView" customModule="Koloda">
@@ -97,9 +125,11 @@
         </view>
     </objects>
     <resources>
-        <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
+        <image name="Ic_24px_Outline_Chat" width="24" height="24"/>
+        <image name="Ic_24px_Outline_Home" width="24" height="24"/>
+        <image name="component1061" width="24" height="24"/>
+        <image name="ic24PxOutlineRefreshBlack" width="24" height="24"/>
         <image name="logobb" width="2000" height="1125"/>
-        <image name="message.badge" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

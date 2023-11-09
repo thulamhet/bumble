@@ -6,6 +6,14 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SVN-Gilroy Bold.otf">
+            <string>SVN-GilroyBold</string>
+        </array>
+        <array key="SVN-Gilroy Regular.otf">
+            <string>SVN-Gilroy</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="Bumble" customModuleProvider="target">
             <connections>
@@ -31,39 +39,41 @@
                             <rect key="frame" x="15" y="250" width="384" height="320"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bE-F4-RfI">
-                                    <rect key="frame" x="15" y="10" width="354" height="34.5"/>
-                                    <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="25"/>
-                                    <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <rect key="frame" x="15" y="10" width="354" height="29.5"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="SVN-GilroyBold" family="SVN-Gilroy" pointSize="25"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="a@gmail.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tnq-Oa-Ex0">
-                                    <rect key="frame" x="15" y="64.5" width="354" height="40"/>
+                                    <rect key="frame" x="15" y="59.5" width="354" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="gp9-U5-BmO"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZRc-0u-WAZ">
-                                    <rect key="frame" x="15" y="124.5" width="354" height="40"/>
+                                    <rect key="frame" x="15" y="119.5" width="354" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="4Np-lX-QaS"/>
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="OmM-gJ-SFr"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAg-Pu-q8x">
-                                    <rect key="frame" x="117" y="194.5" width="150" height="50"/>
-                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                    <rect key="frame" x="117" y="189.5" width="150" height="50"/>
+                                    <color key="backgroundColor" red="0.95686274509803915" green="0.80784313725490198" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="ECi-zs-zlY"/>
                                         <constraint firstAttribute="width" constant="150" id="Ote-KR-sdX"/>
                                     </constraints>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Login">
-                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </buttonConfiguration>
+                                    <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="15"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Login">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="10"/>
@@ -74,16 +84,17 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pb-bu-Z9p">
-                                    <rect key="frame" x="117" y="252" width="150" height="50"/>
-                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                    <rect key="frame" x="117" y="247" width="150" height="50"/>
+                                    <color key="backgroundColor" red="0.95686274510000002" green="0.80784313730000001" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="150" id="5m3-8V-yQd"/>
                                         <constraint firstAttribute="height" constant="50" id="DCx-oX-G2d"/>
                                     </constraints>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="New account">
-                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </buttonConfiguration>
+                                    <fontDescription key="fontDescription" name="SVN-Gilroy" family="SVN-Gilroy" pointSize="15"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="New account">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="10"/>
@@ -103,18 +114,17 @@
                                 <constraint firstItem="5bE-F4-RfI" firstAttribute="top" secondItem="Zsz-dl-U2z" secondAttribute="top" constant="10" id="cfO-aD-zBd"/>
                                 <constraint firstAttribute="height" constant="320" id="e7S-kg-eAi"/>
                                 <constraint firstItem="JAg-Pu-q8x" firstAttribute="top" secondItem="ZRc-0u-WAZ" secondAttribute="bottom" constant="30" id="kUD-XZ-Er0"/>
+                                <constraint firstItem="8Pb-bu-Z9p" firstAttribute="centerX" secondItem="Zsz-dl-U2z" secondAttribute="centerX" id="kiF-kr-OJt"/>
                                 <constraint firstItem="Tnq-Oa-Ex0" firstAttribute="top" secondItem="5bE-F4-RfI" secondAttribute="bottom" constant="20" id="lbd-gO-Hjj"/>
                                 <constraint firstItem="8Pb-bu-Z9p" firstAttribute="top" secondItem="JAg-Pu-q8x" secondAttribute="bottom" constant="7.5" id="nYL-IZ-cu6"/>
-                                <constraint firstItem="8Pb-bu-Z9p" firstAttribute="leading" secondItem="Zsz-dl-U2z" secondAttribute="leading" constant="117" id="pby-1e-q5F"/>
                                 <constraint firstItem="ZRc-0u-WAZ" firstAttribute="top" secondItem="Tnq-Oa-Ex0" secondAttribute="bottom" constant="20" id="qml-eE-CoR"/>
                                 <constraint firstItem="Tnq-Oa-Ex0" firstAttribute="leading" secondItem="Zsz-dl-U2z" secondAttribute="leading" constant="15" id="sAc-xG-9QK"/>
-                                <constraint firstAttribute="trailing" secondItem="8Pb-bu-Z9p" secondAttribute="trailing" constant="117" id="tON-9n-ReV"/>
                                 <constraint firstAttribute="trailing" secondItem="Tnq-Oa-Ex0" secondAttribute="trailing" constant="15" id="u6M-uz-RAf"/>
                                 <constraint firstItem="5bE-F4-RfI" firstAttribute="leading" secondItem="Zsz-dl-U2z" secondAttribute="leading" constant="15" id="yel-5d-FI7"/>
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" red="1" green="0.8750006253" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="Zsz-dl-U2z" firstAttribute="leading" secondItem="wfJ-JM-zdy" secondAttribute="leading" constant="15" id="1H7-QK-K2K"/>
                         <constraint firstItem="rwl-Du-aWl" firstAttribute="leading" secondItem="wfJ-JM-zdy" secondAttribute="leading" id="72b-s7-nfp"/>
@@ -143,9 +153,6 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

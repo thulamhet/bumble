@@ -20,6 +20,20 @@
 		7896700C2AE0DB9E00B0508F /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896700B2AE0DB9E00B0508F /* Chat.swift */; };
 		7896700E2AE0DBA900B0508F /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896700D2AE0DBA900B0508F /* ChatUser.swift */; };
 		789670102AE0DBBE00B0508F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896700F2AE0DBBE00B0508F /* Message.swift */; };
+		78AB0C7A2AFC8A5300C61EBA /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AB0C782AFC8A5300C61EBA /* FilterVC.swift */; };
+		78AB0C7B2AFC8A5300C61EBA /* FilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78AB0C792AFC8A5300C61EBA /* FilterVC.xib */; };
+		78AB0CC72AFC8BF500C61EBA /* SVN-Gilroy Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 78AB0CBD2AFC8BF400C61EBA /* SVN-Gilroy Bold.otf */; };
+		78AB0CC82AFC8BF500C61EBA /* SVN-Gilroy Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 78AB0CBE2AFC8BF400C61EBA /* SVN-Gilroy Bold Italic.otf */; };
+		78AB0CC92AFC8BF500C61EBA /* SVN-Gilroy Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 78AB0CBF2AFC8BF400C61EBA /* SVN-Gilroy Medium.otf */; };
+		78AB0CCA2AFC8BF500C61EBA /* Inconsolata.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78AB0CC02AFC8BF400C61EBA /* Inconsolata.ttf */; };
+		78AB0CCB2AFC8BF500C61EBA /* ShareTechMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78AB0CC12AFC8BF400C61EBA /* ShareTechMono-Regular.ttf */; };
+		78AB0CCC2AFC8BF500C61EBA /* SVN-Gilroy SemiBold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 78AB0CC22AFC8BF400C61EBA /* SVN-Gilroy SemiBold Italic.otf */; };
+		78AB0CCD2AFC8BF500C61EBA /* SVN-Gilroy Medium Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 78AB0CC32AFC8BF400C61EBA /* SVN-Gilroy Medium Italic.otf */; };
+		78AB0CCE2AFC8BF500C61EBA /* SVN-Gilroy Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 78AB0CC42AFC8BF400C61EBA /* SVN-Gilroy Light.otf */; };
+		78AB0CCF2AFC8BF500C61EBA /* SVN-Gilroy SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 78AB0CC52AFC8BF400C61EBA /* SVN-Gilroy SemiBold.otf */; };
+		78AB0CD02AFC8BF500C61EBA /* SVN-Gilroy Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 78AB0CC62AFC8BF400C61EBA /* SVN-Gilroy Regular.otf */; };
+		78AB0CD42AFCB79800C61EBA /* InterestedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AB0CD22AFCB79800C61EBA /* InterestedVC.swift */; };
+		78AB0CD52AFCB79800C61EBA /* InterestedVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78AB0CD32AFCB79800C61EBA /* InterestedVC.xib */; };
 		78B31E682AE3BBAE0074FEBE /* ListMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B31E662AE3BBAE0074FEBE /* ListMessageVC.swift */; };
 		78B31E712AE3BEB50074FEBE /* MatchQueueCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B31E6F2AE3BEB50074FEBE /* MatchQueueCollectionViewCell.swift */; };
 		78B31E722AE3BEB50074FEBE /* MatchQueueCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78B31E702AE3BEB50074FEBE /* MatchQueueCollectionViewCell.xib */; };
@@ -73,6 +87,20 @@
 		7896700B2AE0DB9E00B0508F /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		7896700D2AE0DBA900B0508F /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
 		7896700F2AE0DBBE00B0508F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		78AB0C782AFC8A5300C61EBA /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
+		78AB0C792AFC8A5300C61EBA /* FilterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterVC.xib; sourceTree = "<group>"; };
+		78AB0CBD2AFC8BF400C61EBA /* SVN-Gilroy Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Bold.otf"; sourceTree = "<group>"; };
+		78AB0CBE2AFC8BF400C61EBA /* SVN-Gilroy Bold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Bold Italic.otf"; sourceTree = "<group>"; };
+		78AB0CBF2AFC8BF400C61EBA /* SVN-Gilroy Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Medium.otf"; sourceTree = "<group>"; };
+		78AB0CC02AFC8BF400C61EBA /* Inconsolata.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inconsolata.ttf; sourceTree = "<group>"; };
+		78AB0CC12AFC8BF400C61EBA /* ShareTechMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ShareTechMono-Regular.ttf"; sourceTree = "<group>"; };
+		78AB0CC22AFC8BF400C61EBA /* SVN-Gilroy SemiBold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy SemiBold Italic.otf"; sourceTree = "<group>"; };
+		78AB0CC32AFC8BF400C61EBA /* SVN-Gilroy Medium Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Medium Italic.otf"; sourceTree = "<group>"; };
+		78AB0CC42AFC8BF400C61EBA /* SVN-Gilroy Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Light.otf"; sourceTree = "<group>"; };
+		78AB0CC52AFC8BF400C61EBA /* SVN-Gilroy SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy SemiBold.otf"; sourceTree = "<group>"; };
+		78AB0CC62AFC8BF400C61EBA /* SVN-Gilroy Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Regular.otf"; sourceTree = "<group>"; };
+		78AB0CD22AFCB79800C61EBA /* InterestedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestedVC.swift; sourceTree = "<group>"; };
+		78AB0CD32AFCB79800C61EBA /* InterestedVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterestedVC.xib; sourceTree = "<group>"; };
 		78B31E662AE3BBAE0074FEBE /* ListMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMessageVC.swift; sourceTree = "<group>"; };
 		78B31E6F2AE3BEB50074FEBE /* MatchQueueCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchQueueCollectionViewCell.swift; sourceTree = "<group>"; };
 		78B31E702AE3BEB50074FEBE /* MatchQueueCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchQueueCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -165,6 +193,41 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		78AB0C772AFC8A4400C61EBA /*  Filter */ = {
+			isa = PBXGroup;
+			children = (
+				78AB0C782AFC8A5300C61EBA /* FilterVC.swift */,
+				78AB0C792AFC8A5300C61EBA /* FilterVC.xib */,
+			);
+			path = " Filter";
+			sourceTree = "<group>";
+		};
+		78AB0CBC2AFC8BF400C61EBA /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				78AB0CBD2AFC8BF400C61EBA /* SVN-Gilroy Bold.otf */,
+				78AB0CBE2AFC8BF400C61EBA /* SVN-Gilroy Bold Italic.otf */,
+				78AB0CBF2AFC8BF400C61EBA /* SVN-Gilroy Medium.otf */,
+				78AB0CC02AFC8BF400C61EBA /* Inconsolata.ttf */,
+				78AB0CC12AFC8BF400C61EBA /* ShareTechMono-Regular.ttf */,
+				78AB0CC22AFC8BF400C61EBA /* SVN-Gilroy SemiBold Italic.otf */,
+				78AB0CC32AFC8BF400C61EBA /* SVN-Gilroy Medium Italic.otf */,
+				78AB0CC42AFC8BF400C61EBA /* SVN-Gilroy Light.otf */,
+				78AB0CC52AFC8BF400C61EBA /* SVN-Gilroy SemiBold.otf */,
+				78AB0CC62AFC8BF400C61EBA /* SVN-Gilroy Regular.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		78AB0CD12AFCB74000C61EBA /* Interested */ = {
+			isa = PBXGroup;
+			children = (
+				78AB0CD22AFCB79800C61EBA /* InterestedVC.swift */,
+				78AB0CD32AFCB79800C61EBA /* InterestedVC.xib */,
+			);
+			path = Interested;
+			sourceTree = "<group>";
+		};
 		78B31E6C2AE3BBC30074FEBE /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +291,7 @@
 		78D056E82A4D3A0D00F4C7B4 /* Bumble */ = {
 			isa = PBXGroup;
 			children = (
+				78AB0CBC2AFC8BF400C61EBA /* Font */,
 				78F29AB22A56782E009D977E /* Extension */,
 				78F29AAF2A5677A2009D977E /* Contants */,
 				78F29AAE2A567798009D977E /* Scenes */,
@@ -271,6 +335,8 @@
 		78F29AAE2A567798009D977E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				78AB0CD12AFCB74000C61EBA /* Interested */,
+				78AB0C772AFC8A4400C61EBA /*  Filter */,
 				787D496A2A5BFD7400303FAA /* Base */,
 				787D49652A5BFD2500303FAA /* CustomView */,
 				78B31E6D2AE3BCCF0074FEBE /* Message */,
@@ -434,16 +500,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78AB0C7B2AFC8A5300C61EBA /* FilterVC.xib in Resources */,
+				78AB0CCC2AFC8BF500C61EBA /* SVN-Gilroy SemiBold Italic.otf in Resources */,
 				781381D02AE3C08100FDB6F0 /* ListMessageVC.xib in Resources */,
+				78AB0CC82AFC8BF500C61EBA /* SVN-Gilroy Bold Italic.otf in Resources */,
 				78C11FDB2AFB3B180013BE05 /* MatchedVC.xib in Resources */,
+				78AB0CD02AFC8BF500C61EBA /* SVN-Gilroy Regular.otf in Resources */,
+				78AB0CCB2AFC8BF500C61EBA /* ShareTechMono-Regular.ttf in Resources */,
 				78D056F32A4D3A0E00F4C7B4 /* Assets.xcassets in Resources */,
 				78F29AAD2A56726C009D977E /* CreateNewAccVC.xib in Resources */,
+				78AB0CD52AFCB79800C61EBA /* InterestedVC.xib in Resources */,
 				7896700A2AE0DAA000B0508F /* ChatViewController.xib in Resources */,
+				78AB0CC92AFC8BF500C61EBA /* SVN-Gilroy Medium.otf in Resources */,
+				78AB0CCA2AFC8BF500C61EBA /* Inconsolata.ttf in Resources */,
 				787D49722A5BFEAE00303FAA /* ProfileView.xib in Resources */,
+				78AB0CCD2AFC8BF500C61EBA /* SVN-Gilroy Medium Italic.otf in Resources */,
+				78AB0CCE2AFC8BF500C61EBA /* SVN-Gilroy Light.otf in Resources */,
 				78B31E722AE3BEB50074FEBE /* MatchQueueCollectionViewCell.xib in Resources */,
 				78F29AC02A56800F009D977E /* FindNewVC.xib in Resources */,
+				78AB0CC72AFC8BF500C61EBA /* SVN-Gilroy Bold.otf in Resources */,
 				78D0571C2A4D3AFF00F4C7B4 /* LoginVC.xib in Resources */,
 				78F29AA82A566E03009D977E /* GoogleService-Info.plist in Resources */,
+				78AB0CCF2AFC8BF500C61EBA /* SVN-Gilroy SemiBold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +591,7 @@
 				78B31E682AE3BBAE0074FEBE /* ListMessageVC.swift in Sources */,
 				786425732AE0C821003AD08F /* ProfileModel.swift in Sources */,
 				787D49742A5C03AD00303FAA /* UIViewEx.swift in Sources */,
+				78AB0CD42AFCB79800C61EBA /* InterestedVC.swift in Sources */,
 				78B31E712AE3BEB50074FEBE /* MatchQueueCollectionViewCell.swift in Sources */,
 				787D496E2A5BFDE900303FAA /* BaseLoadCustomView.swift in Sources */,
 				789670102AE0DBBE00B0508F /* Message.swift in Sources */,
@@ -525,6 +604,7 @@
 				78F29AB62A567875009D977E /* StringEx.swift in Sources */,
 				78F29AB12A5677AF009D977E /* Contants.swift in Sources */,
 				789670092AE0DAA000B0508F /* ChatViewController.swift in Sources */,
+				78AB0C7A2AFC8A5300C61EBA /* FilterVC.swift in Sources */,
 				78D056EA2A4D3A0D00F4C7B4 /* AppDelegate.swift in Sources */,
 				78D056EC2A4D3A0D00F4C7B4 /* SceneDelegate.swift in Sources */,
 				78C11FDA2AFB3B180013BE05 /* MatchedVC.swift in Sources */,
