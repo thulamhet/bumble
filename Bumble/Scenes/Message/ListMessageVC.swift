@@ -33,9 +33,11 @@ class ListMessageVC: UIViewController {
         let nib = UINib(nibName: "MatchQueueCollectionViewCell", bundle: .main)
         collectionView.register(nib, forCellWithReuseIdentifier: "MatchQueueCollectionViewCell")
     }
+    
     @IBAction func didSelectButtonBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
     @IBAction func didTemp(_ sender: Any) {
         let vc = ChatViewController()
         self.navigationController?.pushViewController(vc, animated: true)

@@ -34,6 +34,8 @@
 		78AB0CD02AFC8BF500C61EBA /* SVN-Gilroy Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 78AB0CC62AFC8BF400C61EBA /* SVN-Gilroy Regular.otf */; };
 		78AB0CD42AFCB79800C61EBA /* InterestedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AB0CD22AFCB79800C61EBA /* InterestedVC.swift */; };
 		78AB0CD52AFCB79800C61EBA /* InterestedVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78AB0CD32AFCB79800C61EBA /* InterestedVC.xib */; };
+		78AB0CD92AFCBEB200C61EBA /* InterestedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AB0CD72AFCBEB200C61EBA /* InterestedCollectionViewCell.swift */; };
+		78AB0CDA2AFCBEB200C61EBA /* InterestedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78AB0CD82AFCBEB200C61EBA /* InterestedCollectionViewCell.xib */; };
 		78B31E682AE3BBAE0074FEBE /* ListMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B31E662AE3BBAE0074FEBE /* ListMessageVC.swift */; };
 		78B31E712AE3BEB50074FEBE /* MatchQueueCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B31E6F2AE3BEB50074FEBE /* MatchQueueCollectionViewCell.swift */; };
 		78B31E722AE3BEB50074FEBE /* MatchQueueCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78B31E702AE3BEB50074FEBE /* MatchQueueCollectionViewCell.xib */; };
@@ -101,6 +103,8 @@
 		78AB0CC62AFC8BF400C61EBA /* SVN-Gilroy Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SVN-Gilroy Regular.otf"; sourceTree = "<group>"; };
 		78AB0CD22AFCB79800C61EBA /* InterestedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestedVC.swift; sourceTree = "<group>"; };
 		78AB0CD32AFCB79800C61EBA /* InterestedVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterestedVC.xib; sourceTree = "<group>"; };
+		78AB0CD72AFCBEB200C61EBA /* InterestedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestedCollectionViewCell.swift; sourceTree = "<group>"; };
+		78AB0CD82AFCBEB200C61EBA /* InterestedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterestedCollectionViewCell.xib; sourceTree = "<group>"; };
 		78B31E662AE3BBAE0074FEBE /* ListMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMessageVC.swift; sourceTree = "<group>"; };
 		78B31E6F2AE3BEB50074FEBE /* MatchQueueCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchQueueCollectionViewCell.swift; sourceTree = "<group>"; };
 		78B31E702AE3BEB50074FEBE /* MatchQueueCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchQueueCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -222,10 +226,20 @@
 		78AB0CD12AFCB74000C61EBA /* Interested */ = {
 			isa = PBXGroup;
 			children = (
+				78AB0CD62AFCBDC000C61EBA /* Cell */,
 				78AB0CD22AFCB79800C61EBA /* InterestedVC.swift */,
 				78AB0CD32AFCB79800C61EBA /* InterestedVC.xib */,
 			);
 			path = Interested;
+			sourceTree = "<group>";
+		};
+		78AB0CD62AFCBDC000C61EBA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				78AB0CD72AFCBEB200C61EBA /* InterestedCollectionViewCell.swift */,
+				78AB0CD82AFCBEB200C61EBA /* InterestedCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		78B31E6C2AE3BBC30074FEBE /* Model */ = {
@@ -505,6 +519,7 @@
 				781381D02AE3C08100FDB6F0 /* ListMessageVC.xib in Resources */,
 				78AB0CC82AFC8BF500C61EBA /* SVN-Gilroy Bold Italic.otf in Resources */,
 				78C11FDB2AFB3B180013BE05 /* MatchedVC.xib in Resources */,
+				78AB0CDA2AFCBEB200C61EBA /* InterestedCollectionViewCell.xib in Resources */,
 				78AB0CD02AFC8BF500C61EBA /* SVN-Gilroy Regular.otf in Resources */,
 				78AB0CCB2AFC8BF500C61EBA /* ShareTechMono-Regular.ttf in Resources */,
 				78D056F32A4D3A0E00F4C7B4 /* Assets.xcassets in Resources */,
@@ -598,6 +613,7 @@
 				78F29AB42A567861009D977E /* UIColorEx.swift in Sources */,
 				787D49712A5BFEAE00303FAA /* ProfileView.swift in Sources */,
 				78D0571B2A4D3AFF00F4C7B4 /* LoginVC.swift in Sources */,
+				78AB0CD92AFCBEB200C61EBA /* InterestedCollectionViewCell.swift in Sources */,
 				787FB53F2A67DA1000491254 /* BaseViewController.swift in Sources */,
 				78F29AAC2A56726C009D977E /* CreateNewAccVC.swift in Sources */,
 				7896700E2AE0DBA900B0508F /* ChatUser.swift in Sources */,

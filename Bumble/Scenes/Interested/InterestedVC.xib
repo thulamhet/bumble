@@ -10,10 +10,14 @@
         <array key="SVN-Gilroy Bold.otf">
             <string>SVN-GilroyBold</string>
         </array>
+        <array key="SVN-Gilroy SemiBold.otf">
+            <string>SVN-GilroySemiBold</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InterestedVC" customModule="Bumble" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="yfn-4V-ucN" id="UWn-tZ-toe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -98,10 +102,35 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FmG-tF-7hS">
-                    <rect key="frame" x="0.0" y="312" width="375" height="500"/>
+                    <rect key="frame" x="0.0" y="262" width="375" height="550"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="yfn-4V-ucN">
+                            <rect key="frame" x="15" y="48" width="345" height="487"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uTy-4g-c7x">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liked you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cr-fd-TXS">
+                            <rect key="frame" x="15" y="15" width="345" height="18"/>
+                            <fontDescription key="fontDescription" name="SVN-GilroySemiBold" family="SVN-Gilroy" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="500" id="ueP-ml-HqU"/>
+                        <constraint firstItem="yfn-4V-ucN" firstAttribute="top" secondItem="2cr-fd-TXS" secondAttribute="bottom" constant="15" id="Fkn-QD-XMX"/>
+                        <constraint firstAttribute="bottom" secondItem="yfn-4V-ucN" secondAttribute="bottom" constant="15" id="GTM-95-gVV"/>
+                        <constraint firstItem="2cr-fd-TXS" firstAttribute="leading" secondItem="FmG-tF-7hS" secondAttribute="leading" constant="15" id="Sz1-iL-WYq"/>
+                        <constraint firstItem="2cr-fd-TXS" firstAttribute="top" secondItem="FmG-tF-7hS" secondAttribute="top" constant="15" id="dAR-3s-g9I"/>
+                        <constraint firstItem="yfn-4V-ucN" firstAttribute="leading" secondItem="FmG-tF-7hS" secondAttribute="leading" constant="15" id="feI-dq-n7E"/>
+                        <constraint firstAttribute="trailing" secondItem="2cr-fd-TXS" secondAttribute="trailing" constant="15" id="gMj-hj-c41"/>
+                        <constraint firstAttribute="trailing" secondItem="yfn-4V-ucN" secondAttribute="trailing" constant="15" id="gix-xV-zxT"/>
+                        <constraint firstAttribute="height" constant="550" id="ueP-ml-HqU"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
