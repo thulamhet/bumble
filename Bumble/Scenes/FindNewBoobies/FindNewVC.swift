@@ -7,19 +7,13 @@
 
 import UIKit
 import Koloda
+
 class FindNewVC: BaseViewController {
     @IBOutlet weak var scrollView: UIView!
     var images: [String] = ["woman7", "emiu", "woman3", "woman7", "woman5"]
     
-    let bio: String = "If you’re truly stumped on how to describe yourself or your interests, ask your friends or family what key things they think a date should know about you. They won’t overthink it in the same way you might. Maybe they’ll say that a match needs to know how much time you spend working out, so you might then write something like, “Looking for someone who enjoys gym dates” in your bio. "
+    var listProfile: [ProfileModel] = []
     
-    var listProfile: [ProfileModel] = [
-        ProfileModel(uid: "123", name: "Lan", school: "VNU", bio: "If you’re truly stumped on how to describe yourself or your interests, ask your friends or family what key things they think a date should know about you. They won’t overthink it in the same way you might.  "),
-        ProfileModel(uid: "123", name: "Hoa, 21", school: "SIS", bio: "Dick is my love"),
-        ProfileModel(uid: "123", name: "Huyen", school: "VNG", bio: "If you’re truly stumped on how to describe yourself or your interests, ask your friends or family what key things they think a date should know about you. They won’t overthink it in the same way you might."),
-        ProfileModel(uid: "123", name: "Cutr", school: "CCG", bio: "If you’re truly stumped on how to describe yourself or your interests, ask your friends or family what key things they think a date should know about you. They won’t overthink it in the same way you might."),
-        ProfileModel(uid: "123", name: "Elizaxua", school: "WWE", bio: "If you’re truly stumped on how to describe yourself or your interests, ask your friends or family what key things they think a date should know about you. They won’t overthink it in the same way you might."),
-    ]
     let firestoreManager = FirestoreManager()
     
     @IBOutlet weak var kolodaView: KolodaView!
@@ -29,7 +23,19 @@ class FindNewVC: BaseViewController {
         kolodaView.dataSource = self
         kolodaView.delegate = self
         kolodaView.reloadData()
-        firestoreManager.saveUserProfile(userProfile: listProfile[0])
+//        for item in listProfile {
+//            firestoreManager.saveUserProfile(userProfile: item)
+//        }
+        getListUsers()
+    }
+    
+    private func getListUsers() {
+        LoadingView.show()
+        firestoreManager.getAllUsers { [weak self] profiles in
+            self?.listProfile = profiles
+            self?.kolodaView.reloadData()
+            LoadingView.hide()
+        }
     }
     
     @IBAction func didSelectButtonBack(_ sender: Any) {
@@ -61,8 +67,9 @@ extension FindNewVC: KolodaViewDataSource {
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
         let view = ProfileView()
-        view.updateAvt(img: UIImage(named: images[index]) ?? UIImage())
-        view.updateInfo(data: listProfile[index])
+        if listProfile.count > 0 {
+            view.updateInfo(data: listProfile[index])
+        }
         view.performLike = {
             self.kolodaView.swipe(.left)
         }
@@ -85,15 +92,17 @@ extension FindNewVC: KolodaViewDelegate {
     }
 
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-       let alert = UIAlertController(title: "Congratulation!", message: "Now you're \(images[index])", preferredStyle: .alert)
-       alert.addAction(UIAlertAction(title: "OK", style: .default))
-       self.present(alert, animated: true)
+        if listProfile.count > 0 {
+            let alert = UIAlertController(title: "Congratulation!", message: "Now you're \(listProfile[index].name)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: true)
+        }
     }
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
         if direction == .right {
             let vc = MatchedVC()
-            vc.updateAvt(images[index])
+            vc.updateAvt(listProfile[index].imageUrl)
             self.present(vc, animated: true)
         }
     }

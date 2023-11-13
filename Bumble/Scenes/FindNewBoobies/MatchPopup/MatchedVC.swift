@@ -27,7 +27,9 @@ class MatchedVC: UIViewController {
         SDWebImageManager.shared.loadImage(with: currentUser.photoURL, options: .highPriority, progress: nil) { (image, data, error, cacheType, isFinished, imageUrl) in
             self.yourImg.image = image
         }
-        self.herImage.image = UIImage(named: herUrl) ?? UIImage()
+        SDWebImageManager.shared.loadImage(with: URL(string: herUrl), options: .highPriority, progress: nil) { (image, data, error, cacheType, isFinished, imageUrl) in
+            self.herImage.image = image
+        }
     }
     
     func updateAvt (_ imgUrl: String) {

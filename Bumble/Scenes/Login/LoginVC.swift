@@ -36,6 +36,7 @@ class LoginVC: UIViewController {
     @IBAction func didSelectCreateNew(_ sender: Any) {
 //        FirebaseAuth.Auth.auth().createUser(withEmail: "a@gmail.com", password: "123456")
     }
+    
     @IBAction func didSelectLoginBtn(_ sender: Any) {
         guard let email = emailField.text, !email.isEmpty, let password = passwordField.text, !password.isEmpty else {
             print("Missing field data")

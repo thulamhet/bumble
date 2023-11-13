@@ -10,6 +10,7 @@
 		4032B3FADD9709A93F5F0247 /* Pods_Bumble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C73F4B1F534CB803BBF9C /* Pods_Bumble.framework */; };
 		781381D02AE3C08100FDB6F0 /* ListMessageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 781381CF2AE3C08100FDB6F0 /* ListMessageVC.xib */; };
 		782C9BD02B00B4DC007E3658 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C9BCF2B00B4DC007E3658 /* FirebaseManager.swift */; };
+		782C9BD32B01FC16007E3658 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C9BD22B01FC16007E3658 /* LoadingView.swift */; };
 		786425732AE0C821003AD08F /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786425722AE0C821003AD08F /* ProfileModel.swift */; };
 		787D496E2A5BFDE900303FAA /* BaseLoadCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D496D2A5BFDE900303FAA /* BaseLoadCustomView.swift */; };
 		787D49712A5BFEAE00303FAA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D496F2A5BFEAE00303FAA /* ProfileView.swift */; };
@@ -80,6 +81,7 @@
 /* Begin PBXFileReference section */
 		781381CF2AE3C08100FDB6F0 /* ListMessageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListMessageVC.xib; sourceTree = "<group>"; };
 		782C9BCF2B00B4DC007E3658 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		782C9BD22B01FC16007E3658 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		786425722AE0C821003AD08F /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		787D496D2A5BFDE900303FAA /* BaseLoadCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLoadCustomView.swift; sourceTree = "<group>"; };
 		787D496F2A5BFEAE00303FAA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -169,6 +171,14 @@
 				782C9BCF2B00B4DC007E3658 /* FirebaseManager.swift */,
 			);
 			path = Firebase;
+			sourceTree = "<group>";
+		};
+		782C9BD12B01FC0A007E3658 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				782C9BD22B01FC16007E3658 /* LoadingView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		786425712AE0C815003AD08F /* Model */ = {
@@ -315,6 +325,7 @@
 		78D056E82A4D3A0D00F4C7B4 /* Bumble */ = {
 			isa = PBXGroup;
 			children = (
+				782C9BD12B01FC0A007E3658 /* Common */,
 				782C9BCE2B00B4D1007E3658 /* Firebase */,
 				78AB0CBC2AFC8BF400C61EBA /* Font */,
 				78F29AB22A56782E009D977E /* Extension */,
@@ -632,6 +643,7 @@
 				78F29AB62A567875009D977E /* StringEx.swift in Sources */,
 				78F29AB12A5677AF009D977E /* Contants.swift in Sources */,
 				789670092AE0DAA000B0508F /* ChatViewController.swift in Sources */,
+				782C9BD32B01FC16007E3658 /* LoadingView.swift in Sources */,
 				78AB0C7A2AFC8A5300C61EBA /* FilterVC.swift in Sources */,
 				78D056EA2A4D3A0D00F4C7B4 /* AppDelegate.swift in Sources */,
 				78D056EC2A4D3A0D00F4C7B4 /* SceneDelegate.swift in Sources */,

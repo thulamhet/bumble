@@ -12,12 +12,14 @@ class ProfileModel {
     let name: String
     let school: String
     let bio: String
+    let imageUrl: String
     
-    init(uid: String, name: String, school: String, bio: String) {
+    init(uid: String, name: String, school: String, bio: String, imageUrl: String) {
         self.uid = uid
         self.name = name
         self.school = school
         self.bio = bio
+        self.imageUrl = imageUrl
     }
     
     func toDictionary() -> [String: Any] {
@@ -25,7 +27,10 @@ class ProfileModel {
             "uid" : uid,
             "name": name,
             "school": school,
-            "bio": bio
+            "bio": bio,
+            "imageUrl": imageUrl
         ]
     }
 }
+
+
