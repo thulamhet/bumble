@@ -10,14 +10,17 @@ import Koloda
 class FindNewVC: BaseViewController {
     @IBOutlet weak var scrollView: UIView!
     var images: [String] = ["woman7", "emiu", "woman3", "woman7", "woman5"]
+    
     let bio: String = "If you’re truly stumped on how to describe yourself or your interests, ask your friends or family what key things they think a date should know about you. They won’t overthink it in the same way you might. Maybe they’ll say that a match needs to know how much time you spend working out, so you might then write something like, “Looking for someone who enjoys gym dates” in your bio. "
+    
     var listProfile: [ProfileModel] = [
-        ProfileModel(name: "Lan", school: "VNU", bio: "If you’re truly stumped on how to describe yourself or your interests, ask your friends or family what key things they think a date should know about you. They won’t overthink it in the same way you might.  "),
-        ProfileModel(name: "Hoa, 21", school: "SIS", bio: "Dick is my love"),
-        ProfileModel(name: "Huyen", school: "VNG", bio: "If you’re truly stumped on how to describe yourself or your interests, ask your friends or family what key things they think a date should know about you. They won’t overthink it in the same way you might."),
-        ProfileModel(name: "Cutr", school: "CCG", bio: "If you’re truly stumped on how to describe yourself or your interests, ask your friends or family what key things they think a date should know about you. They won’t overthink it in the same way you might."),
-        ProfileModel(name: "Elizaxua", school: "WWE", bio: "If you’re truly stumped on how to describe yourself or your interests, ask your friends or family what key things they think a date should know about you. They won’t overthink it in the same way you might."),
+        ProfileModel(uid: "123", name: "Lan", school: "VNU", bio: "If you’re truly stumped on how to describe yourself or your interests, ask your friends or family what key things they think a date should know about you. They won’t overthink it in the same way you might.  "),
+        ProfileModel(uid: "123", name: "Hoa, 21", school: "SIS", bio: "Dick is my love"),
+        ProfileModel(uid: "123", name: "Huyen", school: "VNG", bio: "If you’re truly stumped on how to describe yourself or your interests, ask your friends or family what key things they think a date should know about you. They won’t overthink it in the same way you might."),
+        ProfileModel(uid: "123", name: "Cutr", school: "CCG", bio: "If you’re truly stumped on how to describe yourself or your interests, ask your friends or family what key things they think a date should know about you. They won’t overthink it in the same way you might."),
+        ProfileModel(uid: "123", name: "Elizaxua", school: "WWE", bio: "If you’re truly stumped on how to describe yourself or your interests, ask your friends or family what key things they think a date should know about you. They won’t overthink it in the same way you might."),
     ]
+    let firestoreManager = FirestoreManager()
     
     @IBOutlet weak var kolodaView: KolodaView!
     
@@ -26,6 +29,7 @@ class FindNewVC: BaseViewController {
         kolodaView.dataSource = self
         kolodaView.delegate = self
         kolodaView.reloadData()
+        firestoreManager.saveUserProfile(userProfile: listProfile[0])
     }
     
     @IBAction func didSelectButtonBack(_ sender: Any) {
