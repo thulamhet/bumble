@@ -73,6 +73,7 @@ class FirestoreManager {
         }
     }
     
+    // Get all user except current user
     func getAllUsers(completion: @escaping ([ProfileModel]) -> Void) {
             let usersCollection = db.collection("users")
 

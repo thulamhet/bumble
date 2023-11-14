@@ -30,8 +30,8 @@
             filePath = "Bumble/Scenes/Message/ListMessageVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,13 +46,13 @@
             filePath = "Bumble/Scenes/FindNewBoobies/FindNewVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "koloda(_:didSwipeCardAt:in:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "3ECE7859-D1C0-43C9-BD24-CE0495811788 - 4e11d159a67a694e"
+                  uuid = "3ECE7859-D1C0-43C9-BD24-CE0495811788 - 4e11d159a67a6ef1"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -62,12 +62,12 @@
                   urlString = "file:///Users/nguyencongthu/IOS%20project/Bumble/Bumble/Scenes/FindNewBoobies/FindNewVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "124"
-                  endingLineNumber = "124"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
                   offsetFromSymbolStart = "272">
                </Location>
                <Location
-                  uuid = "3ECE7859-D1C0-43C9-BD24-CE0495811788 - 4e11d159a67a694e"
+                  uuid = "3ECE7859-D1C0-43C9-BD24-CE0495811788 - 4e11d159a67a6ef1"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -77,8 +77,8 @@
                   urlString = "file:///Users/nguyencongthu/IOS%20project/Bumble/Bumble/Scenes/FindNewBoobies/FindNewVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "124"
-                  endingLineNumber = "124"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
                   offsetFromSymbolStart = "368">
                </Location>
             </Locations>

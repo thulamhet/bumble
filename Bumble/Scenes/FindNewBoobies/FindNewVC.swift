@@ -30,6 +30,7 @@ class FindNewVC: BaseViewController {
         if (self.currentUser == nil) {
             firestoreManager.getUserProfile(uid: user.uid, completion: { [weak self] user in
                 self?.currentUser = user
+                SESSION.currentUser = user
             })
         }
     }
@@ -38,6 +39,7 @@ class FindNewVC: BaseViewController {
         LoadingView.show()
         firestoreManager.getAllUsers { [weak self] profiles in
             self?.listProfile = profiles
+            SESSION.allUsers = profiles
             self?.kolodaView.reloadData()
             LoadingView.hide()
         }
@@ -49,6 +51,7 @@ class FindNewVC: BaseViewController {
     
     @IBAction func didSelectMessageButton(_ sender: Any) {
         let vc = ListMessageVC()
+//        vc.currentUser = currentUser
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

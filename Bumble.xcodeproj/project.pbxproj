@@ -43,6 +43,7 @@
 		78B31E682AE3BBAE0074FEBE /* ListMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B31E662AE3BBAE0074FEBE /* ListMessageVC.swift */; };
 		78B31E712AE3BEB50074FEBE /* MatchQueueCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B31E6F2AE3BEB50074FEBE /* MatchQueueCollectionViewCell.swift */; };
 		78B31E722AE3BEB50074FEBE /* MatchQueueCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78B31E702AE3BEB50074FEBE /* MatchQueueCollectionViewCell.xib */; };
+		78B9C5542B0365E7005E2844 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B9C5532B0365E7005E2844 /* Session.swift */; };
 		78C11FDA2AFB3B180013BE05 /* MatchedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C11FD82AFB3B180013BE05 /* MatchedVC.swift */; };
 		78C11FDB2AFB3B180013BE05 /* MatchedVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78C11FD92AFB3B180013BE05 /* MatchedVC.xib */; };
 		78D056EA2A4D3A0D00F4C7B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D056E92A4D3A0D00F4C7B4 /* AppDelegate.swift */; };
@@ -116,6 +117,7 @@
 		78B31E662AE3BBAE0074FEBE /* ListMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMessageVC.swift; sourceTree = "<group>"; };
 		78B31E6F2AE3BEB50074FEBE /* MatchQueueCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchQueueCollectionViewCell.swift; sourceTree = "<group>"; };
 		78B31E702AE3BEB50074FEBE /* MatchQueueCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchQueueCollectionViewCell.xib; sourceTree = "<group>"; };
+		78B9C5532B0365E7005E2844 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		78C11FD82AFB3B180013BE05 /* MatchedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedVC.swift; sourceTree = "<group>"; };
 		78C11FD92AFB3B180013BE05 /* MatchedVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchedVC.xib; sourceTree = "<group>"; };
 		78D056E62A4D3A0D00F4C7B4 /* Bumble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bumble.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -297,6 +299,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		78B9C5522B0365D7005E2844 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				78B9C5532B0365E7005E2844 /* Session.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		78C11FD72AFB3AFF0013BE05 /* MatchPopup */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +341,7 @@
 		78D056E82A4D3A0D00F4C7B4 /* Bumble */ = {
 			isa = PBXGroup;
 			children = (
+				78B9C5522B0365D7005E2844 /* Domain */,
 				782C9BD12B01FC0A007E3658 /* Common */,
 				782C9BCE2B00B4D1007E3658 /* Firebase */,
 				78AB0CBC2AFC8BF400C61EBA /* Font */,
@@ -649,6 +660,7 @@
 				7896700E2AE0DBA900B0508F /* ChatUser.swift in Sources */,
 				78F29AB62A567875009D977E /* StringEx.swift in Sources */,
 				78F29AB12A5677AF009D977E /* Contants.swift in Sources */,
+				78B9C5542B0365E7005E2844 /* Session.swift in Sources */,
 				789670092AE0DAA000B0508F /* ChatViewController.swift in Sources */,
 				782C9BD32B01FC16007E3658 /* LoadingView.swift in Sources */,
 				78AB0C7A2AFC8A5300C61EBA /* FilterVC.swift in Sources */,
