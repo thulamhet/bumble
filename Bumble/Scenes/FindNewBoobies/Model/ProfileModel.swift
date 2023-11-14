@@ -9,17 +9,21 @@ import Foundation
 
 class ProfileModel {
     let uid: String
-    let name: String
-    let school: String
-    let bio: String
-    let imageUrl: String
+    var name: String
+    var school: String
+    var bio: String
+    var imageUrl: String
+    var listPeopleILiked: [String]
+    var listPeopleLikedMe: [String]
     
-    init(uid: String, name: String, school: String, bio: String, imageUrl: String) {
+    init(uid: String, name: String, school: String, bio: String, imageUrl: String, listPeopleILiked: [String], listPeopleLikedMe: [String]) {
         self.uid = uid
         self.name = name
         self.school = school
         self.bio = bio
         self.imageUrl = imageUrl
+        self.listPeopleILiked = listPeopleILiked
+        self.listPeopleLikedMe = listPeopleLikedMe
     }
     
     func toDictionary() -> [String: Any] {
@@ -28,7 +32,9 @@ class ProfileModel {
             "name": name,
             "school": school,
             "bio": bio,
-            "imageUrl": imageUrl
+            "imageUrl": imageUrl,
+            "listPeopleILiked": listPeopleILiked,
+            "listPeopleLikedMe": listPeopleLikedMe
         ]
     }
 }

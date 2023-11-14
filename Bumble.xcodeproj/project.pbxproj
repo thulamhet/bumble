@@ -11,6 +11,8 @@
 		781381D02AE3C08100FDB6F0 /* ListMessageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 781381CF2AE3C08100FDB6F0 /* ListMessageVC.xib */; };
 		782C9BD02B00B4DC007E3658 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C9BCF2B00B4DC007E3658 /* FirebaseManager.swift */; };
 		782C9BD32B01FC16007E3658 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C9BD22B01FC16007E3658 /* LoadingView.swift */; };
+		782C9BD62B0220BC007E3658 /* InforCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C9BD42B0220BC007E3658 /* InforCell.swift */; };
+		782C9BD72B0220BC007E3658 /* InforCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 782C9BD52B0220BC007E3658 /* InforCell.xib */; };
 		786425732AE0C821003AD08F /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786425722AE0C821003AD08F /* ProfileModel.swift */; };
 		787D496E2A5BFDE900303FAA /* BaseLoadCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D496D2A5BFDE900303FAA /* BaseLoadCustomView.swift */; };
 		787D49712A5BFEAE00303FAA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D496F2A5BFEAE00303FAA /* ProfileView.swift */; };
@@ -82,6 +84,8 @@
 		781381CF2AE3C08100FDB6F0 /* ListMessageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListMessageVC.xib; sourceTree = "<group>"; };
 		782C9BCF2B00B4DC007E3658 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		782C9BD22B01FC16007E3658 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		782C9BD42B0220BC007E3658 /* InforCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InforCell.swift; sourceTree = "<group>"; };
+		782C9BD52B0220BC007E3658 /* InforCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InforCell.xib; sourceTree = "<group>"; };
 		786425722AE0C821003AD08F /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		787D496D2A5BFDE900303FAA /* BaseLoadCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLoadCustomView.swift; sourceTree = "<group>"; };
 		787D496F2A5BFEAE00303FAA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -204,6 +208,8 @@
 			children = (
 				787D496F2A5BFEAE00303FAA /* ProfileView.swift */,
 				787D49702A5BFEAE00303FAA /* ProfileView.xib */,
+				782C9BD42B0220BC007E3658 /* InforCell.swift */,
+				782C9BD52B0220BC007E3658 /* InforCell.xib */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -371,10 +377,10 @@
 		78F29AAE2A567798009D977E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				787D49652A5BFD2500303FAA /* CustomView */,
 				78AB0CD12AFCB74000C61EBA /* Interested */,
 				78AB0C772AFC8A4400C61EBA /*  Filter */,
 				787D496A2A5BFD7400303FAA /* Base */,
-				787D49652A5BFD2500303FAA /* CustomView */,
 				78B31E6D2AE3BCCF0074FEBE /* Message */,
 				7878A9D62AC4786B009AB3AA /* Chat */,
 				78F29AB72A567D08009D977E /* FindNewBoobies */,
@@ -548,6 +554,7 @@
 				78F29AAD2A56726C009D977E /* CreateNewAccVC.xib in Resources */,
 				78AB0CD52AFCB79800C61EBA /* InterestedVC.xib in Resources */,
 				7896700A2AE0DAA000B0508F /* ChatViewController.xib in Resources */,
+				782C9BD72B0220BC007E3658 /* InforCell.xib in Resources */,
 				78AB0CC92AFC8BF500C61EBA /* SVN-Gilroy Medium.otf in Resources */,
 				78AB0CCA2AFC8BF500C61EBA /* Inconsolata.ttf in Resources */,
 				787D49722A5BFEAE00303FAA /* ProfileView.xib in Resources */,
@@ -649,6 +656,7 @@
 				78D056EC2A4D3A0D00F4C7B4 /* SceneDelegate.swift in Sources */,
 				78C11FDA2AFB3B180013BE05 /* MatchedVC.swift in Sources */,
 				7896700C2AE0DB9E00B0508F /* Chat.swift in Sources */,
+				782C9BD62B0220BC007E3658 /* InforCell.swift in Sources */,
 				78F29ABF2A56800F009D977E /* FindNewVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

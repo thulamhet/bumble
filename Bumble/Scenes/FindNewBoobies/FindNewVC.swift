@@ -7,26 +7,31 @@
 
 import UIKit
 import Koloda
+import Firebase
 
 class FindNewVC: BaseViewController {
     @IBOutlet weak var scrollView: UIView!
-    var images: [String] = ["woman7", "emiu", "woman3", "woman7", "woman5"]
     
     var listProfile: [ProfileModel] = []
-    
     let firestoreManager = FirestoreManager()
+    var currentUser: ProfileModel?
     
     @IBOutlet weak var kolodaView: KolodaView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let user: User = Auth.auth().currentUser!
         kolodaView.dataSource = self
         kolodaView.delegate = self
         kolodaView.reloadData()
-//        for item in listProfile {
-//            firestoreManager.saveUserProfile(userProfile: item)
-//        }
+//        var a = ProfileModel(uid: "dD0hAHU3hQU2RrfpbkoJ645diYL2", name:"thư", school: "UET", bio: "wqddasdasdasdasadasass", imageUrl: "https://images5.alphacoders.com/126/1266052.jpg")
+//            firestoreManager.saveUserProfile(userProfile: a)
         getListUsers()
+        if (self.currentUser == nil) {
+            firestoreManager.getUserProfile(uid: user.uid, completion: { [weak self] user in
+                self?.currentUser = user
+            })
+        }
     }
     
     private func getListUsers() {
@@ -62,7 +67,7 @@ class FindNewVC: BaseViewController {
 
 extension FindNewVC: KolodaViewDataSource {
     func kolodaNumberOfCards(_ koloda:KolodaView) -> Int {
-        return images.count
+        return listProfile.count
     }
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
@@ -104,8 +109,26 @@ extension FindNewVC: KolodaViewDelegate {
             let vc = MatchedVC()
             vc.updateAvt(listProfile[index].imageUrl)
             self.present(vc, animated: true)
+            
+            //Update list you liked for current user
+            if !(currentUser?.listPeopleILiked.contains(listProfile[index].uid) ?? false) {
+                currentUser?.listPeopleILiked.append(listProfile[index].uid)
+            }
+            firestoreManager.updateUserProfile(userProfile: self.currentUser!)
+            
+            //Update list who liked you for swiped right user
+            var peopleISwiped: ProfileModel?
+            firestoreManager.getUserProfile(uid: listProfile[index].uid) {[weak self] user in
+                peopleISwiped = user
+                guard let people = peopleISwiped else {return}
+                if !people.listPeopleLikedMe.contains((self?.currentUser!.uid)!) {
+                    people.listPeopleLikedMe.append(self!.currentUser!.uid)
+                    self?.firestoreManager.updateUserProfile(userProfile: people)
+                }
+            }
         }
     }
+    
     func kolodaShouldTransparentizeNextCard(_ koloda: KolodaView) -> Bool {
         return true
     }

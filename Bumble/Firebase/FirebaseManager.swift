@@ -6,10 +6,12 @@
 //
 
 import FirebaseFirestore
+import Firebase
 
 class FirestoreManager {
 
     let db = Firestore.firestore()
+    let currentUser: User = Auth.auth().currentUser!
 
     func saveUserProfile(userProfile: ProfileModel) {
         let userRef = db.collection("users").document(userProfile.uid)
@@ -39,8 +41,11 @@ class FirestoreManager {
                    let school = data["school"] as? String,
                    let bio = data["bio"] as? String,
                    let imageUrl = data["imageUrl"] as? String,
-                   let uid = data["uid"] as? String {
-                    let userProfile = ProfileModel(uid: uid, name: name, school: school, bio: bio, imageUrl: imageUrl)
+                   let uid = data["uid"] as? String,
+                   let iLiked = data["listPeopleILiked"] as? [String],
+                   let likedMe = data["listPeopleLikedMe"] as? [String]
+                {
+                    let userProfile = ProfileModel(uid: uid, name: name, school: school, bio: bio, imageUrl: imageUrl, listPeopleILiked: iLiked, listPeopleLikedMe: likedMe)
                     completion(userProfile)
                 } else {
                     completion(nil)
@@ -85,8 +90,12 @@ class FirestoreManager {
                         let bio = data["bio"] as? String ?? ""
                         let imageUrl = data["imageUrl"] as? String ?? ""
                         let uid = data["uid"] as? String ?? ""
-                        let profile = ProfileModel(uid: uid, name: name, school: school, bio: bio, imageUrl: imageUrl)
-                        userProfiles.append(profile)
+                        let iLiked = data["listPeopleILiked"] as? [String] ?? []
+                        let likedMe = data["listPeopleLikedMe"] as? [String] ?? []
+                        if (uid != self.currentUser.uid) {
+                            let profile = ProfileModel(uid: uid, name: name, school: school, bio: bio, imageUrl: imageUrl, listPeopleILiked: iLiked, listPeopleLikedMe: likedMe)
+                            userProfiles.append(profile)
+                        }
                     }
                     completion(userProfiles)
                 }

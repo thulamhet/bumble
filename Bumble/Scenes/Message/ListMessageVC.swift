@@ -57,7 +57,7 @@ extension ListMessageVC: UICollectionViewDelegateFlowLayout, UICollectionViewDat
         cell.setupCell(matchList[indexPath.row])
         cell.cornerRadius = 40
         cell.borderWidth = 2
-        cell.borderColor = .orange
+        cell.borderColor = UIColor(hexString: "#FFDF37")
         
         return cell
     }
