@@ -46,13 +46,14 @@ class LastestChatModel {
     let uid: String
     var name: String
     var imageUrl: String
-    var lastMessage: String
-    
-    init(uid: String, name: String, imageUrl: String, lastMessage: String) {
+    var lastMessage: Message
+    var yourTurn: Bool
+    init(uid: String, name: String, imageUrl: String, lastMessage: Message, yourTurn: Bool) {
         self.uid = uid
         self.name = name
         self.imageUrl = imageUrl
         self.lastMessage = lastMessage
+        self.yourTurn = yourTurn
     }
     
 }

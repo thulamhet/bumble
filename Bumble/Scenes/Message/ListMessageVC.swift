@@ -26,12 +26,12 @@ class ListMessageVC: UIViewController {
         super.viewDidLoad()
         setupView()
         currentUser = SESSION.currentUser
+        getListMatch()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableViewData.removeAll()
-        getListMatch()
         getListLastMsg()
     }
     
@@ -80,14 +80,26 @@ class ListMessageVC: UIViewController {
 //
 //                                }
                                 let msgdata = threadQuery!.documents.last?.data()
-                                let msg = Message(dictionary: msgdata!)
-                                let lastMsg = LastestChatModel(uid: user.uid, name: user.name, imageUrl: user.imageUrl, lastMessage: msg?.content ?? "")
-                                // lấy last message
-                                if !self.tableViewData.contains(where: {
-                                    $0.uid == lastMsg.uid
-                                }) {
-                                    self.tableViewData.append(lastMsg)
-                                    self.messageTableView.reloadData()
+                                if (msgdata != nil) {
+                                    let msg = Message(dictionary: msgdata!)
+                                    let yourTurn = msg?.senderID == self.currentUser?.uid ? false : true
+                                    let lastMsg = LastestChatModel(uid: user.uid, name: user.name, imageUrl: user.imageUrl, lastMessage: msg!, yourTurn: yourTurn)
+                                    // lấy last message
+                                    if !self.tableViewData.contains(where: {
+                                        $0.uid == lastMsg.uid
+                                    }) {
+                                        self.tableViewData.append(lastMsg)
+                                        self.messageTableView.reloadData()
+                                    } else {
+                                        for mes in self.tableViewData {
+                                            if mes.uid == lastMsg.uid && mes.lastMessage.id != lastMsg.lastMessage.id{
+                                                mes.lastMessage = lastMsg.lastMessage
+                                                mes.yourTurn = true
+                                                self.messageTableView.reloadData()
+                                                break
+                                            }
+                                        }
+                                    }
                                 }
                             }
                             })
@@ -200,12 +212,25 @@ extension ListMessageVC : UITableViewDelegate, UITableViewDataSource {
                                                        for: indexPath) as? LastestMessageCell else {
             return UITableViewCell()
         }
-        cell.setupCell(tableViewData[indexPath.row].imageUrl, tableViewData[indexPath.row].name, tableViewData[indexPath.row].lastMessage)
+        cell.selectionStyle = .none
+        cell.setupCell(tableViewData[indexPath.row].imageUrl, tableViewData[indexPath.row].name, tableViewData[indexPath.row].lastMessage.content, tableViewData[indexPath.row].yourTurn)
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80;
+        return 85;
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = ChatViewController()
+        for user in listUserMatch {
+            if tableViewData[indexPath.row].uid == user.uid {
+                vc.user2 = user
+                self.navigationController?.pushViewController(vc, animated: true)
+                break
+            }
+        }
     }
 }
 
