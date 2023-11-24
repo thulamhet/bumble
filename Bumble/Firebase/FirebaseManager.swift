@@ -43,9 +43,10 @@ class FirestoreManager {
                    let imageUrl = data["imageUrl"] as? String,
                    let uid = data["uid"] as? String,
                    let iLiked = data["listPeopleILiked"] as? [String],
-                   let likedMe = data["listPeopleLikedMe"] as? [String]
+                   let likedMe = data["listPeopleLikedMe"] as? [String],
+                   let listMatch = data["listMatch"] as? [String]
                 {
-                    let userProfile = ProfileModel(uid: uid, name: name, school: school, bio: bio, imageUrl: imageUrl, listPeopleILiked: iLiked, listPeopleLikedMe: likedMe)
+                    let userProfile = ProfileModel(uid: uid, name: name, school: school, bio: bio, imageUrl: imageUrl, listPeopleILiked: iLiked, listPeopleLikedMe: likedMe, listMatch: listMatch)
                     completion(userProfile)
                 } else {
                     completion(nil)
@@ -93,8 +94,9 @@ class FirestoreManager {
                         let uid = data["uid"] as? String ?? ""
                         let iLiked = data["listPeopleILiked"] as? [String] ?? []
                         let likedMe = data["listPeopleLikedMe"] as? [String] ?? []
+                        let listMatch = data["listMatch"] as? [String] ?? []
                         if (uid != self.currentUser.uid) {
-                            let profile = ProfileModel(uid: uid, name: name, school: school, bio: bio, imageUrl: imageUrl, listPeopleILiked: iLiked, listPeopleLikedMe: likedMe)
+                            let profile = ProfileModel(uid: uid, name: name, school: school, bio: bio, imageUrl: imageUrl, listPeopleILiked: iLiked, listPeopleLikedMe: likedMe, listMatch: listMatch)
                             userProfiles.append(profile)
                         }
                     }

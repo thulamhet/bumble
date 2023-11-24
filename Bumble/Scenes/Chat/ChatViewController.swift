@@ -14,18 +14,15 @@ import FirebaseFirestore
 import SDWebImage
 
 class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate, MessagesDataSource, MessagesLayoutDelegate, MessagesDisplayDelegate {
-    var currentUser: User = Auth.auth().currentUser!
-    var user2Name: String = "Wiliam"
-    var user2ImgUrl: String = "https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=1200&quality=85&auto=format&fit=max&s=a52bbe202f57ac0f5ff7f47166906403"
-    var user2UID: String = "GO4z7RANy6aF6kt8NoOvKFVGPc53"
+    var currentUser: ProfileModel? = SESSION.currentUser
+    var user2: ProfileModel?
     
     private var docReference: DocumentReference?
-    
     var messages: [Message] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Chat"
+        self.title = user2?.name
         maintainPositionOnKeyboardFrameChanged = true
         scrollsToLastItemOnKeyboardBeginsEditing = true
         self.navigationController?.setNavigationBarHidden(false, animated: true)
@@ -36,20 +33,32 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
-        
+        customNavBar()
         loadChat()
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-
-        // Show the navigation bar on other view controllers
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
-    // MARK: - Custom messages handlers
+    private func customNavBar () {
+        let backImg = UIImage(named: "ic24PxOutlineLeft")
+        self.navigationController?.navigationBar.backIndicatorImage = backImg
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImg
+        self.navigationController?.navigationBar.backItem?.title = ""
+//        self.navigationController?.navigationBar.tintColor = .black
+//        self.navigationController?.navigationBar.backgroundColor = .white
+        
+        let titleView = UIView()
+
+        let imageView = UIImageView(image: UIImage(named: "ic24PxOutlineLeft"))
+        imageView.contentMode = .scaleAspectFit
+    }
     
+    // MARK: - Custom messages handlers
     func createNewChat() {
-        let users = [self.currentUser.uid, self.user2UID]
+        let users = [self.currentUser?.uid ??  "", user2?.uid ?? ""]
          let data: [String: Any] = [
              "users":users
          ]
@@ -88,7 +97,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
                     for doc in chatQuerySnap!.documents {
                         let chat = Chat(dictionary: doc.data())
                         //Get the chat which has user2 id
-                        if ((chat?.users.contains(self.user2UID)) != nil) {
+                        if chat?.users.contains(self.user2?.uid ?? "") == true {
 //                        if (true) {
                             self.docReference = doc.reference
                             //fetch it's thread collection
@@ -149,7 +158,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     // MARK: - InputBarAccessoryViewDelegate
     
             func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
-                let message = Message(id: UUID().uuidString, content: text, created: Date(), senderID: currentUser.uid, senderName: currentUser.displayName ?? "thu")
+                let message = Message(id: UUID().uuidString, content: text, created: Date(), senderID: currentUser?.uid ?? "", senderName: currentUser?.name ?? "" )
                   //messages.append(message)
                   insertNewMessage(message)
                   save(message)
@@ -162,6 +171,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     
     // MARK: - MessagesDataSource
     func currentSender() -> SenderType {
+        // ??
         return Sender(id: Auth.auth().currentUser!.uid, displayName: Auth.auth().currentUser?.displayName ?? "Name not found")
         
     }
@@ -176,6 +186,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
             print("No messages to display")
             return 0
         } else {
+            print("There are \(messages.count) messages")
             return messages.count
         }
     }
@@ -188,16 +199,16 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     
     // MARK: - MessagesDisplayDelegate
     func backgroundColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
-        return isFromCurrentSender(message: message) ? .orange : .lightGray
+        return isFromCurrentSender(message: message) ? UIColor(hexString: "#F6C84F") : .lightGray
     }
 
     func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
-        if message.sender.senderId == currentUser.uid {
-            SDWebImageManager.shared.loadImage(with: currentUser.photoURL, options: .highPriority, progress: nil) { (image, data, error, cacheType, isFinished, imageUrl) in
+        if message.sender.senderId == currentUser?.uid {
+            SDWebImageManager.shared.loadImage(with: URL(string: currentUser?.imageUrl ?? ""), options: .highPriority, progress: nil) { (image, data, error, cacheType, isFinished, imageUrl) in
                 avatarView.image = image
             }
         } else {
-            SDWebImageManager.shared.loadImage(with: URL(string: user2ImgUrl), options: .highPriority, progress: nil) { (image, data, error, cacheType, isFinished, imageUrl) in
+            SDWebImageManager.shared.loadImage(with: URL(string: user2?.imageUrl ?? ""), options: .highPriority, progress: nil) { (image, data, error, cacheType, isFinished, imageUrl) in
                 avatarView.image = image
             }
         }

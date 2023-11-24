@@ -15,8 +15,9 @@ class ProfileModel {
     var imageUrl: String
     var listPeopleILiked: [String]
     var listPeopleLikedMe: [String]
+    var listMatch: [String]
     
-    init(uid: String, name: String, school: String, bio: String, imageUrl: String, listPeopleILiked: [String], listPeopleLikedMe: [String]) {
+    init(uid: String, name: String, school: String, bio: String, imageUrl: String, listPeopleILiked: [String], listPeopleLikedMe: [String], listMatch: [String]) {
         self.uid = uid
         self.name = name
         self.school = school
@@ -24,6 +25,7 @@ class ProfileModel {
         self.imageUrl = imageUrl
         self.listPeopleILiked = listPeopleILiked
         self.listPeopleLikedMe = listPeopleLikedMe
+        self.listMatch = listMatch
     }
     
     func toDictionary() -> [String: Any] {
@@ -34,9 +36,25 @@ class ProfileModel {
             "bio": bio,
             "imageUrl": imageUrl,
             "listPeopleILiked": listPeopleILiked,
-            "listPeopleLikedMe": listPeopleLikedMe
+            "listPeopleLikedMe": listPeopleLikedMe,
+            "listMatch": listMatch
         ]
     }
+}
+
+class LastestChatModel {
+    let uid: String
+    var name: String
+    var imageUrl: String
+    var lastMessage: String
+    
+    init(uid: String, name: String, imageUrl: String, lastMessage: String) {
+        self.uid = uid
+        self.name = name
+        self.imageUrl = imageUrl
+        self.lastMessage = lastMessage
+    }
+    
 }
 
 

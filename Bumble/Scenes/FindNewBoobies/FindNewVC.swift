@@ -109,17 +109,50 @@ extension FindNewVC: KolodaViewDelegate {
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
         if direction == .right {
-            let vc = MatchedVC()
-            vc.updateAvt(listProfile[index].imageUrl)
-            self.present(vc, animated: true)
             
-            //Update list you liked for current user
+            // If match
+            if (currentUser?.listPeopleLikedMe.contains(listProfile[index].uid) ?? false) {
+                let vc = MatchVC()
+                vc.updateAvt(listProfile[index].imageUrl)
+                self.navigationController?.pushViewController(vc, animated: true)
+                
+                // Thêm id vừa quẹt vào listMatch của user hiện tại
+                currentUser?.listMatch.append(listProfile[index].uid)
+                
+                // Xóa id khỏi list thích mình
+                currentUser?.listPeopleLikedMe = currentUser?.listPeopleLikedMe.filter {
+                    $0 != listProfile[index].uid
+                } ?? []
+                
+                // Update user
+                firestoreManager.updateUserProfile(userProfile: self.currentUser!)
+                
+                // Xóa id khỏi list đã thích của user vừa quẹt phải và thêm id vào list match
+                var peopleISwiped: ProfileModel?
+                firestoreManager.getUserProfile(uid: listProfile[index].uid) {[weak self] user in
+                    peopleISwiped = user
+                    guard let people = peopleISwiped else {return}
+                    if !people.listPeopleILiked.contains((self?.currentUser!.uid)!) {
+                        people.listPeopleILiked.append(self!.currentUser!.uid)
+                        people.listPeopleILiked = people.listPeopleILiked.filter {
+                            $0 != self?.currentUser!.uid
+                        }
+                        
+                        people.listMatch.append((self?.currentUser!.uid)! )
+                        self?.firestoreManager.updateUserProfile(userProfile: people)
+                    }
+                }
+                
+                return
+            }
+            
+            // Update list những người đã thích cho user hiện tại
             if !(currentUser?.listPeopleILiked.contains(listProfile[index].uid) ?? false) {
                 currentUser?.listPeopleILiked.append(listProfile[index].uid)
             }
             firestoreManager.updateUserProfile(userProfile: self.currentUser!)
             
-            //Update list who liked you for swiped right user
+            // Update list những người thích mình cho user vừa quẹt
             var peopleISwiped: ProfileModel?
             firestoreManager.getUserProfile(uid: listProfile[index].uid) {[weak self] user in
                 peopleISwiped = user

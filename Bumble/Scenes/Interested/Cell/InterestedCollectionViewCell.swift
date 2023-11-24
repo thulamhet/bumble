@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class InterestedCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var avatarImg: UIImageView!
@@ -13,11 +14,14 @@ class InterestedCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func setupCell(_ img: String) {
-        avatarImg.image = UIImage(named: img)
+    func setupCell(_ imgUrl: String) {
+        SDWebImageManager.shared.loadImage(with: URL(string: imgUrl ), options: .highPriority, progress: nil) { (image, data, error, cacheType, isFinished, imageUrl) in
+            self.avatarImg.image = image
+        }
     }
 
     @IBAction func didSelectLikeButton(_ sender: Any) {
         
     }
 }
+

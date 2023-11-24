@@ -21,6 +21,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bee" translatesAutoresizingMaskIntoConstraints="NO" id="RoX-Wh-iee">
                                 <rect key="frame" x="6" y="6" width="68" height="68"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="36"/>
@@ -46,6 +47,7 @@
                     </view>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Vi1-tq-EGr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="51R-aa-S9f"/>
                 <constraint firstAttribute="trailing" secondItem="Vi1-tq-EGr" secondAttribute="trailing" id="694-lZ-FOI"/>

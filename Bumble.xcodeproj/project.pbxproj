@@ -13,6 +13,8 @@
 		782C9BD32B01FC16007E3658 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C9BD22B01FC16007E3658 /* LoadingView.swift */; };
 		782C9BD62B0220BC007E3658 /* InforCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C9BD42B0220BC007E3658 /* InforCell.swift */; };
 		782C9BD72B0220BC007E3658 /* InforCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 782C9BD52B0220BC007E3658 /* InforCell.xib */; };
+		785BF00A2B10886B000EF55E /* LastestMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BF0082B10886B000EF55E /* LastestMessageCell.swift */; };
+		785BF00B2B10886B000EF55E /* LastestMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 785BF0092B10886B000EF55E /* LastestMessageCell.xib */; };
 		786425732AE0C821003AD08F /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786425722AE0C821003AD08F /* ProfileModel.swift */; };
 		787D496E2A5BFDE900303FAA /* BaseLoadCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D496D2A5BFDE900303FAA /* BaseLoadCustomView.swift */; };
 		787D49712A5BFEAE00303FAA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D496F2A5BFEAE00303FAA /* ProfileView.swift */; };
@@ -44,6 +46,8 @@
 		78B31E712AE3BEB50074FEBE /* MatchQueueCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B31E6F2AE3BEB50074FEBE /* MatchQueueCollectionViewCell.swift */; };
 		78B31E722AE3BEB50074FEBE /* MatchQueueCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78B31E702AE3BEB50074FEBE /* MatchQueueCollectionViewCell.xib */; };
 		78B9C5542B0365E7005E2844 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B9C5532B0365E7005E2844 /* Session.swift */; };
+		78B9C5582B0373E9005E2844 /* MatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B9C5562B0373E9005E2844 /* MatchVC.swift */; };
+		78B9C5592B0373E9005E2844 /* MatchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78B9C5572B0373E9005E2844 /* MatchVC.xib */; };
 		78C11FDA2AFB3B180013BE05 /* MatchedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C11FD82AFB3B180013BE05 /* MatchedVC.swift */; };
 		78C11FDB2AFB3B180013BE05 /* MatchedVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78C11FD92AFB3B180013BE05 /* MatchedVC.xib */; };
 		78D056EA2A4D3A0D00F4C7B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D056E92A4D3A0D00F4C7B4 /* AppDelegate.swift */; };
@@ -87,6 +91,8 @@
 		782C9BD22B01FC16007E3658 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		782C9BD42B0220BC007E3658 /* InforCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InforCell.swift; sourceTree = "<group>"; };
 		782C9BD52B0220BC007E3658 /* InforCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InforCell.xib; sourceTree = "<group>"; };
+		785BF0082B10886B000EF55E /* LastestMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastestMessageCell.swift; sourceTree = "<group>"; };
+		785BF0092B10886B000EF55E /* LastestMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastestMessageCell.xib; sourceTree = "<group>"; };
 		786425722AE0C821003AD08F /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		787D496D2A5BFDE900303FAA /* BaseLoadCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLoadCustomView.swift; sourceTree = "<group>"; };
 		787D496F2A5BFEAE00303FAA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -118,6 +124,8 @@
 		78B31E6F2AE3BEB50074FEBE /* MatchQueueCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchQueueCollectionViewCell.swift; sourceTree = "<group>"; };
 		78B31E702AE3BEB50074FEBE /* MatchQueueCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchQueueCollectionViewCell.xib; sourceTree = "<group>"; };
 		78B9C5532B0365E7005E2844 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		78B9C5562B0373E9005E2844 /* MatchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchVC.swift; sourceTree = "<group>"; };
+		78B9C5572B0373E9005E2844 /* MatchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchVC.xib; sourceTree = "<group>"; };
 		78C11FD82AFB3B180013BE05 /* MatchedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedVC.swift; sourceTree = "<group>"; };
 		78C11FD92AFB3B180013BE05 /* MatchedVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchedVC.xib; sourceTree = "<group>"; };
 		78D056E62A4D3A0D00F4C7B4 /* Bumble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bumble.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -295,6 +303,8 @@
 			children = (
 				78B31E6F2AE3BEB50074FEBE /* MatchQueueCollectionViewCell.swift */,
 				78B31E702AE3BEB50074FEBE /* MatchQueueCollectionViewCell.xib */,
+				785BF0082B10886B000EF55E /* LastestMessageCell.swift */,
+				785BF0092B10886B000EF55E /* LastestMessageCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -305,6 +315,15 @@
 				78B9C5532B0365E7005E2844 /* Session.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		78B9C5552B0373D3005E2844 /* MatchVC */ = {
+			isa = PBXGroup;
+			children = (
+				78B9C5562B0373E9005E2844 /* MatchVC.swift */,
+				78B9C5572B0373E9005E2844 /* MatchVC.xib */,
+			);
+			path = MatchVC;
 			sourceTree = "<group>";
 		};
 		78C11FD72AFB3AFF0013BE05 /* MatchPopup */ = {
@@ -347,6 +366,7 @@
 				78AB0CBC2AFC8BF400C61EBA /* Font */,
 				78F29AB22A56782E009D977E /* Extension */,
 				78F29AAF2A5677A2009D977E /* Contants */,
+				787D496A2A5BFD7400303FAA /* Base */,
 				78F29AAE2A567798009D977E /* Scenes */,
 				78F29AA72A566E03009D977E /* GoogleService-Info.plist */,
 				78D056E92A4D3A0D00F4C7B4 /* AppDelegate.swift */,
@@ -391,7 +411,6 @@
 				787D49652A5BFD2500303FAA /* CustomView */,
 				78AB0CD12AFCB74000C61EBA /* Interested */,
 				78AB0C772AFC8A4400C61EBA /*  Filter */,
-				787D496A2A5BFD7400303FAA /* Base */,
 				78B31E6D2AE3BCCF0074FEBE /* Message */,
 				7878A9D62AC4786B009AB3AA /* Chat */,
 				78F29AB72A567D08009D977E /* FindNewBoobies */,
@@ -421,6 +440,7 @@
 		78F29AB72A567D08009D977E /* FindNewBoobies */ = {
 			isa = PBXGroup;
 			children = (
+				78B9C5552B0373D3005E2844 /* MatchVC */,
 				78C11FD72AFB3AFF0013BE05 /* MatchPopup */,
 				786425712AE0C815003AD08F /* Model */,
 				78F29ABD2A56800F009D977E /* FindNewVC.swift */,
@@ -565,6 +585,8 @@
 				78F29AAD2A56726C009D977E /* CreateNewAccVC.xib in Resources */,
 				78AB0CD52AFCB79800C61EBA /* InterestedVC.xib in Resources */,
 				7896700A2AE0DAA000B0508F /* ChatViewController.xib in Resources */,
+				785BF00B2B10886B000EF55E /* LastestMessageCell.xib in Resources */,
+				78B9C5592B0373E9005E2844 /* MatchVC.xib in Resources */,
 				782C9BD72B0220BC007E3658 /* InforCell.xib in Resources */,
 				78AB0CC92AFC8BF500C61EBA /* SVN-Gilroy Medium.otf in Resources */,
 				78AB0CCA2AFC8BF500C61EBA /* Inconsolata.ttf in Resources */,
@@ -649,6 +671,7 @@
 				78AB0CD42AFCB79800C61EBA /* InterestedVC.swift in Sources */,
 				78B31E712AE3BEB50074FEBE /* MatchQueueCollectionViewCell.swift in Sources */,
 				787D496E2A5BFDE900303FAA /* BaseLoadCustomView.swift in Sources */,
+				78B9C5582B0373E9005E2844 /* MatchVC.swift in Sources */,
 				789670102AE0DBBE00B0508F /* Message.swift in Sources */,
 				78F29AB42A567861009D977E /* UIColorEx.swift in Sources */,
 				787D49712A5BFEAE00303FAA /* ProfileView.swift in Sources */,
@@ -670,6 +693,7 @@
 				7896700C2AE0DB9E00B0508F /* Chat.swift in Sources */,
 				782C9BD62B0220BC007E3658 /* InforCell.swift in Sources */,
 				78F29ABF2A56800F009D977E /* FindNewVC.swift in Sources */,
+				785BF00A2B10886B000EF55E /* LastestMessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

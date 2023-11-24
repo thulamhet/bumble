@@ -10,10 +10,23 @@ import UIKit
 class InterestedVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var matchList: [String] = ["woman10", "woman11","woman12", "woman13", "woman13"]
+    var listUser: [ProfileModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        getListPeopleLikeMe()
+    }
+    
+    private func getListPeopleLikeMe() {
+        let listLikeMe: [String] = SESSION.currentUser?.listPeopleLikedMe ?? []
+        for id in listLikeMe {
+            for user in SESSION.allUsers {
+                if id == user.uid {
+                    listUser.append(user)
+                }
+            }
+        }
     }
     
     private func setupView() {
@@ -38,14 +51,14 @@ class InterestedVC: UIViewController {
 
 extension InterestedVC : UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        4
+        listUser.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InterestedCollectionViewCell", for: indexPath) as? InterestedCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.setupCell(matchList[indexPath.row])
+        cell.setupCell(listUser[indexPath.row].imageUrl)
         cell.cornerRadius = 10
         return cell
     }
