@@ -104,6 +104,11 @@ class FirestoreManager {
                 }
             }
         }
+    
+    func load () {
+        
+    }
+    
 }
 
 

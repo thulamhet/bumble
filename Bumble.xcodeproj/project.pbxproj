@@ -15,6 +15,9 @@
 		782C9BD72B0220BC007E3658 /* InforCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 782C9BD52B0220BC007E3658 /* InforCell.xib */; };
 		785BF00A2B10886B000EF55E /* LastestMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BF0082B10886B000EF55E /* LastestMessageCell.swift */; };
 		785BF00B2B10886B000EF55E /* LastestMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 785BF0092B10886B000EF55E /* LastestMessageCell.xib */; };
+		785BF00E2B15A190000EF55E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BF00D2B15A190000EF55E /* LocationManager.swift */; };
+		785BF0122B15C4DE000EF55E /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BF0102B15C4DE000EF55E /* ProfileVC.swift */; };
+		785BF0132B15C4DE000EF55E /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 785BF0112B15C4DE000EF55E /* ProfileVC.xib */; };
 		786425732AE0C821003AD08F /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786425722AE0C821003AD08F /* ProfileModel.swift */; };
 		787D496E2A5BFDE900303FAA /* BaseLoadCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D496D2A5BFDE900303FAA /* BaseLoadCustomView.swift */; };
 		787D49712A5BFEAE00303FAA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D496F2A5BFEAE00303FAA /* ProfileView.swift */; };
@@ -93,6 +96,9 @@
 		782C9BD52B0220BC007E3658 /* InforCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InforCell.xib; sourceTree = "<group>"; };
 		785BF0082B10886B000EF55E /* LastestMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastestMessageCell.swift; sourceTree = "<group>"; };
 		785BF0092B10886B000EF55E /* LastestMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastestMessageCell.xib; sourceTree = "<group>"; };
+		785BF00D2B15A190000EF55E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		785BF0102B15C4DE000EF55E /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		785BF0112B15C4DE000EF55E /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		786425722AE0C821003AD08F /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		787D496D2A5BFDE900303FAA /* BaseLoadCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLoadCustomView.swift; sourceTree = "<group>"; };
 		787D496F2A5BFEAE00303FAA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -191,8 +197,18 @@
 			isa = PBXGroup;
 			children = (
 				782C9BD22B01FC16007E3658 /* LoadingView.swift */,
+				785BF00D2B15A190000EF55E /* LocationManager.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		785BF00F2B15C4C5000EF55E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				785BF0102B15C4DE000EF55E /* ProfileVC.swift */,
+				785BF0112B15C4DE000EF55E /* ProfileVC.xib */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		786425712AE0C815003AD08F /* Model */ = {
@@ -408,6 +424,7 @@
 		78F29AAE2A567798009D977E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				785BF00F2B15C4C5000EF55E /* Profile */,
 				787D49652A5BFD2500303FAA /* CustomView */,
 				78AB0CD12AFCB74000C61EBA /* Interested */,
 				78AB0C772AFC8A4400C61EBA /*  Filter */,
@@ -583,6 +600,7 @@
 				78AB0CCB2AFC8BF500C61EBA /* ShareTechMono-Regular.ttf in Resources */,
 				78D056F32A4D3A0E00F4C7B4 /* Assets.xcassets in Resources */,
 				78F29AAD2A56726C009D977E /* CreateNewAccVC.xib in Resources */,
+				785BF0132B15C4DE000EF55E /* ProfileVC.xib in Resources */,
 				78AB0CD52AFCB79800C61EBA /* InterestedVC.xib in Resources */,
 				7896700A2AE0DAA000B0508F /* ChatViewController.xib in Resources */,
 				785BF00B2B10886B000EF55E /* LastestMessageCell.xib in Resources */,
@@ -667,6 +685,7 @@
 			files = (
 				78B31E682AE3BBAE0074FEBE /* ListMessageVC.swift in Sources */,
 				786425732AE0C821003AD08F /* ProfileModel.swift in Sources */,
+				785BF00E2B15A190000EF55E /* LocationManager.swift in Sources */,
 				787D49742A5C03AD00303FAA /* UIViewEx.swift in Sources */,
 				78AB0CD42AFCB79800C61EBA /* InterestedVC.swift in Sources */,
 				78B31E712AE3BEB50074FEBE /* MatchQueueCollectionViewCell.swift in Sources */,
@@ -689,6 +708,7 @@
 				78AB0C7A2AFC8A5300C61EBA /* FilterVC.swift in Sources */,
 				78D056EA2A4D3A0D00F4C7B4 /* AppDelegate.swift in Sources */,
 				78D056EC2A4D3A0D00F4C7B4 /* SceneDelegate.swift in Sources */,
+				785BF0122B15C4DE000EF55E /* ProfileVC.swift in Sources */,
 				78C11FDA2AFB3B180013BE05 /* MatchedVC.swift in Sources */,
 				7896700C2AE0DB9E00B0508F /* Chat.swift in Sources */,
 				782C9BD62B0220BC007E3658 /* InforCell.swift in Sources */,

@@ -8,8 +8,9 @@
 import UIKit
 import Koloda
 import Firebase
+import CoreLocation
 
-class FindNewVC: BaseViewController {
+class FindNewVC: BaseViewController, CLLocationManagerDelegate {
     @IBOutlet weak var scrollView: UIView!
     
     var listProfile: [ProfileModel] = []
@@ -17,13 +18,25 @@ class FindNewVC: BaseViewController {
     var currentUser: ProfileModel?
     
     @IBOutlet weak var kolodaView: KolodaView!
-    
+    let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         let user: User = Auth.auth().currentUser!
         kolodaView.dataSource = self
         kolodaView.delegate = self
         kolodaView.reloadData()
+        self.locationManager.requestAlwaysAuthorization()
+
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+        
+        
 //        var a = ProfileModel(uid: "dD0hAHU3hQU2RrfpbkoJ645diYL2", name:"thư", school: "UET", bio: "wqddasdasdasdasadasass", imageUrl: "https://images5.alphacoders.com/126/1266052.jpg")
 //            firestoreManager.saveUserProfile(userProfile: a)
         getListUsers()
@@ -46,7 +59,11 @@ class FindNewVC: BaseViewController {
     }
     
     @IBAction func didSelectButtonBack(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        let vc = ProfileVC()
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+        
+        
     }
     
     @IBAction func didSelectMessageButton(_ sender: Any) {
