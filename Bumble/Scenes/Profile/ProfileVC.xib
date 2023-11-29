@@ -15,6 +15,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC" customModule="Bumble" customModuleProvider="target">
             <connections>
+                <outlet property="avtImage" destination="tfm-3e-7v3" id="iIc-N4-M4X"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -47,6 +48,9 @@
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="ic24PxOutlineLeft"/>
+                            <connections>
+                                <action selector="didSelectButtonBack:" destination="-1" eventType="touchUpInside" id="ZmV-Cv-KvL"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -59,9 +63,9 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgh-rY-xyc">
-                    <rect key="frame" x="107" y="130" width="200" height="200"/>
+                    <rect key="frame" x="107" y="395" width="200" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="200" id="RHA-On-87a"/>
+                        <constraint firstAttribute="height" constant="50" id="RHA-On-87a"/>
                         <constraint firstAttribute="width" constant="200" id="Wah-XQ-mZ6"/>
                     </constraints>
                     <state key="normal" title="Button"/>
@@ -70,16 +74,30 @@
                         <action selector="didSelectUploadAvatar:" destination="-1" eventType="touchUpInside" id="Bla-Q0-pmS"/>
                     </connections>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tfm-3e-7v3">
+                    <rect key="frame" x="87" y="105" width="240" height="240"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="HCi-CQ-5x3"/>
+                        <constraint firstAttribute="height" constant="240" id="cSi-Wv-dIY"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="120"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="tfm-3e-7v3" firstAttribute="top" secondItem="s6S-Dl-fWT" secondAttribute="bottom" constant="25" id="4L4-cS-4aF"/>
+                <constraint firstItem="Pgh-rY-xyc" firstAttribute="top" secondItem="tfm-3e-7v3" secondAttribute="bottom" constant="50" id="5dP-a2-mqw"/>
                 <constraint firstItem="aT8-x1-wmh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6fs-fr-Qf9"/>
                 <constraint firstItem="s6S-Dl-fWT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="F3m-us-SDg"/>
                 <constraint firstItem="aT8-x1-wmh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KON-AT-ovC"/>
-                <constraint firstItem="Pgh-rY-xyc" firstAttribute="top" secondItem="s6S-Dl-fWT" secondAttribute="bottom" constant="50" id="L0k-IU-HFp"/>
                 <constraint firstItem="Pgh-rY-xyc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Uzb-j7-jWn"/>
                 <constraint firstAttribute="trailing" secondItem="aT8-x1-wmh" secondAttribute="trailing" id="YjK-YJ-iOR"/>
                 <constraint firstItem="s6S-Dl-fWT" firstAttribute="top" secondItem="aT8-x1-wmh" secondAttribute="bottom" id="gkb-Xp-GKf"/>
+                <constraint firstItem="tfm-3e-7v3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lI8-bF-FVr"/>
                 <constraint firstAttribute="trailing" secondItem="s6S-Dl-fWT" secondAttribute="trailing" id="wFl-R8-xSv"/>
             </constraints>
             <point key="canvasLocation" x="131" y="-11"/>

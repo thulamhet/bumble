@@ -28,13 +28,13 @@ class FindNewVC: BaseViewController, CLLocationManagerDelegate {
         self.locationManager.requestAlwaysAuthorization()
 
         // For use in foreground
-        self.locationManager.requestWhenInUseAuthorization()
-
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
-        }
+//        self.locationManager.requestWhenInUseAuthorization()
+//
+//        if CLLocationManager.locationServicesEnabled() {
+//            locationManager.delegate = self
+//            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+//            locationManager.startUpdatingLocation()
+//        }
         
         
 //        var a = ProfileModel(uid: "dD0hAHU3hQU2RrfpbkoJ645diYL2", name:"thư", school: "UET", bio: "wqddasdasdasdasadasass", imageUrl: "https://images5.alphacoders.com/126/1266052.jpg")
@@ -61,14 +61,10 @@ class FindNewVC: BaseViewController, CLLocationManagerDelegate {
     @IBAction func didSelectButtonBack(_ sender: Any) {
         let vc = ProfileVC()
         self.navigationController?.pushViewController(vc, animated: true)
-        
-        
-        
     }
     
     @IBAction func didSelectMessageButton(_ sender: Any) {
         let vc = ListMessageVC()
-//        vc.currentUser = currentUser
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
