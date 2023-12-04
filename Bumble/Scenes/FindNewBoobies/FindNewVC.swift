@@ -26,19 +26,10 @@ class FindNewVC: BaseViewController, CLLocationManagerDelegate {
         kolodaView.delegate = self
         kolodaView.reloadData()
         self.locationManager.requestAlwaysAuthorization()
-
-        // For use in foreground
-//        self.locationManager.requestWhenInUseAuthorization()
-//
-//        if CLLocationManager.locationServicesEnabled() {
-//            locationManager.delegate = self
-//            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-//            locationManager.startUpdatingLocation()
-//        }
         
         
-//        var a = ProfileModel(uid: "dD0hAHU3hQU2RrfpbkoJ645diYL2", name:"thư", school: "UET", bio: "wqddasdasdasdasadasass", imageUrl: "https://images5.alphacoders.com/126/1266052.jpg")
-//            firestoreManager.saveUserProfile(userProfile: a)
+//        var a = ProfileModel(uid: "vf19aaqw7WRI3ymA2J9mQ6XcZZH3", name: "Minh", school: "VNU", bio: "đây là a9@gmail.com", imageUrl: "https://pics.craiyon.com/2023-07-06/9ba84ae991974741b13d6d3d0a4898b9.webp", listPeopleILiked: [], listPeopleLikedMe: [], listMatch: [])
+//        firestoreManager.saveUserProfile(userProfile: a)
         getListUsers()
         if (self.currentUser == nil) {
             firestoreManager.getUserProfile(uid: user.uid, completion: { [weak self] user in
@@ -122,8 +113,6 @@ extension FindNewVC: KolodaViewDelegate {
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
         if direction == .right {
-            
-            // If match
             if (currentUser?.listPeopleLikedMe.contains(listProfile[index].uid) ?? false) {
                 let vc = MatchVC()
                 vc.updateAvt(listProfile[index].imageUrl)
@@ -145,15 +134,20 @@ extension FindNewVC: KolodaViewDelegate {
                 firestoreManager.getUserProfile(uid: listProfile[index].uid) {[weak self] user in
                     peopleISwiped = user
                     guard let people = peopleISwiped else {return}
-                    if !people.listPeopleILiked.contains((self?.currentUser!.uid)!) {
-                        people.listPeopleILiked.append(self!.currentUser!.uid)
-                        people.listPeopleILiked = people.listPeopleILiked.filter {
-                            $0 != self?.currentUser!.uid
-                        }
-                        
-                        people.listMatch.append((self?.currentUser!.uid)! )
-                        self?.firestoreManager.updateUserProfile(userProfile: people)
+//                    if !people.listPeopleILiked.contains((self?.currentUser!.uid)!) {
+//                        people.listPeopleILiked.append(self!.currentUser!.uid)
+//                        people.listPeopleILiked = people.listPeopleILiked.filter {
+//                            $0 != self?.currentUser!.uid
+//                        }
+//
+//                        people.listMatch.append((self?.currentUser!.uid)! )
+//                        self?.firestoreManager.updateUserProfile(userProfile: people)
+//                    }
+                    people.listPeopleILiked = people.listPeopleILiked.filter {
+                        $0 != self?.currentUser!.uid
                     }
+                    people.listMatch.append((self?.currentUser!.uid)! )
+                    self?.firestoreManager.updateUserProfile(userProfile: people)
                 }
                 
                 return
@@ -175,6 +169,8 @@ extension FindNewVC: KolodaViewDelegate {
                     self?.firestoreManager.updateUserProfile(userProfile: people)
                 }
             }
+        } else {
+            
         }
     }
     

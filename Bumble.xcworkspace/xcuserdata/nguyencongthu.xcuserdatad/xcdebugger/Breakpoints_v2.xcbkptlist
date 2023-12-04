@@ -7,62 +7,62 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3ECE7859-D1C0-43C9-BD24-CE0495811788"
+            uuid = "3636DAE1-E598-4CFA-9E2C-5C2EF2785B48"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Bumble/Scenes/FindNewBoobies/FindNewVC.swift"
+            filePath = "Bumble/Scenes/Profile/ProfileVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
-            landmarkName = "koloda(_:didSwipeCardAt:in:)"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "3ECE7859-D1C0-43C9-BD24-CE0495811788 - b18e01d2609cd061"
+                  uuid = "3636DAE1-E598-4CFA-9E2C-5C2EF2785B48 - a343ebab6c42464b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #3 (Swift.Optional&lt;Bumble.ProfileModel&gt;) -&gt; () in Bumble.FindNewVC.koloda(_: Koloda.KolodaView, didSwipeCardAt: Swift.Int, in: Koloda.SwipeResultDirection) -&gt; ()"
+                  symbolName = "Bumble.ProfileVC.imagePickerController(_: __C.UIImagePickerController, didFinishPickingMediaWithInfo: Swift.Dictionary&lt;__C.UIImagePickerControllerInfoKey, Any&gt;) -&gt; ()"
                   moduleName = "Bumble"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyencongthu/IOS%20project/Bumble/Bumble/Scenes/FindNewBoobies/FindNewVC.swift"
+                  urlString = "file:///Users/nguyencongthu/IOS%20project/Bumble/Bumble/Scenes/Profile/ProfileVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "177"
-                  endingLineNumber = "177"
-                  offsetFromSymbolStart = "760">
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "376">
                </Location>
                <Location
-                  uuid = "3ECE7859-D1C0-43C9-BD24-CE0495811788 - b18e01d2609cd061"
+                  uuid = "3636DAE1-E598-4CFA-9E2C-5C2EF2785B48 - 83aa3a8dccaba0f5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #3 (Swift.Optional&lt;Bumble.ProfileModel&gt;) -&gt; () in Bumble.FindNewVC.koloda(_: Koloda.KolodaView, didSwipeCardAt: Swift.Int, in: Koloda.SwipeResultDirection) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Result&lt;Foundation.URL, Swift.Error&gt;) -&gt; () in Bumble.ProfileVC.imagePickerController(_: __C.UIImagePickerController, didFinishPickingMediaWithInfo: Swift.Dictionary&lt;__C.UIImagePickerControllerInfoKey, Any&gt;) -&gt; ()"
                   moduleName = "Bumble"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyencongthu/IOS%20project/Bumble/Bumble/Scenes/FindNewBoobies/FindNewVC.swift"
+                  urlString = "file:///Users/nguyencongthu/IOS%20project/Bumble/Bumble/Scenes/Profile/ProfileVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "177"
-                  endingLineNumber = "177"
-                  offsetFromSymbolStart = "272">
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "316">
                </Location>
                <Location
-                  uuid = "3ECE7859-D1C0-43C9-BD24-CE0495811788 - b18e01d2609cd061"
+                  uuid = "3636DAE1-E598-4CFA-9E2C-5C2EF2785B48 - 2af3058dc458a1b7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #3 (Swift.Optional&lt;Bumble.ProfileModel&gt;) -&gt; () in Bumble.FindNewVC.koloda(_: Koloda.KolodaView, didSwipeCardAt: Swift.Int, in: Koloda.SwipeResultDirection) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;, Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Error&gt;, __C.SDImageCacheType, Swift.Bool, Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in closure #1 (Swift.Result&lt;Foundation.URL, Swift.Error&gt;) -&gt; () in Bumble.ProfileVC.imagePickerController(_: __C.UIImagePickerController, didFinishPickingMediaWithInfo: Swift.Dictionary&lt;__C.UIImagePickerControllerInfoKey, Any&gt;) -&gt; ()"
                   moduleName = "Bumble"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nguyencongthu/IOS%20project/Bumble/Bumble/Scenes/FindNewBoobies/FindNewVC.swift"
+                  urlString = "file:///Users/nguyencongthu/IOS%20project/Bumble/Bumble/Scenes/Profile/ProfileVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "177"
-                  endingLineNumber = "177"
-                  offsetFromSymbolStart = "368">
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "372">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -70,7 +70,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "722EB890-5D8F-4BA4-86FD-43FBC91D852F"
+            uuid = "7856A5C9-ADDC-4C01-9433-31C983AE2F7D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -83,7 +83,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "722EB890-5D8F-4BA4-86FD-43FBC91D852F - db23ed7ac2247345"
+                  uuid = "7856A5C9-ADDC-4C01-9433-31C983AE2F7D - db23ed7ac224720f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -93,24 +93,24 @@
                   urlString = "file:///Users/nguyencongthu/IOS%20project/Bumble/Bumble/Scenes/FindNewBoobies/FindNewVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "139"
-                  endingLineNumber = "139"
-                  offsetFromSymbolStart = "1256">
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "1988">
                </Location>
                <Location
-                  uuid = "722EB890-5D8F-4BA4-86FD-43FBC91D852F - db23ed7ac2247383"
+                  uuid = "7856A5C9-ADDC-4C01-9433-31C983AE2F7D - 47dd391fc1698634"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Bumble.FindNewVC.koloda(_: Koloda.KolodaView, didSwipeCardAt: Swift.Int, in: Koloda.SwipeResultDirection) -&gt; ()"
+                  symbolName = "closure #2 (Swift.Optional&lt;Bumble.ProfileModel&gt;) -&gt; () in Bumble.FindNewVC.koloda(_: Koloda.KolodaView, didSwipeCardAt: Swift.Int, in: Koloda.SwipeResultDirection) -&gt; ()"
                   moduleName = "Bumble"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/nguyencongthu/IOS%20project/Bumble/Bumble/Scenes/FindNewBoobies/FindNewVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "137"
-                  endingLineNumber = "137"
-                  offsetFromSymbolStart = "968">
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "112">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -118,17 +118,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3636DAE1-E598-4CFA-9E2C-5C2EF2785B48"
+            uuid = "D156EBFC-5AAA-442C-9085-D73C930E55FF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Bumble/Scenes/Profile/ProfileVC.swift"
+            filePath = "Bumble/Scenes/FindNewBoobies/FindNewVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "koloda(_:didSwipeCardAt:in:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D156EBFC-5AAA-442C-9085-D73C930E55FF - 47dd391fc16987b8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Bumble.ProfileModel&gt;) -&gt; () in Bumble.FindNewVC.koloda(_: Koloda.KolodaView, didSwipeCardAt: Swift.Int, in: Koloda.SwipeResultDirection) -&gt; ()"
+                  moduleName = "Bumble"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyencongthu/IOS%20project/Bumble/Bumble/Scenes/FindNewBoobies/FindNewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "300">
+               </Location>
+               <Location
+                  uuid = "D156EBFC-5AAA-442C-9085-D73C930E55FF - 47dd391fc16987b8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Bumble.ProfileModel&gt;) -&gt; () in Bumble.FindNewVC.koloda(_: Koloda.KolodaView, didSwipeCardAt: Swift.Int, in: Koloda.SwipeResultDirection) -&gt; ()"
+                  moduleName = "Bumble"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nguyencongthu/IOS%20project/Bumble/Bumble/Scenes/FindNewBoobies/FindNewVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "396">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

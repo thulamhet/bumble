@@ -172,7 +172,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     // MARK: - MessagesDataSource
     func currentSender() -> SenderType {
         // ??
-        return Sender(id: Auth.auth().currentUser!.uid, displayName: Auth.auth().currentUser?.displayName ?? "Name not found")
+        return Sender(id: Auth.auth().currentUser?.uid ?? "", displayName: Auth.auth().currentUser?.displayName ?? "Name not found")
         
     }
     

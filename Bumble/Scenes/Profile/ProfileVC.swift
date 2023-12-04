@@ -9,11 +9,16 @@ import UIKit
 import FirebaseFirestore
 import FirebaseStorage
 import SDWebImage
+import FirebaseAuth
 
 class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var avtImage: UIImageView!
+    @IBOutlet weak var bioDesView: UITextView!
+    
     let firestoreManager = FirestoreManager()
     var currentUser: ProfileModel?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         currentUser = SESSION.currentUser
@@ -31,6 +36,13 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         SDWebImageManager.shared.loadImage(with: URL(string: SESSION.currentUser?.imageUrl ?? ""), options: .highPriority, progress: nil) { (image, data, error, cacheType, isFinished, imageUrl) in
             self.avtImage.image = image
         }
+        bioDesView.text = currentUser?.bio ?? ""
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+                view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func handleTap() {
+        view.endEditing(true)
     }
     
     @IBAction func didSelectUploadAvatar(_ sender: Any) {
@@ -40,6 +52,29 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     @IBAction func didSelectButtonBack(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func didSelectSignOutBtn(_ sender: Any) {
+        do {
+            try FirebaseAuth.Auth.auth().signOut()
+            print("User signed out successfully")
+            let vc = LoginVC()
+            self.navigationController?.pushViewController(vc, animated: true)
+        } catch let signOutError as NSError {
+            print("Error signing out:", signOutError.localizedDescription)
+        }
+    }
+    @IBAction func didSelectButtonChangePassword(_ sender: Any) {
+        let vc = ForgotPasswordVC()
+        vc.gmail = Auth.auth().currentUser?.email
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func didSelectButtonSave(_ sender: Any) {
+        currentUser?.bio = bioDesView.text
+        firestoreManager.updateUserProfile(userProfile: currentUser!)
+        navigationController?.popViewController(animated: true)
+    }
+    
 }
 
 extension ProfileVC {
@@ -71,6 +106,8 @@ extension ProfileVC {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
+    
+    
     
     func uploadImageToFirebase(image: UIImage, completion: @escaping (Result<URL, Error>) -> Void) {
         guard let imageData = image.jpegData(compressionQuality: 0.5) else {
@@ -107,4 +144,6 @@ extension ProfileVC {
             }
         }
     }
+    
+    
 }

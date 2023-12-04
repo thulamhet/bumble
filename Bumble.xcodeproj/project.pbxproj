@@ -61,6 +61,10 @@
 		78D0570D2A4D3A0E00F4C7B4 /* BumbleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D0570C2A4D3A0E00F4C7B4 /* BumbleUITestsLaunchTests.swift */; };
 		78D0571B2A4D3AFF00F4C7B4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D057192A4D3AFF00F4C7B4 /* LoginVC.swift */; };
 		78D0571C2A4D3AFF00F4C7B4 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78D0571A2A4D3AFF00F4C7B4 /* LoginVC.xib */; };
+		78DD40392B1E278600675B0E /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DD40372B1E278600675B0E /* ForgotPasswordVC.swift */; };
+		78DD403A2B1E278600675B0E /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78DD40382B1E278600675B0E /* ForgotPasswordVC.xib */; };
+		78E0AEB82B173403005999D3 /* BasicInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0AEB62B173403005999D3 /* BasicInfoView.swift */; };
+		78E0AEB92B173403005999D3 /* BasicInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78E0AEB72B173403005999D3 /* BasicInfoView.xib */; };
 		78F29AA82A566E03009D977E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78F29AA72A566E03009D977E /* GoogleService-Info.plist */; };
 		78F29AAC2A56726C009D977E /* CreateNewAccVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F29AAA2A56726C009D977E /* CreateNewAccVC.swift */; };
 		78F29AAD2A56726C009D977E /* CreateNewAccVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F29AAB2A56726C009D977E /* CreateNewAccVC.xib */; };
@@ -146,6 +150,10 @@
 		78D0570C2A4D3A0E00F4C7B4 /* BumbleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumbleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		78D057192A4D3AFF00F4C7B4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		78D0571A2A4D3AFF00F4C7B4 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		78DD40372B1E278600675B0E /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		78DD40382B1E278600675B0E /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
+		78E0AEB62B173403005999D3 /* BasicInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInfoView.swift; sourceTree = "<group>"; };
+		78E0AEB72B173403005999D3 /* BasicInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicInfoView.xib; sourceTree = "<group>"; };
 		78F29AA72A566E03009D977E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78F29AAA2A56726C009D977E /* CreateNewAccVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewAccVC.swift; sourceTree = "<group>"; };
 		78F29AAB2A56726C009D977E /* CreateNewAccVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateNewAccVC.xib; sourceTree = "<group>"; };
@@ -205,6 +213,7 @@
 		785BF00F2B15C4C5000EF55E /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				78E0AEB52B172ED4005999D3 /* InterestView */,
 				785BF0102B15C4DE000EF55E /* ProfileVC.swift */,
 				785BF0112B15C4DE000EF55E /* ProfileVC.xib */,
 			);
@@ -410,9 +419,28 @@
 			path = BumbleUITests;
 			sourceTree = "<group>";
 		};
+		78DD40362B1E276E00675B0E /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				78DD40372B1E278600675B0E /* ForgotPasswordVC.swift */,
+				78DD40382B1E278600675B0E /* ForgotPasswordVC.xib */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		78E0AEB52B172ED4005999D3 /* InterestView */ = {
+			isa = PBXGroup;
+			children = (
+				78E0AEB62B173403005999D3 /* BasicInfoView.swift */,
+				78E0AEB72B173403005999D3 /* BasicInfoView.xib */,
+			);
+			path = InterestView;
+			sourceTree = "<group>";
+		};
 		78F29AA92A567257009D977E /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				78DD40362B1E276E00675B0E /* ForgotPassword */,
 				78D057192A4D3AFF00F4C7B4 /* LoginVC.swift */,
 				78D0571A2A4D3AFF00F4C7B4 /* LoginVC.xib */,
 				78F29AAA2A56726C009D977E /* CreateNewAccVC.swift */,
@@ -593,11 +621,13 @@
 				78AB0C7B2AFC8A5300C61EBA /* FilterVC.xib in Resources */,
 				78AB0CCC2AFC8BF500C61EBA /* SVN-Gilroy SemiBold Italic.otf in Resources */,
 				781381D02AE3C08100FDB6F0 /* ListMessageVC.xib in Resources */,
+				78E0AEB92B173403005999D3 /* BasicInfoView.xib in Resources */,
 				78AB0CC82AFC8BF500C61EBA /* SVN-Gilroy Bold Italic.otf in Resources */,
 				78C11FDB2AFB3B180013BE05 /* MatchedVC.xib in Resources */,
 				78AB0CDA2AFCBEB200C61EBA /* InterestedCollectionViewCell.xib in Resources */,
 				78AB0CD02AFC8BF500C61EBA /* SVN-Gilroy Regular.otf in Resources */,
 				78AB0CCB2AFC8BF500C61EBA /* ShareTechMono-Regular.ttf in Resources */,
+				78DD403A2B1E278600675B0E /* ForgotPasswordVC.xib in Resources */,
 				78D056F32A4D3A0E00F4C7B4 /* Assets.xcassets in Resources */,
 				78F29AAD2A56726C009D977E /* CreateNewAccVC.xib in Resources */,
 				785BF0132B15C4DE000EF55E /* ProfileVC.xib in Resources */,
@@ -697,6 +727,7 @@
 				78D0571B2A4D3AFF00F4C7B4 /* LoginVC.swift in Sources */,
 				78AB0CD92AFCBEB200C61EBA /* InterestedCollectionViewCell.swift in Sources */,
 				787FB53F2A67DA1000491254 /* BaseViewController.swift in Sources */,
+				78DD40392B1E278600675B0E /* ForgotPasswordVC.swift in Sources */,
 				782C9BD02B00B4DC007E3658 /* FirebaseManager.swift in Sources */,
 				78F29AAC2A56726C009D977E /* CreateNewAccVC.swift in Sources */,
 				7896700E2AE0DBA900B0508F /* ChatUser.swift in Sources */,
@@ -706,6 +737,7 @@
 				789670092AE0DAA000B0508F /* ChatViewController.swift in Sources */,
 				782C9BD32B01FC16007E3658 /* LoadingView.swift in Sources */,
 				78AB0C7A2AFC8A5300C61EBA /* FilterVC.swift in Sources */,
+				78E0AEB82B173403005999D3 /* BasicInfoView.swift in Sources */,
 				78D056EA2A4D3A0D00F4C7B4 /* AppDelegate.swift in Sources */,
 				78D056EC2A4D3A0D00F4C7B4 /* SceneDelegate.swift in Sources */,
 				785BF0122B15C4DE000EF55E /* ProfileVC.swift in Sources */,

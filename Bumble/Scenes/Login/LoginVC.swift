@@ -22,7 +22,7 @@ class LoginVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        emailField.becomeFirstResponder()
+//        emailField.becomeFirstResponder()
     }
     
     private func setupUI() {
@@ -30,11 +30,29 @@ class LoginVC: UIViewController {
         loginView.layer.shadowOpacity = 0.5
         loginView.layer.shadowOffset = CGSize(width: 2, height: 2)
         loginView.layer.shadowRadius = 4
-        loginView.layer.cornerRadius = 8
+        loginView.layer.cornerRadius = 12
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+                view.addGestureRecognizer(tapGesture)
+        passwordField.isSecureTextEntry = true
+        
+    }
+    
+    @objc func handleTap() {
+        view.endEditing(true)
     }
 
     @IBAction func didSelectCreateNew(_ sender: Any) {
 //        FirebaseAuth.Auth.auth().createUser(withEmail: "a@gmail.com", password: "123456")
+    }
+    
+    @IBAction func didSelectEyeButton(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        passwordField.isSecureTextEntry = sender.isSelected
+        if !sender.isSelected {
+            sender.setImage(UIImage(named: "view"), for: .normal)
+        } else {
+            sender.setImage(UIImage(named: "hide"), for: .normal)
+        }
     }
     
     @IBAction func didSelectLoginBtn(_ sender: Any) {
@@ -49,6 +67,10 @@ class LoginVC: UIViewController {
         }
         FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { result, error in
             guard error == nil else {
+                let alert = UIAlertController(title: "Login Failed", message: "Incorrect username or password. Please try again.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(okAction)
+                self.present(alert, animated: true, completion: nil)
                 return
             }
             print("You have signed in")
@@ -56,6 +78,12 @@ class LoginVC: UIViewController {
 //            let vc = MatchVC()
             self.navigationController?.pushViewController(vc, animated: true)
         })
+    }
+    
+    @IBAction func didSelectForgotPassword(_ sender: Any) {
+        let vc = ForgotPasswordVC()
+        vc.gmail = emailField.text
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

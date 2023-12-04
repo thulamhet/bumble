@@ -82,10 +82,10 @@ class ListMessageVC: UIViewController {
                                     } else {
                                         for mes in self.tableViewData {
                                             if mes.uid == lastMsg.uid && mes.lastMessage.id != lastMsg.lastMessage.id{
-                                                if let keyWindow = UIApplication.shared.keyWindow, let rootViewController = keyWindow.rootViewController {
-                                                    let customPopup = CustomPopup()
-                                                    customPopup.show(inView: rootViewController.view)
-                                                }
+//                                                if let keyWindow = UIApplication.shared.keyWindow, let rootViewController = keyWindow.rootViewController {
+//                                                    let customPopup = CustomPopup()
+//                                                    customPopup.show(inView: rootViewController.view)
+//                                                }
                                                 
                                                 mes.lastMessage = lastMsg.lastMessage
                                                 mes.yourTurn = true
