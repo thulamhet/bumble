@@ -16,9 +16,11 @@ class FindNewVC: BaseViewController, CLLocationManagerDelegate {
     var listProfile: [ProfileModel] = []
     let firestoreManager = FirestoreManager()
     var currentUser: ProfileModel?
-    
+    var performFilter: (() -> Void)?
     @IBOutlet weak var kolodaView: KolodaView!
     let locationManager = CLLocationManager()
+    var isFilter: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let user: User = Auth.auth().currentUser!
@@ -26,8 +28,6 @@ class FindNewVC: BaseViewController, CLLocationManagerDelegate {
         kolodaView.delegate = self
         kolodaView.reloadData()
         self.locationManager.requestAlwaysAuthorization()
-        
-        
 //        var a = ProfileModel(uid: "vf19aaqw7WRI3ymA2J9mQ6XcZZH3", name: "Minh", school: "VNU", bio: "đây là a9@gmail.com", imageUrl: "https://pics.craiyon.com/2023-07-06/9ba84ae991974741b13d6d3d0a4898b9.webp", listPeopleILiked: [], listPeopleLikedMe: [], listMatch: [])
 //        firestoreManager.saveUserProfile(userProfile: a)
         getListUsers()
@@ -37,6 +37,15 @@ class FindNewVC: BaseViewController, CLLocationManagerDelegate {
                 SESSION.currentUser = user
             })
         }
+        performFilter?()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.listProfile = self.listProfile.filter {
+            Int($0.age) ?? 18 < SESSION.filterAge 
+        }
+        kolodaView.reloadData()
     }
     
     private func getListUsers() {
@@ -61,14 +70,12 @@ class FindNewVC: BaseViewController, CLLocationManagerDelegate {
     
     @IBAction func didSelectFilterButton(_ sender: Any) {
         let vc = FilterVC()
-        vc.modalPresentationStyle = .overFullScreen
-        self.navigationController?.present(vc, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func didSelectInterestedButton(_ sender: Any) {
         let vc = InterestedVC()
-        vc.modalPresentationStyle = .overFullScreen
-        self.navigationController?.present(vc, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -83,10 +90,10 @@ extension FindNewVC: KolodaViewDataSource {
             view.updateInfo(data: listProfile[index])
         }
         view.performLike = {
-            self.kolodaView.swipe(.left)
+            self.kolodaView.swipe(.right)
         }
         view.performDislike = {
-            self.kolodaView.swipe(.right)
+            self.kolodaView.swipe(.left)
         }
         view.layer.cornerRadius = 20
         view.clipsToBounds = true
@@ -103,13 +110,13 @@ extension FindNewVC: KolodaViewDelegate {
        koloda.reloadData()
     }
 
-    func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-        if listProfile.count > 0 {
-            let alert = UIAlertController(title: "Congratulation!", message: "Now you're \(listProfile[index].name)", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default))
-            self.present(alert, animated: true)
-        }
-    }
+//    func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
+//        if listProfile.count > 0 {
+//            let alert = UIAlertController(title: "Congratulation!", message: "Now you're \(listProfile[index].name)", preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: .default))
+//            self.present(alert, animated: true)
+//        }
+//    }
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
         if direction == .right {

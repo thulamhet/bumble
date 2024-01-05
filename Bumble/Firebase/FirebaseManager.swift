@@ -44,9 +44,11 @@ class FirestoreManager {
                    let uid = data["uid"] as? String,
                    let iLiked = data["listPeopleILiked"] as? [String],
                    let likedMe = data["listPeopleLikedMe"] as? [String],
-                   let listMatch = data["listMatch"] as? [String]
+                   let listMatch = data["listMatch"] as? [String],
+                    let age = data["age"] as? String ,
+                    let gender = data["gender"] as? String
                 {
-                    let userProfile = ProfileModel(uid: uid, name: name, school: school, bio: bio, imageUrl: imageUrl, listPeopleILiked: iLiked, listPeopleLikedMe: likedMe, listMatch: listMatch)
+                    let userProfile = ProfileModel(uid: uid, name: name, school: school, bio: bio, imageUrl: imageUrl, listPeopleILiked: iLiked, listPeopleLikedMe: likedMe, listMatch: listMatch, age: age, gender: gender)
                     completion(userProfile)
                 } else {
                     completion(nil)
@@ -95,8 +97,10 @@ class FirestoreManager {
                         let iLiked = data["listPeopleILiked"] as? [String] ?? []
                         let likedMe = data["listPeopleLikedMe"] as? [String] ?? []
                         let listMatch = data["listMatch"] as? [String] ?? []
+                        let age = data["age"] as? String ?? ""
+                        let gender = data["gender"] as? String ?? ""
                         if (uid != self.currentUser.uid) {
-                            let profile = ProfileModel(uid: uid, name: name, school: school, bio: bio, imageUrl: imageUrl, listPeopleILiked: iLiked, listPeopleLikedMe: likedMe, listMatch: listMatch)
+                            let profile = ProfileModel(uid: uid, name: name, school: school, bio: bio, imageUrl: imageUrl, listPeopleILiked: iLiked, listPeopleLikedMe: likedMe, listMatch: listMatch, age: age, gender: gender)
                             userProfiles.append(profile)
                         }
                     }

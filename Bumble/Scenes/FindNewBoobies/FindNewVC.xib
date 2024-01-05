@@ -50,71 +50,85 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMQ-uA-s19" userLabel="Navbar">
-                    <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                    <rect key="frame" x="0.0" y="706" width="414" height="30"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjr-wI-bgS">
-                            <rect key="frame" x="30" y="-3" width="50" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="50" id="V45-dl-a23"/>
-                                <constraint firstAttribute="height" constant="50" id="skO-x5-uY3"/>
-                            </constraints>
-                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="settings (3)"/>
-                            <connections>
-                                <action selector="didSelectButtonBack:" destination="-1" eventType="touchUpInside" id="vsE-MA-i1i"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4N8-wf-XmT">
-                            <rect key="frame" x="334" y="-3" width="50" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="CE3-CE-NpM"/>
-                                <constraint firstAttribute="width" constant="50" id="oyx-6F-Fc5"/>
-                            </constraints>
-                            <color key="tintColor" systemColor="labelColor"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="conversation"/>
-                            <connections>
-                                <action selector="didSelectMessageButton:" destination="-1" eventType="touchUpInside" id="gV4-R9-1zL"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCj-Rm-7k7">
-                            <rect key="frame" x="110" y="-3" width="50" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="50" id="98S-GW-2nR"/>
-                                <constraint firstAttribute="height" constant="50" id="YXM-az-Lz7"/>
-                            </constraints>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="filter (1)"/>
-                            <connections>
-                                <action selector="didSelectFilterButton:" destination="-1" eventType="touchUpInside" id="yYS-yT-c90"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhE-9F-1mD">
-                            <rect key="frame" x="269" y="4.6666666666666288" width="35" height="35"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="35" id="WeW-CJ-vwP"/>
-                                <constraint firstAttribute="width" constant="35" id="v8X-yr-ubu"/>
-                            </constraints>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="love"/>
-                            <connections>
-                                <action selector="didSelectInterestedButton:" destination="-1" eventType="touchUpInside" id="0BP-ct-2Lw"/>
-                            </connections>
-                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="ggV-BZ-T6C">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAj-jn-JlK">
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" id="pvP-xT-iLh"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjr-wI-bgS">
+                                    <rect key="frame" x="67.666666666666671" y="0.0" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="V45-dl-a23"/>
+                                        <constraint firstAttribute="height" constant="30" id="skO-x5-uY3"/>
+                                    </constraints>
+                                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="settings (3)"/>
+                                    <connections>
+                                        <action selector="didSelectButtonBack:" destination="-1" eventType="touchUpInside" id="vsE-MA-i1i"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCj-Rm-7k7">
+                                    <rect key="frame" x="150.66666666666666" y="0.0" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="98S-GW-2nR"/>
+                                        <constraint firstAttribute="height" constant="30" id="YXM-az-Lz7"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="filter (1)"/>
+                                    <connections>
+                                        <action selector="didSelectFilterButton:" destination="-1" eventType="touchUpInside" id="yYS-yT-c90"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhE-9F-1mD">
+                                    <rect key="frame" x="233.33333333333334" y="0.0" width="30.000000000000028" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="WeW-CJ-vwP"/>
+                                        <constraint firstAttribute="width" constant="30" id="v8X-yr-ubu"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="love"/>
+                                    <connections>
+                                        <action selector="didSelectInterestedButton:" destination="-1" eventType="touchUpInside" id="0BP-ct-2Lw"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4N8-wf-XmT">
+                                    <rect key="frame" x="316.33333333333331" y="0.0" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="CE3-CE-NpM"/>
+                                        <constraint firstAttribute="width" constant="30" id="oyx-6F-Fc5"/>
+                                    </constraints>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="conversation"/>
+                                    <connections>
+                                        <action selector="didSelectMessageButton:" destination="-1" eventType="touchUpInside" id="gV4-R9-1zL"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6j-Ps-O5Z">
+                                    <rect key="frame" x="414" y="0.0" width="0.0" height="30"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" id="6KB-VM-0Ug"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="ETW-ql-4d7"/>
-                        <constraint firstItem="4N8-wf-XmT" firstAttribute="leading" secondItem="YhE-9F-1mD" secondAttribute="trailing" constant="30" id="F20-qg-I6X"/>
-                        <constraint firstItem="4N8-wf-XmT" firstAttribute="centerY" secondItem="lMQ-uA-s19" secondAttribute="centerY" id="JeL-Gy-z0m"/>
-                        <constraint firstAttribute="trailing" secondItem="4N8-wf-XmT" secondAttribute="trailing" constant="30" id="NG4-mZ-7TV"/>
-                        <constraint firstAttribute="height" constant="44" id="Qw6-79-nLw"/>
-                        <constraint firstItem="YhE-9F-1mD" firstAttribute="centerY" secondItem="lMQ-uA-s19" secondAttribute="centerY" id="UtU-Qj-uFr"/>
-                        <constraint firstItem="hCj-Rm-7k7" firstAttribute="centerY" secondItem="lMQ-uA-s19" secondAttribute="centerY" id="ZAo-sD-D9B"/>
-                        <constraint firstItem="hCj-Rm-7k7" firstAttribute="leading" secondItem="zjr-wI-bgS" secondAttribute="trailing" constant="30" id="fjn-dR-Hsp"/>
-                        <constraint firstItem="zjr-wI-bgS" firstAttribute="centerY" secondItem="lMQ-uA-s19" secondAttribute="centerY" id="kVU-xp-Shv"/>
-                        <constraint firstItem="zjr-wI-bgS" firstAttribute="leading" secondItem="lMQ-uA-s19" secondAttribute="leading" constant="30" id="v57-7y-izP"/>
+                        <constraint firstAttribute="trailing" secondItem="ggV-BZ-T6C" secondAttribute="trailing" id="2nh-uN-Jkv"/>
+                        <constraint firstItem="ggV-BZ-T6C" firstAttribute="leading" secondItem="lMQ-uA-s19" secondAttribute="leading" id="NmN-pb-D3T"/>
+                        <constraint firstAttribute="height" constant="30" id="Qw6-79-nLw"/>
+                        <constraint firstItem="ggV-BZ-T6C" firstAttribute="top" secondItem="lMQ-uA-s19" secondAttribute="top" id="c9J-uY-q7Y"/>
+                        <constraint firstAttribute="bottom" secondItem="ggV-BZ-T6C" secondAttribute="bottom" id="iHr-E5-pXe"/>
                     </constraints>
                 </view>
             </subviews>
@@ -146,6 +160,9 @@
         <image name="settings (3)" width="32" height="32"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

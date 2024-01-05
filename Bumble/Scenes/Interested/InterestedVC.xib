@@ -19,6 +19,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InterestedVC" customModule="Bumble" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="yfn-4V-ucN" id="UWn-tZ-toe"/>
+                <outlet property="emptyView" destination="CkT-my-FS8" id="CKH-cM-z0x"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -121,16 +122,46 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CkT-my-FS8">
+                            <rect key="frame" x="30" y="63" width="315" height="300"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oops" translatesAutoresizingMaskIntoConstraints="NO" id="5zK-fT-Gcc">
+                                    <rect key="frame" x="57.666666666666686" y="15" width="200" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="Dsm-kL-1i8"/>
+                                        <constraint firstAttribute="width" constant="200" id="x9p-Qc-nRY"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No body like you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCE-bh-An4">
+                                    <rect key="frame" x="15" y="130" width="285" height="28.666666666666657"/>
+                                    <fontDescription key="fontDescription" name="SVN-GilroySemiBold" family="SVN-Gilroy" pointSize="27"/>
+                                    <color key="textColor" red="0.023529411760000001" green="0.1647058824" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="5zK-fT-Gcc" firstAttribute="centerX" secondItem="CkT-my-FS8" secondAttribute="centerX" id="Cmt-lC-yH8"/>
+                                <constraint firstAttribute="height" constant="300" id="DZ8-m7-B19"/>
+                                <constraint firstItem="OCE-bh-An4" firstAttribute="top" secondItem="5zK-fT-Gcc" secondAttribute="bottom" constant="15" id="J9r-1d-u8k"/>
+                                <constraint firstAttribute="trailing" secondItem="OCE-bh-An4" secondAttribute="trailing" constant="15" id="TT7-ew-KQ9"/>
+                                <constraint firstItem="5zK-fT-Gcc" firstAttribute="top" secondItem="CkT-my-FS8" secondAttribute="top" constant="15" id="ttu-yO-3uh"/>
+                                <constraint firstItem="OCE-bh-An4" firstAttribute="leading" secondItem="CkT-my-FS8" secondAttribute="leading" constant="15" id="v8g-Eq-tTO"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="yfn-4V-ucN" firstAttribute="top" secondItem="2cr-fd-TXS" secondAttribute="bottom" constant="15" id="Fkn-QD-XMX"/>
                         <constraint firstAttribute="bottom" secondItem="yfn-4V-ucN" secondAttribute="bottom" constant="15" id="GTM-95-gVV"/>
+                        <constraint firstItem="CkT-my-FS8" firstAttribute="leading" secondItem="FmG-tF-7hS" secondAttribute="leading" constant="30" id="P8j-Pb-0Kb"/>
                         <constraint firstItem="2cr-fd-TXS" firstAttribute="leading" secondItem="FmG-tF-7hS" secondAttribute="leading" constant="15" id="Sz1-iL-WYq"/>
+                        <constraint firstAttribute="trailing" secondItem="CkT-my-FS8" secondAttribute="trailing" constant="30" id="Y8o-dc-fCO"/>
                         <constraint firstItem="2cr-fd-TXS" firstAttribute="top" secondItem="FmG-tF-7hS" secondAttribute="top" constant="15" id="dAR-3s-g9I"/>
                         <constraint firstItem="yfn-4V-ucN" firstAttribute="leading" secondItem="FmG-tF-7hS" secondAttribute="leading" constant="15" id="feI-dq-n7E"/>
                         <constraint firstAttribute="trailing" secondItem="2cr-fd-TXS" secondAttribute="trailing" constant="15" id="gMj-hj-c41"/>
                         <constraint firstAttribute="trailing" secondItem="yfn-4V-ucN" secondAttribute="trailing" constant="15" id="gix-xV-zxT"/>
+                        <constraint firstItem="CkT-my-FS8" firstAttribute="top" secondItem="2cr-fd-TXS" secondAttribute="bottom" constant="30" id="qjS-nd-qKV"/>
                         <constraint firstAttribute="height" constant="550" id="ueP-ml-HqU"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
@@ -161,6 +192,7 @@
     <resources>
         <image name="ic24PxOutlineLeft" width="24" height="24"/>
         <image name="icons8-heart-48" width="48" height="48"/>
+        <image name="oops" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

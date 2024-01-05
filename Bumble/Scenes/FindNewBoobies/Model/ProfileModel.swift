@@ -16,8 +16,10 @@ class ProfileModel {
     var listPeopleILiked: [String]
     var listPeopleLikedMe: [String]
     var listMatch: [String]
+    var age: String
+    var gender: String
     
-    init(uid: String, name: String, school: String, bio: String, imageUrl: String, listPeopleILiked: [String], listPeopleLikedMe: [String], listMatch: [String]) {
+    init(uid: String, name: String, school: String, bio: String, imageUrl: String, listPeopleILiked: [String], listPeopleLikedMe: [String], listMatch: [String], age: String, gender: String) {
         self.uid = uid
         self.name = name
         self.school = school
@@ -26,6 +28,8 @@ class ProfileModel {
         self.listPeopleILiked = listPeopleILiked
         self.listPeopleLikedMe = listPeopleLikedMe
         self.listMatch = listMatch
+        self.age = age
+        self.gender = gender
     }
     
     func toDictionary() -> [String: Any] {
@@ -37,7 +41,9 @@ class ProfileModel {
             "imageUrl": imageUrl,
             "listPeopleILiked": listPeopleILiked,
             "listPeopleLikedMe": listPeopleLikedMe,
-            "listMatch": listMatch
+            "listMatch": listMatch,
+            "age": age,
+            "gender": gender
         ]
     }
 }

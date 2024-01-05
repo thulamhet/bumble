@@ -50,6 +50,13 @@
                                                         <constraint firstAttribute="height" constant="400" id="vmH-K2-0Y4"/>
                                                     </constraints>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SUY-Cs-ooE">
+                                                    <rect key="frame" x="0.0" y="310" width="414" height="90"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.16007864238410596" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="90" id="8AD-HU-VNK"/>
+                                                    </constraints>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HNUE 2026" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A63-PE-TPi">
                                                     <rect key="frame" x="54.000000000000007" y="356" width="114.66666666666669" height="24.333333333333314"/>
                                                     <fontDescription key="fontDescription" name="SVN-GilroyMedium" family="SVN-Gilroy" pointSize="23"/>
@@ -75,8 +82,11 @@
                                                 <constraint firstAttribute="bottom" secondItem="eGI-Ek-wfg" secondAttribute="bottom" constant="20" id="073-ql-qrd"/>
                                                 <constraint firstAttribute="trailing" secondItem="ScP-md-PGV" secondAttribute="trailing" id="79a-ch-ZYB"/>
                                                 <constraint firstItem="nKJ-LC-MRB" firstAttribute="leading" secondItem="hWh-tf-3Ol" secondAttribute="leading" constant="15" id="BlI-0t-cub"/>
+                                                <constraint firstAttribute="trailing" secondItem="SUY-Cs-ooE" secondAttribute="trailing" id="M5g-Z6-Ysg"/>
                                                 <constraint firstItem="eGI-Ek-wfg" firstAttribute="leading" secondItem="hWh-tf-3Ol" secondAttribute="leading" constant="20" id="b20-fR-ooQ"/>
+                                                <constraint firstItem="SUY-Cs-ooE" firstAttribute="leading" secondItem="hWh-tf-3Ol" secondAttribute="leading" id="btA-tn-lxf"/>
                                                 <constraint firstItem="ScP-md-PGV" firstAttribute="top" secondItem="hWh-tf-3Ol" secondAttribute="top" id="d4P-Aj-LIL"/>
+                                                <constraint firstAttribute="bottom" secondItem="SUY-Cs-ooE" secondAttribute="bottom" id="i2v-uu-w55"/>
                                                 <constraint firstItem="A63-PE-TPi" firstAttribute="leading" secondItem="eGI-Ek-wfg" secondAttribute="trailing" constant="10" id="j4t-9N-GcB"/>
                                                 <constraint firstItem="ScP-md-PGV" firstAttribute="leading" secondItem="hWh-tf-3Ol" secondAttribute="leading" id="nB5-ON-UYd"/>
                                                 <constraint firstAttribute="height" constant="400" id="s5x-rt-SKp"/>
@@ -233,13 +243,41 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqc-Qc-ZT0">
+                                                    <rect key="frame" x="15" y="-55" width="90" height="90"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="QQI-bJ-rLK"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="hAe-1i-idk"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <connections>
+                                                        <action selector="didSelectButtonDislike:" destination="-1" eventType="touchUpInside" id="Gsi-nJ-7PY"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egE-m4-1dX">
+                                                    <rect key="frame" x="309" y="-55" width="90" height="90"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="Jsc-yM-kcT"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="buP-QM-SOT"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <connections>
+                                                        <action selector="didSelectButtonLike:" destination="-1" eventType="touchUpInside" id="PDw-Ol-LTS"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="KoB-6H-XuV" firstAttribute="leading" secondItem="x2T-SX-Y98" secondAttribute="leading" constant="30" id="2o5-TI-ScV"/>
+                                                <constraint firstItem="yqc-Qc-ZT0" firstAttribute="leading" secondItem="x2T-SX-Y98" secondAttribute="leading" constant="15" id="4xi-ax-Ng3"/>
                                                 <constraint firstAttribute="bottom" secondItem="KoB-6H-XuV" secondAttribute="bottom" constant="30" id="ACP-VY-Tks"/>
+                                                <constraint firstAttribute="bottom" secondItem="egE-m4-1dX" secondAttribute="bottom" constant="15" id="FwI-c2-yP6"/>
+                                                <constraint firstAttribute="trailing" secondItem="egE-m4-1dX" secondAttribute="trailing" constant="15" id="Jr6-hc-6iL"/>
                                                 <constraint firstAttribute="bottom" secondItem="Xkx-2k-Lm3" secondAttribute="bottom" constant="30" id="U2e-fF-elT"/>
                                                 <constraint firstAttribute="trailing" secondItem="Xkx-2k-Lm3" secondAttribute="trailing" constant="30" id="iqp-fx-pVk"/>
+                                                <constraint firstAttribute="bottom" secondItem="yqc-Qc-ZT0" secondAttribute="bottom" constant="15" id="tGB-Yv-iJg"/>
                                             </constraints>
                                         </view>
                                     </subviews>

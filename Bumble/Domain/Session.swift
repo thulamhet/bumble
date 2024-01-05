@@ -14,6 +14,8 @@ class SessionCache {
 
     var currentUser: ProfileModel?
     var allUsers: [ProfileModel] = []
+    var filterStatus: Int = 2
+    var filterAge: Int = 100
 }
 
 let SESSION = SessionCache.shared

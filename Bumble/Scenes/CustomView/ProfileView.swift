@@ -87,17 +87,17 @@ class ProfileView: BaseLoadCustomView {
     func updateInfo(data: ProfileModel) {
         bioLabel.text = data.bio
         schoolLabel.text = data.school
-        nameLabel.text = data.name
+        nameLabel.text = data.name + ", " + data.age
         imgUrl = data.imageUrl
     }
     
     @IBAction func didSelectButtonDislike(_ sender: Any) {
-        performLike?()
+        performDislike?()
     }
     
     
     @IBAction func didSelectButtonLike(_ sender: Any) {
-        performDislike?()
+        performLike?()
     }
 }
 

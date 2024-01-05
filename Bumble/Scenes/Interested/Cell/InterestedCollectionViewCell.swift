@@ -14,6 +14,9 @@ class InterestedCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
+    var performLike: (() -> Void)?
+    var performDislike: (() -> Void)?
+    
     func setupCell(_ imgUrl: String) {
         SDWebImageManager.shared.loadImage(with: URL(string: imgUrl ), options: .highPriority, progress: nil) { (image, data, error, cacheType, isFinished, imageUrl) in
             self.avatarImg.image = image
@@ -21,7 +24,11 @@ class InterestedCollectionViewCell: UICollectionViewCell {
     }
 
     @IBAction func didSelectLikeButton(_ sender: Any) {
-        
+        performLike?()
+    }
+    
+    @IBAction func didSelectDislikeButton(_ sender: Any) {
+        performDislike?()
     }
 }
 
